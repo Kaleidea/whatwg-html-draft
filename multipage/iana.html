@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Standard</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/spec.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/styles.css crossorigin=""><script>
+<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Specification Draft: &lt;search> element with form functionality</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/spec.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/styles.css crossorigin=""><script>
    function toggleStatus(div) {
      div.parentNode.classList.toggle('wrapped');
    }
@@ -8,12 +8,13 @@
   </script><body>
   
   <script async="" crossorigin="" src=/html-dfn.js></script>
-  <script data-file-issue-url=https://github.com/whatwg/html/issues/new async="" crossorigin="" src=https://resources.whatwg.org/file-issue.js></script>
+  <script data-file-issue-url=https://github.com/Kaleidea/whatwg-html-draft/issues/new async="" crossorigin="" src=https://resources.whatwg.org/file-issue.js></script>
   
   <header id=head class="head with-buttons">
    <a href=https://whatwg.org/ class=logo><img width=100 alt=WHATWG crossorigin="" src=https://resources.whatwg.org/logo.svg height=100></a>
-   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Living Standard — Last Updated <span class=pubdate>22 November 2021</span></h2></hgroup>
+   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Review Draft: <code id=living-standard:the-search-element><a href=forms.html#the-search-element>search</a></code> element with form functionality — Last Updated <span class=pubdate>27 November 2021</span></h2></hgroup>
    
+
    
 
    
@@ -33,7 +34,7 @@
 
   
 
-  <nav><a href=obsolete.html>← 16 Obsolete features</a> — <a href=./>Table of Contents</a> — <a href=indices.html>Index →</a></nav><ol class=toc><li id=toc-iana><a href=iana.html#iana><span class=secno>17</span> IANA considerations</a><ol><li><a href=iana.html#text/html><span class=secno>17.1</span> <code>text/html</code></a><li><a href=iana.html#multipart/x-mixed-replace><span class=secno>17.2</span> <code>multipart/x-mixed-replace</code></a><li><a href=iana.html#application/xhtml+xml><span class=secno>17.3</span> <code>application/xhtml+xml</code></a><li><a href=iana.html#text/ping><span class=secno>17.4</span> <code>text/ping</code></a><li><a href=iana.html#application/microdata+json><span class=secno>17.5</span> <code>application/microdata+json</code></a><li><a href=iana.html#text/event-stream><span class=secno>17.6</span> <code>text/event-stream</code></a><li><a href=iana.html#cross-origin-embedder-policy><span class=secno>17.7</span> `<code>Cross-Origin-Embedder-Policy</code>`</a><li><a href=iana.html#cross-origin-embedder-policy-report-only><span class=secno>17.8</span> `<code>Cross-Origin-Embedder-Policy-Report-Only</code>`</a><li><a href=iana.html#cross-origin-opener-policy-2><span class=secno>17.9</span> `<code>Cross-Origin-Opener-Policy</code>`</a><li><a href=iana.html#cross-origin-opener-policy-report-only><span class=secno>17.10</span> `<code>Cross-Origin-Opener-Policy-Report-Only</code>`</a><li><a href=iana.html#origin-agent-cluster><span class=secno>17.11</span> `<code>Origin-Agent-Cluster</code>`</a><li><a href=iana.html#ping-from><span class=secno>17.12</span> `<code>Ping-From</code>`</a><li><a href=iana.html#ping-to><span class=secno>17.13</span> `<code>Ping-To</code>`</a><li><a href=iana.html#refresh><span class=secno>17.14</span> `<code>Refresh</code>`</a><li><a href=iana.html#last-event-id><span class=secno>17.15</span> `<code>Last-Event-ID</code>`</a><li><a href=iana.html#x-frame-options><span class=secno>17.16</span> `<code>X-Frame-Options</code>`</a><li><a href=iana.html#web+-scheme-prefix><span class=secno>17.17</span> <code>web+</code> scheme prefix</a></ol></ol><h2 id=iana><span class=secno>17</span> IANA considerations<a href=#iana class=self-link></a></h2>
+  <nav><a href=obsolete.html>← 16 Obsolete features</a> — <a href=./>Table of Contents</a> — <a href=indices.html>Index →</a></nav><ol class=toc><li id=toc-iana><a href=iana.html#iana><span class=secno>17</span> IANA considerations</a><ol><li><a href=iana.html#text/html><span class=secno>17.1</span> <code>text/html</code></a><li><a href=iana.html#multipart/x-mixed-replace><span class=secno>17.2</span> <code>multipart/x-mixed-replace</code></a><li><a href=iana.html#application/xhtml+xml><span class=secno>17.3</span> <code>application/xhtml+xml</code></a><li><a href=iana.html#text/ping><span class=secno>17.4</span> <code>text/ping</code></a><li><a href=iana.html#application/microdata+json><span class=secno>17.5</span> <code>application/microdata+json</code></a><li><a href=iana.html#text/event-stream><span class=secno>17.6</span> <code>text/event-stream</code></a><li><a href=iana.html#web+-scheme-prefix><span class=secno>17.7</span> <code>web+</code> scheme prefix</a></ol></ol><h2 id=iana><span class=secno>17</span> IANA considerations<a href=#iana class=self-link></a></h2>
 
   
 
@@ -265,107 +266,7 @@
   <code id=text/event-stream:text/event-stream><a href=#text/event-stream>text/event-stream</a></code> resources.</p>
 
 
-  <h3 id=cross-origin-embedder-policy><span class=secno>17.7</span> `<dfn data-dfn-type=http-header><code>Cross-Origin-Embedder-Policy</code></dfn>`<a href=#cross-origin-embedder-policy class=self-link></a></h3>
-
-  <p>This section describes a header for registration in the Permanent Message Header Field
-  Registry. <a href=references.html#refsRFC3864>[RFC3864]</a></p>
-
-  <dl><dt>Header field name:<dd>Cross-Origin-Embedder-Policy<dt>Applicable protocol:<dd>http<dt>Status:<dd>standard<dt>Author/Change controller:<dd>WHATWG<dt>Specification document(s):<dd>
-    This document is the relevant specification.
-   <dt>Related information:<dd>None.</dl>
-
-
-  <h3 id=cross-origin-embedder-policy-report-only><span class=secno>17.8</span> `<dfn data-dfn-type=http-header><code>Cross-Origin-Embedder-Policy-Report-Only</code></dfn>`<a href=#cross-origin-embedder-policy-report-only class=self-link></a></h3>
-
-  <p>This section describes a header for registration in the Permanent Message Header Field
-  Registry. <a href=references.html#refsRFC3864>[RFC3864]</a></p>
-
-  <dl><dt>Header field name:<dd>Cross-Origin-Embedder-Policy-Report-Only<dt>Applicable protocol:<dd>http<dt>Status:<dd>standard<dt>Author/Change controller:<dd>WHATWG<dt>Specification document(s):<dd>
-    This document is the relevant specification.
-   <dt>Related information:<dd>None.</dl>
-
-
-  <h3 id=cross-origin-opener-policy-2><span class=secno>17.9</span> `<dfn data-dfn-type=http-header><code>Cross-Origin-Opener-Policy</code></dfn>`<a href=#cross-origin-opener-policy-2 class=self-link></a></h3>
-
-  <p>This section describes a header for registration in the Permanent Message Header Field
-  Registry. <a href=references.html#refsRFC3864>[RFC3864]</a></p>
-
-  <dl><dt>Header field name:<dd>Cross-Origin-Opener-Policy<dt>Applicable protocol:<dd>http<dt>Status:<dd>standard<dt>Author/Change controller:<dd>WHATWG<dt>Specification document(s):<dd>
-    This document is the relevant specification.
-   <dt>Related information:<dd>None.</dl>
-
-
-  <h3 id=cross-origin-opener-policy-report-only><span class=secno>17.10</span> `<dfn data-dfn-type=http-header><code>Cross-Origin-Opener-Policy-Report-Only</code></dfn>`<a href=#cross-origin-opener-policy-report-only class=self-link></a></h3>
-
-  <p>This section describes a header for registration in the Permanent Message Header Field
-  Registry. <a href=references.html#refsRFC3864>[RFC3864]</a></p>
-
-  <dl><dt>Header field name:<dd>Cross-Origin-Opener-Policy-Report-Only<dt>Applicable protocol:<dd>http<dt>Status:<dd>standard<dt>Author/Change controller:<dd>WHATWG<dt>Specification document(s):<dd>
-    This document is the relevant specification.
-   <dt>Related information:<dd>None.</dl>
-
-
-  <h3 id=origin-agent-cluster><span class=secno>17.11</span> `<dfn><code>Origin-Agent-Cluster</code></dfn>`<a href=#origin-agent-cluster class=self-link></a></h3>
-
-  <p>This section describes a header for registration in the Permanent Message Header Field
-  Registry. <a href=references.html#refsRFC3864>[RFC3864]</a></p>
-
-  <dl><dt>Header field name:<dd>Origin-Agent-Cluster<dt>Applicable protocol:<dd>http<dt>Status:<dd>standard<dt>Author/Change controller:<dd>WHATWG<dt>Specification document(s):<dd>
-    This document is the relevant specification.
-   <dt>Related information:<dd>None.</dl>
-
-
-  <h3 id=ping-from><span class=secno>17.12</span> `<dfn><code>Ping-From</code></dfn>`<a href=#ping-from class=self-link></a></h3>
-
-  <p>This section describes a header for registration in the Permanent Message Header Field
-  Registry. <a href=references.html#refsRFC3864>[RFC3864]</a></p>
-
-  <dl><dt>Header field name:<dd>Ping-From<dt>Applicable protocol:<dd>http<dt>Status:<dd>standard<dt>Author/Change controller:<dd>W3C<dt>Specification document(s):<dd>
-    This document is the relevant specification.
-   <dt>Related information:<dd>None.</dl>
-
-
-  <h3 id=ping-to><span class=secno>17.13</span> `<dfn><code>Ping-To</code></dfn>`<a href=#ping-to class=self-link></a></h3>
-
-  <p>This section describes a header for registration in the Permanent Message Header Field
-  Registry. <a href=references.html#refsRFC3864>[RFC3864]</a></p>
-
-  <dl><dt>Header field name:<dd>Ping-To<dt>Applicable protocol:<dd>http<dt>Status:<dd>standard<dt>Author/Change controller:<dd>W3C<dt>Specification document(s):<dd>
-    This document is the relevant specification.
-   <dt>Related information:<dd>None.</dl>
-
-
-  <h3 id=refresh><span class=secno>17.14</span> `<dfn><code>Refresh</code></dfn>`<a href=#refresh class=self-link></a></h3>
-
-  <p>This section describes a header for registration in the Permanent Message Header Field
-  Registry. <a href=references.html#refsRFC3864>[RFC3864]</a></p>
-
-  <dl><dt>Header field name:<dd>Refresh<dt>Applicable protocol:<dd>http<dt>Status:<dd>standard<dt>Author/Change controller:<dd>WHATWG<dt>Specification document(s):<dd>
-    This document is the relevant specification.
-   <dt>Related information:<dd>None.</dl>
-
-
-  <h3 id=last-event-id><span class=secno>17.15</span> `<dfn><code>Last-Event-ID</code></dfn>`<a href=#last-event-id class=self-link></a></h3>
-
-  <p>This section describes a header for registration in the Permanent Message Header Field
-  Registry. <a href=references.html#refsRFC3864>[RFC3864]</a></p>
-
-  <dl><dt>Header field name:<dd>Last-Event-ID<dt>Applicable protocol:<dd>http<dt>Status:<dd>standard<dt>Author/Change controller:<dd>W3C<dt>Specification document(s):<dd>
-    This document is the relevant specification.
-   <dt>Related information:<dd>None.</dl>
-
-
-  <h3 id=x-frame-options><span class=secno>17.16</span> `<dfn><code>X-Frame-Options</code></dfn>`<a href=#x-frame-options class=self-link></a></h3>
-
-  <p>This section describes a header for registration in the Permanent Message Header Field
-  Registry. <a href=references.html#refsRFC3864>[RFC3864]</a></p>
-
-  <dl><dt>Header field name:<dd>X-Frame-Options<dt>Applicable protocol:<dd>http<dt>Status:<dd>standard<dt>Author/Change controller:<dd>WHATWG<dt>Specification document(s):<dd>
-    This document is the relevant specification.
-   <dt>Related information:<dd>None.</dl>
-
-
-  <h3 id=web+-scheme-prefix><span class=secno>17.17</span> <dfn><code>web+</code> scheme prefix</dfn><a href=#web+-scheme-prefix class=self-link></a></h3>
+  <h3 id=web+-scheme-prefix><span class=secno>17.7</span> <dfn><code>web+</code> scheme prefix</dfn><a href=#web+-scheme-prefix class=self-link></a></h3>
 
   <p>This section describes a convention for use with the IANA URI scheme registry. It does not
   itself register a specific scheme. <a href=references.html#refsRFC7595>[RFC7595]</a></p>

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Standard</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/spec.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/styles.css crossorigin=""><script>
+<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Specification Draft: &lt;search> element with form functionality</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/spec.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/styles.css crossorigin=""><script>
    function toggleStatus(div) {
      div.parentNode.classList.toggle('wrapped');
    }
@@ -8,12 +8,13 @@
   </script><body>
   
   <script async="" crossorigin="" src=/html-dfn.js></script>
-  <script data-file-issue-url=https://github.com/whatwg/html/issues/new async="" crossorigin="" src=https://resources.whatwg.org/file-issue.js></script>
+  <script data-file-issue-url=https://github.com/Kaleidea/whatwg-html-draft/issues/new async="" crossorigin="" src=https://resources.whatwg.org/file-issue.js></script>
   
   <header id=head class="head with-buttons">
    <a href=https://whatwg.org/ class=logo><img width=100 alt=WHATWG crossorigin="" src=https://resources.whatwg.org/logo.svg height=100></a>
-   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Living Standard — Last Updated <span class=pubdate>22 November 2021</span></h2></hgroup>
+   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Review Draft: <code id=living-standard:the-search-element><a href=forms.html#the-search-element>search</a></code> element with form functionality — Last Updated <span class=pubdate>27 November 2021</span></h2></hgroup>
    
+
    
 
    
@@ -1416,7 +1417,8 @@
     <code id=the-stack-of-open-elements:listing><a href=obsolete.html#listing>listing</a></code>, <code id=the-stack-of-open-elements:the-main-element><a href=grouping-content.html#the-main-element>main</a></code>, <code id=the-stack-of-open-elements:the-marquee-element><a href=obsolete.html#the-marquee-element>marquee</a></code>, <code id=the-stack-of-open-elements:the-menu-element><a href=grouping-content.html#the-menu-element>menu</a></code>,
     <code id=the-stack-of-open-elements:the-meta-element><a href=semantics.html#the-meta-element>meta</a></code>, <code id=the-stack-of-open-elements:the-nav-element><a href=sections.html#the-nav-element>nav</a></code>, <code id=the-stack-of-open-elements:noembed><a href=obsolete.html#noembed>noembed</a></code>, <code id=the-stack-of-open-elements:noframes><a href=obsolete.html#noframes>noframes</a></code>,
     <code id=the-stack-of-open-elements:the-noscript-element><a href=scripting.html#the-noscript-element>noscript</a></code>, <code id=the-stack-of-open-elements:the-object-element><a href=iframe-embed-object.html#the-object-element>object</a></code>, <code id=the-stack-of-open-elements:the-ol-element><a href=grouping-content.html#the-ol-element>ol</a></code>, <code id=the-stack-of-open-elements:the-p-element><a href=grouping-content.html#the-p-element>p</a></code>, <code id=the-stack-of-open-elements:the-param-element><a href=iframe-embed-object.html#the-param-element>param</a></code>,
-    <code id=the-stack-of-open-elements:plaintext><a href=obsolete.html#plaintext>plaintext</a></code>, <code id=the-stack-of-open-elements:the-pre-element><a href=grouping-content.html#the-pre-element>pre</a></code>, <code id=the-stack-of-open-elements:the-script-element><a href=scripting.html#the-script-element>script</a></code>, <code id=the-stack-of-open-elements:the-section-element><a href=sections.html#the-section-element>section</a></code>,
+    <code id=the-stack-of-open-elements:plaintext><a href=obsolete.html#plaintext>plaintext</a></code>, <code id=the-stack-of-open-elements:the-pre-element><a href=grouping-content.html#the-pre-element>pre</a></code>, <code id=the-stack-of-open-elements:the-script-element><a href=scripting.html#the-script-element>script</a></code>,
+    <code id=the-stack-of-open-elements:the-search-element><a href=forms.html#the-search-element>search</a></code>, <code id=the-stack-of-open-elements:the-section-element><a href=sections.html#the-section-element>section</a></code>,
     <code id=the-stack-of-open-elements:the-select-element><a href=form-elements.html#the-select-element>select</a></code>, <code id=the-stack-of-open-elements:the-source-element><a href=embedded-content.html#the-source-element>source</a></code>, <code id=the-stack-of-open-elements:the-style-element><a href=semantics.html#the-style-element>style</a></code>, <code id=the-stack-of-open-elements:the-summary-element><a href=interactive-elements.html#the-summary-element>summary</a></code>,
     <code id=the-stack-of-open-elements:the-table-element><a href=tables.html#the-table-element>table</a></code>, <code id=the-stack-of-open-elements:the-tbody-element><a href=tables.html#the-tbody-element>tbody</a></code>, <code id=the-stack-of-open-elements:the-td-element><a href=tables.html#the-td-element>td</a></code>, <code id=the-stack-of-open-elements:the-template-element><a href=scripting.html#the-template-element>template</a></code>,
     <code id=the-stack-of-open-elements:the-textarea-element><a href=form-elements.html#the-textarea-element>textarea</a></code>, <code id=the-stack-of-open-elements:the-tfoot-element><a href=tables.html#the-tfoot-element>tfoot</a></code>, <code id=the-stack-of-open-elements:the-th-element><a href=tables.html#the-th-element>th</a></code>, <code id=the-stack-of-open-elements:the-thead-element><a href=tables.html#the-thead-element>thead</a></code>,
@@ -1562,7 +1564,8 @@
   <a href=#head-element-pointer id=the-element-pointers:head-element-pointer><code>head</code> element pointer</a> gets set to point to this node.</p>
 
   <p>The <a href=#form-element-pointer id=the-element-pointers:form-element-pointer><code>form</code> element pointer</a> points to the last
-  <code id=the-element-pointers:the-form-element><a href=forms.html#the-form-element>form</a></code> element that was opened and whose end tag has not yet been seen. It is used to
+  <a href=forms.html#concept-form id=the-element-pointers:concept-form>form</a> (<code id=the-element-pointers:the-form-element><a href=forms.html#the-form-element>form</a></code> or <code id=the-element-pointers:the-search-element><a href=forms.html#the-search-element>search</a></code> element)
+  that was opened and whose end tag has not yet been seen. It is used to
   make form controls associate with forms in the face of dramatically bad markup, for historical
   reasons. It is ignored inside <code id=the-element-pointers:the-template-element><a href=scripting.html#the-template-element>template</a></code> elements.</p>
 
@@ -2868,7 +2871,8 @@
    either not <a href=forms.html#category-listed id=creating-and-inserting-nodes:category-listed>listed</a> or doesn't have a <code id=creating-and-inserting-nodes:attr-fae-form><a href=form-control-infrastructure.html#attr-fae-form>form</a></code> attribute, and the <var>intended parent</var> is in the same
    <a id=creating-and-inserting-nodes:tree href=https://dom.spec.whatwg.org/#concept-tree data-x-internal=tree>tree</a> as the element pointed to by the <a href=#form-element-pointer id=creating-and-inserting-nodes:form-element-pointer-2><code>form</code> element
    pointer</a>, then <a href=form-control-infrastructure.html#concept-form-association id=creating-and-inserting-nodes:concept-form-association>associate</a> <var>element</var>
-   with the <code id=creating-and-inserting-nodes:the-form-element><a href=forms.html#the-form-element>form</a></code> element pointed to by the <a href=#form-element-pointer id=creating-and-inserting-nodes:form-element-pointer-3><code>form</code> element
+   with the <a href=forms.html#concept-form id=creating-and-inserting-nodes:concept-form>form</a> pointed to by the
+   <a href=#form-element-pointer id=creating-and-inserting-nodes:form-element-pointer-3><code>form</code> element
    pointer</a> and set <var>element</var>'s <a id=creating-and-inserting-nodes:parser-inserted-flag href=form-control-infrastructure.html#parser-inserted-flag>parser inserted flag</a>.<li><p>Return <var>element</var>.</ol>
 
   <hr>
@@ -3750,10 +3754,11 @@ document<c- p>.</c->body<c- p>.</c->appendChild<c- p>(</c->text<c- p>);</c->
     <p>If there <em>is</em> a <code id=parsing-main-inbody:the-template-element-6><a href=scripting.html#the-template-element>template</a></code> element on the <a href=#stack-of-open-elements id=parsing-main-inbody:stack-of-open-elements-38>stack of open
     elements</a>, then run these substeps instead:</p>
 
-    <ol><li><p>If the <a href=#stack-of-open-elements id=parsing-main-inbody:stack-of-open-elements-39>stack of open elements</a> does not <a href=#has-an-element-in-scope id=parsing-main-inbody:has-an-element-in-scope-6>have a <code>form</code> element in scope</a>, then this is a <a href=#parse-errors id=parsing-main-inbody:parse-errors-21>parse
-     error</a>; return and ignore the token.<li><p><a href=#generate-implied-end-tags id=parsing-main-inbody:generate-implied-end-tags-7>Generate implied end tags</a>.<li><p>If the <a href=#current-node id=parsing-main-inbody:current-node-11>current node</a> is not a <code id=parsing-main-inbody:the-form-element><a href=forms.html#the-form-element>form</a></code> element, then this is a
-     <a href=#parse-errors id=parsing-main-inbody:parse-errors-22>parse error</a>.<li><p>Pop elements from the <a href=#stack-of-open-elements id=parsing-main-inbody:stack-of-open-elements-40>stack of open elements</a> until a <code id=parsing-main-inbody:the-form-element-2><a href=forms.html#the-form-element>form</a></code>
-     element has been popped from the stack.</ol>
+    <ol><li><p>If the <a href=#stack-of-open-elements id=parsing-main-inbody:stack-of-open-elements-39>stack of open elements</a> does not <a href=#has-an-element-in-scope id=parsing-main-inbody:has-an-element-in-scope-6>have a <span>form</span> in scope</a>, then this is a
+     <a href=#parse-errors id=parsing-main-inbody:parse-errors-21>parse error</a>; return and ignore the token.<li><p><a href=#generate-implied-end-tags id=parsing-main-inbody:generate-implied-end-tags-7>Generate implied end tags</a>.<li><p>If the <a href=#current-node id=parsing-main-inbody:current-node-11>current node</a> is not a <a href=forms.html#concept-form id=parsing-main-inbody:concept-form>form</a>,
+     then this is a <a href=#parse-errors id=parsing-main-inbody:parse-errors-22>parse error</a>.<li><p>Pop elements from the <a href=#stack-of-open-elements id=parsing-main-inbody:stack-of-open-elements-40>stack of open elements</a> until a
+     <a href=forms.html#concept-form id=parsing-main-inbody:concept-form-2>form</a> (<code id=parsing-main-inbody:the-form-element><a href=forms.html#the-form-element>form</a></code> or <code id=parsing-main-inbody:the-search-element><a href=forms.html#the-search-element>search</a></code> element)
+     has been popped from the stack.</ol>
    <dt>An end tag whose tag name is "p"<dd>
     <p>If the <a href=#stack-of-open-elements id=parsing-main-inbody:stack-of-open-elements-41>stack of open elements</a> does not <a href=#has-an-element-in-button-scope id=parsing-main-inbody:has-an-element-in-button-scope-8>have a <code>p</code> element in button scope</a>, then this is a <a href=#parse-errors id=parsing-main-inbody:parse-errors-23>parse
     error</a>; <a href=#insert-an-html-element id=parsing-main-inbody:insert-an-html-element-10>insert an HTML element</a> for a "p" start tag token with no
@@ -4321,7 +4326,8 @@ document<c- p>.</c->body<c- p>.</c->appendChild<c- p>(</c->text<c- p>);</c->
 
     <p><a href=#insert-an-html-element id=parsing-main-intable:insert-an-html-element-7>Insert an HTML element</a> for the token, and set the <a href=#form-element-pointer id=parsing-main-intable:form-element-pointer-2><code>form</code> element pointer</a> to point to the element created.</p>
 
-    <p>Pop that <code id=parsing-main-intable:the-form-element><a href=forms.html#the-form-element>form</a></code> element off the <a href=#stack-of-open-elements id=parsing-main-intable:stack-of-open-elements-5>stack of open elements</a>.</p>
+    <p>Pop that <a href=forms.html#concept-form id=parsing-main-intable:concept-form>form</a> off the
+    <a href=#stack-of-open-elements id=parsing-main-intable:stack-of-open-elements-5>stack of open elements</a>.</p>
    <dt>An end-of-file token<dd>
     <p>Process the token <a href=#using-the-rules-for id=parsing-main-intable:using-the-rules-for-2>using the rules for</a> the "<a href=#parsing-main-inbody id=parsing-main-intable:parsing-main-inbody>in body</a>" <a href=#insertion-mode id=parsing-main-intable:insertion-mode-10>insertion mode</a>.</p>
    <dt>Anything else<dd>
@@ -5415,8 +5421,9 @@ document<c- p>.</c->body<c- p>.</c->appendChild<c- p>(</c->text<c- p>);</c->
   information:</p>
 
   <ul><li>Whether the document is set to <i id=coercing-an-html-dom-into-an-infoset:no-quirks-mode><a data-x-internal=no-quirks-mode href=https://dom.spec.whatwg.org/#concept-document-no-quirks>no-quirks mode</a></i>, <i id=coercing-an-html-dom-into-an-infoset:limited-quirks-mode><a data-x-internal=limited-quirks-mode href=https://dom.spec.whatwg.org/#concept-document-limited-quirks>limited-quirks mode</a></i>, or
-   <i id=coercing-an-html-dom-into-an-infoset:quirks-mode><a data-x-internal=quirks-mode href=https://dom.spec.whatwg.org/#concept-document-quirks>quirks mode</a></i><li>The association between form controls and forms that aren't their nearest <code id=coercing-an-html-dom-into-an-infoset:the-form-element><a href=forms.html#the-form-element>form</a></code>
-   element ancestor (use of the <a href=#form-element-pointer id=coercing-an-html-dom-into-an-infoset:form-element-pointer><code>form</code> element pointer</a> in the parser)<li>The <a id=coercing-an-html-dom-into-an-infoset:template-contents href=scripting.html#template-contents>template contents</a> of any <code id=coercing-an-html-dom-into-an-infoset:the-template-element><a href=scripting.html#the-template-element>template</a></code> elements.</ul>
+   <i id=coercing-an-html-dom-into-an-infoset:quirks-mode><a data-x-internal=quirks-mode href=https://dom.spec.whatwg.org/#concept-document-quirks>quirks mode</a></i><li>The association between form controls and forms that aren't their nearest
+   <a href=forms.html#concept-form id=coercing-an-html-dom-into-an-infoset:concept-form>form</a> ancestor
+   (use of the <a href=#form-element-pointer id=coercing-an-html-dom-into-an-infoset:form-element-pointer><code>form</code> element pointer</a> in the parser)<li>The <a id=coercing-an-html-dom-into-an-infoset:template-contents href=scripting.html#template-contents>template contents</a> of any <code id=coercing-an-html-dom-into-an-infoset:the-template-element><a href=scripting.html#the-template-element>template</a></code> elements.</ul>
 
   <p class=note>The mutations allowed by this section apply <em>after</em> the <a href=#html-parser id=coercing-an-html-dom-into-an-infoset:html-parser-5>HTML
   parser</a>'s rules have been applied. For example, a <code>&lt;a::></code> start tag
@@ -5848,14 +5855,15 @@ document<c- p>.</c->body<c- p>.</c->appendChild<c- p>(</c->text<c- p>);</c->
 
    <ul class=domTree><li class=t1><code id=serialising-html-fragments:the-html-element><a href=semantics.html#the-html-element>html</a></code><ul><li class=t1><code id=serialising-html-fragments:the-head-element><a href=semantics.html#the-head-element>head</a></code><li class=t1><code id=serialising-html-fragments:the-body-element><a href=sections.html#the-body-element>body</a></code><ul><li class=t1><code id=serialising-html-fragments:the-form-element><a href=forms.html#the-form-element>form</a></code> <span class=t2><code id=serialising-html-fragments:the-id-attribute class="attribute name"><a href=dom.html#the-id-attribute>id</a></code>="<code class="attribute value">outer</code>"</span><ul><li class=t1><code id=serialising-html-fragments:the-div-element><a href=grouping-content.html#the-div-element>div</a></code><ul><li class=t1><code id=serialising-html-fragments:the-form-element-2><a href=forms.html#the-form-element>form</a></code> <span class=t2><code id=serialising-html-fragments:the-id-attribute-2 class="attribute name"><a href=dom.html#the-id-attribute>id</a></code>="<code class="attribute value">inner</code>"</span><ul><li class=t1><code id=serialising-html-fragments:the-input-element><a href=input.html#the-input-element>input</a></code></ul></ul></ul></ul></ul></ul>
 
-   <p>The <code id=serialising-html-fragments:the-input-element-2><a href=input.html#the-input-element>input</a></code> element will be associated with the inner <code id=serialising-html-fragments:the-form-element-3><a href=forms.html#the-form-element>form</a></code> element.
+   <p>The <code id=serialising-html-fragments:the-input-element-2><a href=input.html#the-input-element>input</a></code> element will be associated with the inner
+   <a href=forms.html#concept-form id=serialising-html-fragments:concept-form>form</a>.
    Now, if this tree structure is serialized and reparsed, the <code>&lt;form
    id="inner"></code> start tag will be ignored, and so the <code id=serialising-html-fragments:the-input-element-3><a href=input.html#the-input-element>input</a></code> element will be
-   associated with the outer <code id=serialising-html-fragments:the-form-element-4><a href=forms.html#the-form-element>form</a></code> element instead.</p>
+   associated with the outer <a href=forms.html#concept-form id=serialising-html-fragments:concept-form-2>form</a> instead.</p>
 
    <pre><code class='html'><c- p>&lt;</c-><c- f>html</c-><c- p>&gt;&lt;</c-><c- f>head</c-><c- p>&gt;&lt;/</c-><c- f>head</c-><c- p>&gt;&lt;</c-><c- f>body</c-><c- p>&gt;&lt;</c-><c- f>form</c-> <c- e>id</c-><c- o>=</c-><c- s>&quot;outer&quot;</c-><c- p>&gt;&lt;</c-><c- f>div</c-><c- p>&gt;</c-><mark><c- p>&lt;</c-><c- f>form</c-> <c- e>id</c-><c- o>=</c-><c- s>&quot;inner&quot;</c-><c- p>&gt;</c-></mark><c- p>&lt;</c-><c- f>input</c-><c- p>&gt;&lt;/</c-><c- f>form</c-><c- p>&gt;&lt;/</c-><c- f>div</c-><c- p>&gt;&lt;/</c-><c- f>form</c-><c- p>&gt;&lt;/</c-><c- f>body</c-><c- p>&gt;&lt;/</c-><c- f>html</c-><c- p>&gt;</c-></code></pre>
 
-   <ul class=domTree><li class=t1><code id=serialising-html-fragments:the-html-element-2><a href=semantics.html#the-html-element>html</a></code><ul><li class=t1><code id=serialising-html-fragments:the-head-element-2><a href=semantics.html#the-head-element>head</a></code><li class=t1><code id=serialising-html-fragments:the-body-element-2><a href=sections.html#the-body-element>body</a></code><ul><li class=t1><code id=serialising-html-fragments:the-form-element-5><a href=forms.html#the-form-element>form</a></code> <span class=t2><code id=serialising-html-fragments:the-id-attribute-3 class="attribute name"><a href=dom.html#the-id-attribute>id</a></code>="<code class="attribute value">outer</code>"</span><ul><li class=t1><code id=serialising-html-fragments:the-div-element-2><a href=grouping-content.html#the-div-element>div</a></code><ul><li class=t1><code id=serialising-html-fragments:the-input-element-4><a href=input.html#the-input-element>input</a></code></ul></ul></ul></ul></ul>
+   <ul class=domTree><li class=t1><code id=serialising-html-fragments:the-html-element-2><a href=semantics.html#the-html-element>html</a></code><ul><li class=t1><code id=serialising-html-fragments:the-head-element-2><a href=semantics.html#the-head-element>head</a></code><li class=t1><code id=serialising-html-fragments:the-body-element-2><a href=sections.html#the-body-element>body</a></code><ul><li class=t1><code id=serialising-html-fragments:the-form-element-3><a href=forms.html#the-form-element>form</a></code> <span class=t2><code id=serialising-html-fragments:the-id-attribute-3 class="attribute name"><a href=dom.html#the-id-attribute>id</a></code>="<code class="attribute value">outer</code>"</span><ul><li class=t1><code id=serialising-html-fragments:the-div-element-2><a href=grouping-content.html#the-div-element>div</a></code><ul><li class=t1><code id=serialising-html-fragments:the-input-element-4><a href=input.html#the-input-element>input</a></code></ul></ul></ul></ul></ul>
 
   </div>
 
@@ -6025,10 +6033,12 @@ console<c- p>.</c->assert<c- p>(</c->container<c- p>.</c->firstChild <c- k>insta
 
     <p class=note>The parser will reference the <var id=parsing-html-fragments:concept-frag-parse-context-8><a href=#concept-frag-parse-context>context</a></var> element as part of that algorithm.</p>
    <li>
-    <p>Set the parser's <a href=#form-element-pointer id=parsing-html-fragments:form-element-pointer><code>form</code> element pointer</a> to the nearest node to the
-    <var id=parsing-html-fragments:concept-frag-parse-context-9><a href=#concept-frag-parse-context>context</a></var> element that is a <code id=parsing-html-fragments:the-form-element><a href=forms.html#the-form-element>form</a></code>
-    element (going straight up the ancestor chain, and including the element itself, if it is a
-    <code id=parsing-html-fragments:the-form-element-2><a href=forms.html#the-form-element>form</a></code> element), if any. (If there is no such <code id=parsing-html-fragments:the-form-element-3><a href=forms.html#the-form-element>form</a></code> element, the
+    <p>Set the parser's <a href=#form-element-pointer id=parsing-html-fragments:form-element-pointer><code>form</code> element pointer</a>
+    to the nearest node to the <var id=parsing-html-fragments:concept-frag-parse-context-9><a href=#concept-frag-parse-context>context</a></var>
+    element that is a <a href=forms.html#concept-form id=parsing-html-fragments:concept-form>form</a>
+    (going straight up the ancestor chain, and including the element itself, if it is a
+    <a href=forms.html#concept-form id=parsing-html-fragments:concept-form-2>form</a>), if any. (If there is no such
+    <a href=forms.html#concept-form id=parsing-html-fragments:concept-form-3>form</a>, the
     <a href=#form-element-pointer id=parsing-html-fragments:form-element-pointer-2><code>form</code> element pointer</a> keeps its initial value, null.)</p>
    <li>
     <p>Place the <var>input</var> into the <a href=#input-stream id=parsing-html-fragments:input-stream>input stream</a> for the <a href=#html-parser id=parsing-html-fragments:html-parser-3>HTML

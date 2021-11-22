@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Standard</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/spec.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/styles.css crossorigin=""><script>
+<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Specification Draft: &lt;search> element with form functionality</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/spec.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/styles.css crossorigin=""><script>
    function toggleStatus(div) {
      div.parentNode.classList.toggle('wrapped');
    }
@@ -8,12 +8,13 @@
   </script><body>
   
   <script async="" crossorigin="" src=/html-dfn.js></script>
-  <script data-file-issue-url=https://github.com/whatwg/html/issues/new async="" crossorigin="" src=https://resources.whatwg.org/file-issue.js></script>
+  <script data-file-issue-url=https://github.com/Kaleidea/whatwg-html-draft/issues/new async="" crossorigin="" src=https://resources.whatwg.org/file-issue.js></script>
   
   <header id=head class="head with-buttons">
    <a href=https://whatwg.org/ class=logo><img width=100 alt=WHATWG crossorigin="" src=https://resources.whatwg.org/logo.svg height=100></a>
-   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Living Standard — Last Updated <span class=pubdate>22 November 2021</span></h2></hgroup>
+   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Review Draft: <code id=living-standard:the-search-element><a href=forms.html#the-search-element>search</a></code> element with form functionality — Last Updated <span class=pubdate>27 November 2021</span></h2></hgroup>
    
+
    
 
    
@@ -296,7 +297,7 @@
   <pre><code class='css'><c- n>@namespace</c-> <c- nf>url</c-><c- p>(</c-><c- s>http://www.w3.org/1999/xhtml</c-><c- p>);</c->
 
 <c- f>address, blockquote, center, dialog, div, figure, figcaption, footer, form,</c->
-<c- f>header, hr, legend, listing, main, p, plaintext, pre, xmp </c-><c- p>{</c->
+<c- f>header, hr, legend, listing, main, p, plaintext, pre, search, xmp </c-><c- p>{</c->
   <c- k>display</c-><c- p>:</c-> block<c- p>;</c->
 <c- p>}</c->
 
@@ -511,8 +512,8 @@
 
 <c- f>address, blockquote, center, div, figure, figcaption, footer, form, header, hr,</c->
 <c- f>legend, listing, main, p, plaintext, pre, summary, xmp, article, aside, h1, h2,</c->
-<c- f>h3, h4, h5, h6, hgroup, nav, section, table, caption, colgroup, col, thead,</c->
-<c- f>tbody, tfoot, tr, td, th, dir, dd, dl, dt, menu, ol, ul, li, bdi, output,</c->
+<c- f>h3, h4, h5, h6, hgroup, nav, section, search, table, caption, colgroup, col,</c->
+<c- f>thead, tbody, tfoot, tr, td, th, dir, dd, dl, dt, menu, ol, ul, li, bdi, output,</c->
 <c- f>[dir=ltr i], [dir=rtl i], [dir=auto i] </c-><c- p>{</c->
   <c- k>unicode-bidi</c-><c- p>:</c-> isolate<c- p>;</c-> 
 <c- p>}</c->
@@ -547,8 +548,8 @@
 
 <c- f>address, blockquote, center, div, figure, figcaption, footer, form, header, hr,</c->
 <c- f>legend, listing, main, p, plaintext, pre, summary, xmp, article, aside, h1, h2,</c->
-<c- f>h3, h4, h5, h6, hgroup, nav, section, table, caption, colgroup, col, thead,</c->
-<c- f>tbody, tfoot, tr, td, th, dir, dd, dl, dt, menu, ol, ul, li, [dir=ltr i],</c->
+<c- f>h3, h4, h5, h6, hgroup, nav, section, search, table, caption, colgroup, col,</c->
+<c- f>thead, tbody, tfoot, tr, td, th, dir, dd, dl, dt, menu, ol, ul, li, [dir=ltr i],</c->
 <c- f>[dir=rtl i], [dir=auto i], *|* </c-><c- p>{</c->
   <c- k>unicode-bidi</c-><c- p>:</c-> bidi-override<c- p>;</c->
 <c- p>}</c->

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Standard, Edition for Web Developers</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/dev/styles.css crossorigin=""><script>
+<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Specification Draft: &lt;search> element with form functionality, Edition for Web Developers</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/dev/styles.css crossorigin=""><script>
    function toggleStatus(div) {
      div.parentNode.classList.toggle('wrapped');
    }
@@ -13,7 +13,8 @@
   <header id=head class="head with-buttons">
    <a href=https://whatwg.org/ class=logo><img width=100 alt=WHATWG crossorigin="" src=https://resources.whatwg.org/logo.svg height=100></a>
    
-   <hgroup><h1><a rel=home href=/dev/>HTML: The Living Standard</a></h1><h2 id=dev-edition-h2 class="no-num no-toc">Edition for Web Developers — Last Updated <span class=pubdate>22 November 2021</span></h2></hgroup>
+   <hgroup><h1><a rel=home href=/dev/>HTML: The Living Standard — Edition for Web Developers</a></h1><h2 id=dev-edition-h2 class="no-num no-toc">Review Draft: <code id=dev-edition-h2:the-search-element><a href=forms.html#the-search-element>search</a></code> element with form functionality — Last Updated <span class=pubdate>27 November 2021</span></h2></hgroup>
+
    
 
    <div id=search>
@@ -36,7 +37,7 @@
 
   
 
-  <nav><a href=comms.html>← 9 Communication</a> — <a href=./>Table of Contents</a> — <a href=web-sockets.html>9.3 Web sockets →</a></nav><ol class=toc><li><ol><li><a href=server-sent-events.html#server-sent-events><span class=secno>9.2</span> Server-sent events</a><ol><li><a href=server-sent-events.html#server-sent-events-intro><span class=secno>9.2.1</span> Introduction</a><li><a href=server-sent-events.html#the-eventsource-interface><span class=secno>9.2.2</span> The <code>EventSource</code> interface</a><li><a href=server-sent-events.html#the-event-stream-format><span class=secno>9.2.3</span> The event stream format</a><li><a href=server-sent-events.html#authoring-notes><span class=secno>9.2.4</span> Authoring notes</a></ol></ol></ol><h3 id=server-sent-events><span class=secno>9.2</span> <dfn>Server-sent events</dfn><a href=#server-sent-events class=self-link></a></h3><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events title="Traditionally, a web page has to send a request to the server to receive new data; that is, the page requests data from the server. With server-sent events, it's possible for a server to send new data to a web page at any time, by pushing messages to the web page. These incoming messages can be treated as Events + data inside the web page.">Server-sent_events</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>6+</span></span><span class="safari yes"><span>Safari</span><span>5+</span></span><span class="chrome yes"><span>Chrome</span><span>6+</span></span><hr><span class="opera yes"><span>Opera</span><span>11+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>45+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>5+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>37+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>11+</span></span></div></div></div>
+  <nav><a href=comms.html>← 9 Communication</a> — <a href=./>Table of Contents</a> — <a href=web-sockets.html>9.3 Web sockets →</a></nav><ol class=toc><li><ol><li><a href=server-sent-events.html#server-sent-events><span class=secno>9.2</span> Server-sent events</a><ol><li><a href=server-sent-events.html#server-sent-events-intro><span class=secno>9.2.1</span> Introduction</a><li><a href=server-sent-events.html#the-eventsource-interface><span class=secno>9.2.2</span> The <code>EventSource</code> interface</a><li><a href=server-sent-events.html#the-last-event-id-header><span class=secno>9.2.3</span> The `<code>Last-Event-ID</code>` header</a><li><a href=server-sent-events.html#the-event-stream-format><span class=secno>9.2.4</span> The event stream format</a><li><a href=server-sent-events.html#authoring-notes><span class=secno>9.2.5</span> Authoring notes</a></ol></ol></ol><h3 id=server-sent-events><span class=secno>9.2</span> <dfn>Server-sent events</dfn><a href=#server-sent-events class=self-link></a></h3><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events title="Traditionally, a web page has to send a request to the server to receive new data; that is, the page requests data from the server. With server-sent events, it's possible for a server to send new data to a web page at any time, by pushing messages to the web page. These incoming messages can be treated as Events + data inside the web page.">Server-sent_events</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>6+</span></span><span class="safari yes"><span>Safari</span><span>5+</span></span><span class="chrome yes"><span>Chrome</span><span>6+</span></span><hr><span class="opera yes"><span>Opera</span><span>11+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>45+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>5+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>37+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>11+</span></span></div></div></div>
 
   <h4 id=server-sent-events-intro><span class=secno>9.2.1</span> Introduction<a href=#server-sent-events-intro class=self-link></a></h4>
 
@@ -156,9 +157,20 @@ source<c- p>.</c->addEventListener<c- p>(</c-><c- t>&apos;remove&apos;</c-><c- p
   
 
 
+  <h4 id=the-last-event-id-header><span class=secno>9.2.3</span> The `<code id=the-last-event-id-header:last-event-id><a href=#last-event-id>Last-Event-ID</a></code>` header<a href=#the-last-event-id-header class=self-link></a></h4>
+
+  <p>The <dfn id=last-event-id data-dfn-type=http-header><code>Last-Event-ID</code></dfn>` HTTP request header reports an
+  <code>EventSource</code> object's <span>last event ID
+  string</span> to the server when the user agent is to <span>reestablish the connection</span>.
+
+  <p class=XXX>See <a href=https://github.com/whatwg/html/issues/7363>whatwg/html issue
+  #7363</a> to define the value space better. It is essentially any UTF-8 encoded string, that does
+  not contain U+0000 NULL, U+000A LF, or U+000D CR.</p>
+
+
   
 
-  <h4 id=the-event-stream-format><span class=secno>9.2.3</span> The event stream format<a href=#the-event-stream-format class=self-link></a></h4>
+  <h4 id=the-event-stream-format><span class=secno>9.2.4</span> The event stream format<a href=#the-event-stream-format class=self-link></a></h4>
 
   <p>This event stream format's <a id=the-event-stream-format:mime-type href=https://mimesniff.spec.whatwg.org/#mime-type data-x-internal=mime-type>MIME type</a> is <code>text/event-stream</code>.</p>
 
@@ -194,7 +206,6 @@ source<c- p>.</c->addEventListener<c- p>(</c-><c- t>&apos;remove&apos;</c-><c- p
   
 
   <div class=example>
-
    <p>The following event stream, once followed by a blank line:</p>
    <pre>data: YHOO
 data: +2
@@ -216,21 +227,20 @@ stocks<c- p>.</c->onmessage <c- o>=</c-> <c- a>function</c-> <c- p>(</c->event<c
    <pre><code class='js'><c- a>function</c-> updateStocks<c- p>(</c->symbol<c- p>,</c-> delta<c- p>,</c-> value<c- p>)</c-> <c- p>{</c-> <c- p>...</c-> <c- p>}</c-></code></pre>
 
    <p>...or some such.</p>
-
   </div>
 
   <div class=example>
-
    <p>The following stream contains four blocks. The first block has just a comment, and will fire
    nothing. The second block has two fields with names "data" and "id" respectively; an event will
    be fired for this block, with the data "first event", and will then set the last event ID to "1"
-   so that if the connection died between this block and the next, the server would be sent a `<code>Last-Event-ID</code>` header with the value "1". The third block
+   so that if the connection died between this block and the next, the server would be sent a
+   `<code id=the-event-stream-format:last-event-id><a href=#last-event-id>Last-Event-ID</a></code>` header with the value `<code>1</code>`. The third block
    fires an event with data "second event", and also has an "id" field, this time with no value,
-   which resets the last event ID to the empty string (meaning no `<code>Last-Event-ID</code>` header will now be sent in the event of a
-   reconnection being attempted). Finally, the last block just fires an event with the data
-   " third event" (with a single leading space character). Note that the last still has to
-   end with a blank line, the end of the stream is not enough to trigger the dispatch of the last
-   event.</p>
+   which resets the last event ID to the empty string (meaning no `<code id=the-event-stream-format:last-event-id-2><a href=#last-event-id>Last-Event-ID</a></code>`
+   header will now be sent in the event of a reconnection being attempted). Finally, the last block
+   just fires an event with the data " third event" (with a single leading space
+   character). Note that the last still has to end with a blank line, the end of the stream is not
+   enough to trigger the dispatch of the last event.</p>
 
    <pre>: test stream
 
@@ -245,7 +255,6 @@ data:  third event
   </div>
 
   <div class=example>
-
    <p>The following stream fires two events:</p>
 
    <pre>data
@@ -258,11 +267,9 @@ data:</pre>
    <p>The first block fires events with the data set to the empty string, as would the last block if
    it was followed by a blank line. The middle block fires an event with the data set to a single
    newline character. The last block is discarded because it is not followed by a blank line.</p>
-
   </div>
 
   <div class=example>
-
    <p>The following stream fires two identical events:</p>
 
    <pre>data:test
@@ -271,11 +278,10 @@ data: test
 </pre>
 
    <p>This is because the space after the colon is ignored if present.</p>
-
   </div>
 
 
-  <h4 id=authoring-notes><span class=secno>9.2.4</span> Authoring notes<a href=#authoring-notes class=self-link></a></h4>
+  <h4 id=authoring-notes><span class=secno>9.2.5</span> Authoring notes<a href=#authoring-notes class=self-link></a></h4>
 
   <p>Legacy proxy servers are known to, in certain cases, drop HTTP connections after a short
   timeout. To protect against such proxy servers, authors can include a comment line (one starting

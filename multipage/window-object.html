@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Standard</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/spec.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/styles.css crossorigin=""><script>
+<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Specification Draft: &lt;search> element with form functionality</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/spec.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/styles.css crossorigin=""><script>
    function toggleStatus(div) {
      div.parentNode.classList.toggle('wrapped');
    }
@@ -8,12 +8,13 @@
   </script><body>
   
   <script async="" crossorigin="" src=/html-dfn.js></script>
-  <script data-file-issue-url=https://github.com/whatwg/html/issues/new async="" crossorigin="" src=https://resources.whatwg.org/file-issue.js></script>
+  <script data-file-issue-url=https://github.com/Kaleidea/whatwg-html-draft/issues/new async="" crossorigin="" src=https://resources.whatwg.org/file-issue.js></script>
   
   <header id=head class="head with-buttons">
    <a href=https://whatwg.org/ class=logo><img width=100 alt=WHATWG crossorigin="" src=https://resources.whatwg.org/logo.svg height=100></a>
-   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Living Standard — Last Updated <span class=pubdate>22 November 2021</span></h2></hgroup>
+   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Review Draft: <code id=living-standard:the-search-element><a href=forms.html#the-search-element>search</a></code> element with form functionality — Last Updated <span class=pubdate>27 November 2021</span></h2></hgroup>
    
+
    
 
    
@@ -437,7 +438,7 @@
   
   <ul><li><p><var>window</var>'s <a href=#document-tree-child-browsing-context-name-property-set id=named-access-on-the-window-object:document-tree-child-browsing-context-name-property-set>document-tree child browsing context name property
    set</a>;<li><p>the value of the <code>name</code> content attribute for all <code id=named-access-on-the-window-object:the-embed-element><a href=iframe-embed-object.html#the-embed-element>embed</a></code>,
-   <code id=named-access-on-the-window-object:the-form-element><a href=forms.html#the-form-element>form</a></code>, <code id=named-access-on-the-window-object:the-img-element><a href=embedded-content.html#the-img-element>img</a></code>, and <code id=named-access-on-the-window-object:the-object-element><a href=iframe-embed-object.html#the-object-element>object</a></code> elements that
+   <code id=named-access-on-the-window-object:the-form-element><a href=forms.html#the-form-element>form</a></code>, <code id=named-access-on-the-window-object:the-search-element><a href=forms.html#the-search-element>search</a></code>, <code id=named-access-on-the-window-object:the-img-element><a href=embedded-content.html#the-img-element>img</a></code>, and <code id=named-access-on-the-window-object:the-object-element><a href=iframe-embed-object.html#the-object-element>object</a></code> elements that
    have a non-empty <code>name</code> content attribute and are <a id=named-access-on-the-window-object:in-a-document-tree href=https://dom.spec.whatwg.org/#in-a-document-tree data-x-internal=in-a-document-tree>in a document
    tree</a> with <var>window</var>'s <a href=#concept-document-window id=named-access-on-the-window-object:concept-document-window>associated
    <code>Document</code></a> as their <a id=named-access-on-the-window-object:root href=https://dom.spec.whatwg.org/#concept-tree-root data-x-internal=root>root</a>; and<li><p>the value of the <code id=named-access-on-the-window-object:the-id-attribute><a href=dom.html#the-id-attribute>id</a></code> content attribute for all <a id=named-access-on-the-window-object:html-elements href=infrastructure.html#html-elements>HTML
@@ -471,7 +472,7 @@
   <ul><li><p><a href=browsers.html#document-tree-child-browsing-context id=named-access-on-the-window-object:document-tree-child-browsing-context-4>document-tree child browsing
    contexts</a> of <var>window</var>'s <a href=#concept-document-window id=named-access-on-the-window-object:concept-document-window-4>associated
    <code>Document</code></a> whose <a href=browsers.html#browsing-context-name id=named-access-on-the-window-object:browsing-context-name-5>name</a> is
-   <var>name</var>;<li><p><code id=named-access-on-the-window-object:the-embed-element-2><a href=iframe-embed-object.html#the-embed-element>embed</a></code>, <code id=named-access-on-the-window-object:the-form-element-2><a href=forms.html#the-form-element>form</a></code>, <code id=named-access-on-the-window-object:the-img-element-2><a href=embedded-content.html#the-img-element>img</a></code>, or
+   <var>name</var>;<li><p><code id=named-access-on-the-window-object:the-embed-element-2><a href=iframe-embed-object.html#the-embed-element>embed</a></code>, <code id=named-access-on-the-window-object:the-form-element-2><a href=forms.html#the-form-element>form</a></code>, <code id=named-access-on-the-window-object:the-search-element-2><a href=forms.html#the-search-element>search</a></code>, <code id=named-access-on-the-window-object:the-img-element-2><a href=embedded-content.html#the-img-element>img</a></code>, or
    <code id=named-access-on-the-window-object:the-object-element-2><a href=iframe-embed-object.html#the-object-element>object</a></code> elements that have a <code>name</code> content attribute whose
    value is <var>name</var> and are <a id=named-access-on-the-window-object:in-a-document-tree-3 href=https://dom.spec.whatwg.org/#in-a-document-tree data-x-internal=in-a-document-tree>in a document tree</a> with <var>window</var>'s <a href=#concept-document-window id=named-access-on-the-window-object:concept-document-window-5>associated <code>Document</code></a> as their
    <a id=named-access-on-the-window-object:root-3 href=https://dom.spec.whatwg.org/#concept-tree-root data-x-internal=root>root</a>; and<li><p><a id=named-access-on-the-window-object:html-elements-2 href=infrastructure.html#html-elements>HTML elements</a> that have an <code id=named-access-on-the-window-object:the-id-attribute-3><a href=dom.html#the-id-attribute>id</a></code> content attribute

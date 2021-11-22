@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Standard</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/spec.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/styles.css crossorigin=""><script>
+<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Specification Draft: &lt;search> element with form functionality</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/spec.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/styles.css crossorigin=""><script>
    function toggleStatus(div) {
      div.parentNode.classList.toggle('wrapped');
    }
@@ -8,12 +8,13 @@
   </script><body>
   
   <script async="" crossorigin="" src=/html-dfn.js></script>
-  <script data-file-issue-url=https://github.com/whatwg/html/issues/new async="" crossorigin="" src=https://resources.whatwg.org/file-issue.js></script>
+  <script data-file-issue-url=https://github.com/Kaleidea/whatwg-html-draft/issues/new async="" crossorigin="" src=https://resources.whatwg.org/file-issue.js></script>
   
   <header id=head class="head with-buttons">
    <a href=https://whatwg.org/ class=logo><img width=100 alt=WHATWG crossorigin="" src=https://resources.whatwg.org/logo.svg height=100></a>
-   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Living Standard — Last Updated <span class=pubdate>22 November 2021</span></h2></hgroup>
+   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Review Draft: <code id=living-standard:the-search-element><a href=forms.html#the-search-element>search</a></code> element with form functionality — Last Updated <span class=pubdate>27 November 2021</span></h2></hgroup>
    
+
    
 
    
@@ -33,7 +34,7 @@
 
   
 
-  <nav><a href=window-object.html>← 7.3 The Window object</a> — <a href=./>Table of Contents</a> — <a href=history.html>7.10 Session history and navigation →</a></nav><ol class=toc><li id=toc-browsers><ol><li><a href=origin.html#origin><span class=secno>7.5</span> Origin</a><ol><li><a href=origin.html#sites><span class=secno>7.5.1</span> Sites</a><li><a href=origin.html#relaxing-the-same-origin-restriction><span class=secno>7.5.2</span> Relaxing the same-origin restriction</a><li><a href=origin.html#origin-keyed-agent-clusters><span class=secno>7.5.3</span> Origin-keyed agent clusters</a></ol><li><a href=origin.html#sandboxing><span class=secno>7.6</span> Sandboxing</a><li><a href=origin.html#cross-origin-opener-policies><span class=secno>7.7</span> Cross-origin opener policies</a><ol><li><a href=origin.html#the-headers><span class=secno>7.7.1</span> The headers</a><li><a href=origin.html#browsing-context-group-switches-due-to-cross-origin-opener-policy><span class=secno>7.7.2</span> Browsing context group switches due to cross-origin opener policy</a><li><a href=origin.html#reporting><span class=secno>7.7.3</span> Reporting</a></ol><li><a href=origin.html#coep><span class=secno>7.8</span> Cross-origin embedder policies</a><ol><li><a href=origin.html#the-headers-2><span class=secno>7.8.1</span> The headers</a><li><a href=origin.html#embedder-policy-checks><span class=secno>7.8.2</span> Embedder policy checks</a></ol><li><a href=origin.html#policy-containers><span class=secno>7.9</span> Policy containers</a></ol></ol><h3 id=origin><span class=secno>7.5</span> Origin<a href=#origin class=self-link></a></h3>
+  <nav><a href=window-object.html>← 7.3 The Window object</a> — <a href=./>Table of Contents</a> — <a href=history.html>7.10 Session history and navigation →</a></nav><ol class=toc><li id=toc-browsers><ol><li><a href=origin.html#origin><span class=secno>7.5</span> Origin</a><ol><li><a href=origin.html#sites><span class=secno>7.5.1</span> Sites</a><li><a href=origin.html#relaxing-the-same-origin-restriction><span class=secno>7.5.2</span> Relaxing the same-origin restriction</a><li><a href=origin.html#origin-keyed-agent-clusters><span class=secno>7.5.3</span> Origin-keyed agent clusters</a></ol><li><a href=origin.html#sandboxing><span class=secno>7.6</span> Sandboxing</a><li><a href=origin.html#cross-origin-opener-policies><span class=secno>7.7</span> Cross-origin opener policies</a><ol><li><a href=origin.html#the-coop-headers><span class=secno>7.7.1</span> The headers</a><li><a href=origin.html#browsing-context-group-switches-due-to-cross-origin-opener-policy><span class=secno>7.7.2</span> Browsing context group switches due to cross-origin opener policy</a><li><a href=origin.html#reporting><span class=secno>7.7.3</span> Reporting</a></ol><li><a href=origin.html#coep><span class=secno>7.8</span> Cross-origin embedder policies</a><ol><li><a href=origin.html#the-coep-headers><span class=secno>7.8.1</span> The headers</a><li><a href=origin.html#embedder-policy-checks><span class=secno>7.8.2</span> Embedder policy checks</a></ol><li><a href=origin.html#policy-containers><span class=secno>7.9</span> Policy containers</a></ol></ol><h3 id=origin><span class=secno>7.5</span> Origin<a href=#origin class=self-link></a></h3>
   
 
   <p>Origins are the fundamental currency of the web's security model. Two actors in the web
@@ -352,8 +353,9 @@
 
   <p>A <code id=origin-keyed-agent-clusters:document><a href=dom.html#document>Document</a></code> delivered over a <a id=origin-keyed-agent-clusters:secure-context href=webappapis.html#secure-context>secure context</a> can request that it be
   placed in an <a href=#concept-origin id=origin-keyed-agent-clusters:concept-origin-2>origin</a>-<a href=webappapis.html#agent-cluster-key id=origin-keyed-agent-clusters:agent-cluster-key-2>keyed</a> <a id=origin-keyed-agent-clusters:agent-cluster-2 href=https://tc39.es/ecma262/#sec-agent-clusters data-x-internal=agent-cluster>agent
-  cluster</a>, by using the `<code id=origin-keyed-agent-clusters:origin-agent-cluster><a href=iana.html#origin-agent-cluster>Origin-Agent-Cluster</a></code>` HTTP response header. This header
-  is a <a href=https://httpwg.org/http-extensions/draft-ietf-httpbis-header-structure.html id=origin-keyed-agent-clusters:http-structured-header data-x-internal=http-structured-header>structured header</a> whose value must be a <a href=https://httpwg.org/http-extensions/draft-ietf-httpbis-header-structure.html#boolean id=origin-keyed-agent-clusters:http-structured-header-boolean data-x-internal=http-structured-header-boolean>boolean</a>. <a href=references.html#refsSTRUCTURED-FIELDS>[STRUCTURED-FIELDS]</a></p>
+  cluster</a>, by using the `<dfn id=origin-agent-cluster data-dfn-type=http-header><code>Origin-Agent-Cluster</code></dfn>` HTTP
+  response header. This header is a <a href=https://httpwg.org/http-extensions/draft-ietf-httpbis-header-structure.html id=origin-keyed-agent-clusters:http-structured-header data-x-internal=http-structured-header>structured header</a>
+  whose value must be a <a href=https://httpwg.org/http-extensions/draft-ietf-httpbis-header-structure.html#boolean id=origin-keyed-agent-clusters:http-structured-header-boolean data-x-internal=http-structured-header-boolean>boolean</a>. <a href=references.html#refsSTRUCTURED-FIELDS>[STRUCTURED-FIELDS]</a></p>
 
   <p>Per the processing model in the <a href=browsing-the-web.html#initialise-the-document-object id=origin-keyed-agent-clusters:initialise-the-document-object>create
   and initialize a new <code>Document</code> object</a>, values
@@ -369,10 +371,10 @@
   to allocate implementation-specific resources corresponding to <a href=https://tc39.es/ecma262/#sec-agent-clusters id=origin-keyed-agent-clusters:agent-cluster-3 data-x-internal=agent-cluster>agent
   clusters</a>, such as processes or threads, more efficiently.</p>
 
-  <p>Note that within a <a id=origin-keyed-agent-clusters:browsing-context-group href=browsers.html#browsing-context-group>browsing context group</a>, the `<code id=origin-keyed-agent-clusters:origin-agent-cluster-2><a href=iana.html#origin-agent-cluster>Origin-Agent-Cluster</a></code>` header can never cause same-origin
-  <code id=origin-keyed-agent-clusters:document-4><a href=dom.html#document>Document</a></code> objects to end up in different <a href=https://tc39.es/ecma262/#sec-agent-clusters id=origin-keyed-agent-clusters:agent-cluster-4 data-x-internal=agent-cluster>agent
-  clusters</a>, even if one sends the header and the other doesn't. This is
-  prevented by means of the <a id=origin-keyed-agent-clusters:historical-agent-cluster-key-map href=browsers.html#historical-agent-cluster-key-map>historical agent cluster key map</a>.</p>
+  <p>Note that within a <a id=origin-keyed-agent-clusters:browsing-context-group href=browsers.html#browsing-context-group>browsing context group</a>, the `<code id=origin-keyed-agent-clusters:origin-agent-cluster><a href=#origin-agent-cluster>Origin-Agent-Cluster</a></code>`
+  header can never cause same-origin <code id=origin-keyed-agent-clusters:document-4><a href=dom.html#document>Document</a></code> objects to end up in different <a href=https://tc39.es/ecma262/#sec-agent-clusters id=origin-keyed-agent-clusters:agent-cluster-4 data-x-internal=agent-cluster>agent clusters</a>, even if one sends the header and the other
+  doesn't. This is prevented by means of the <a id=origin-keyed-agent-clusters:historical-agent-cluster-key-map href=browsers.html#historical-agent-cluster-key-map>historical agent cluster key
+  map</a>.</p>
 
   <p class=note>This means that the <code id=origin-keyed-agent-clusters:dom-originagentcluster><a href=#dom-originagentcluster>originAgentCluster</a></code> getter can return false, even if the
   header is set, if the header was omitted on a previously-loaded same-origin page in the same
@@ -390,9 +392,9 @@
   <p class=note>Similarly, <code id=origin-keyed-agent-clusters:document-6><a href=dom.html#document>Document</a></code>s whose <a id=origin-keyed-agent-clusters:agent-cluster-6 href=https://tc39.es/ecma262/#sec-agent-clusters data-x-internal=agent-cluster>agent cluster</a>'s
   <a href=webappapis.html#agent-cluster-cross-origin-isolation id=origin-keyed-agent-clusters:agent-cluster-cross-origin-isolation>cross-origin isolation mode</a> is not
   "<code id=origin-keyed-agent-clusters:cross-origin-isolation-none><a href=browsers.html#cross-origin-isolation-none>none</a></code>" are automatically origin-keyed. The
-  `<code id=origin-keyed-agent-clusters:origin-agent-cluster-3><a href=iana.html#origin-agent-cluster>Origin-Agent-Cluster</a></code>` header might be useful as
-  an additional hint to implementations about resource allocation, since the `<code id=origin-keyed-agent-clusters:cross-origin-opener-policy-2><a href=iana.html#cross-origin-opener-policy-2>Cross-Origin-Opener-Policy</a></code>` and
-  `<code id=origin-keyed-agent-clusters:cross-origin-embedder-policy><a href=iana.html#cross-origin-embedder-policy>Cross-Origin-Embedder-Policy</a></code>` headers used to achieve cross-origin isolation are
+  `<code id=origin-keyed-agent-clusters:origin-agent-cluster-2><a href=#origin-agent-cluster>Origin-Agent-Cluster</a></code>` header might be useful as an additional hint to
+  implementations about resource allocation, since the `<code id=origin-keyed-agent-clusters:cross-origin-opener-policy-2><a href=#cross-origin-opener-policy-2>Cross-Origin-Opener-Policy</a></code>` and
+  `<code id=origin-keyed-agent-clusters:cross-origin-embedder-policy><a href=#cross-origin-embedder-policy>Cross-Origin-Embedder-Policy</a></code>` headers used to achieve cross-origin isolation are
   more about ensuring that everything in the same address space opts in to being there. But adding
   it would have no additional observable effects on author code.</p>
 
@@ -601,9 +603,10 @@
     mode</a> to one of "<code id=cross-origin-opener-policies:cross-origin-isolation-logical><a href=browsers.html#cross-origin-isolation-logical>logical</a></code>" or "<code id=cross-origin-opener-policies:cross-origin-isolation-concrete><a href=browsers.html#cross-origin-isolation-concrete>concrete</a></code>".</p>
 
     <p class=note>"<code id=cross-origin-opener-policies:coop-same-origin-plus-coep><a href=#coop-same-origin-plus-coep>same-origin-plus-COEP</a></code>" cannot
-    be directly set via the `<code id=cross-origin-opener-policies:cross-origin-opener-policy-2-2><a href=iana.html#cross-origin-opener-policy-2>Cross-Origin-Opener-Policy</a></code>` header, but results
-    from a combination of setting both `<code><a href=iana.html#cross-origin-opener-policy-2 id=cross-origin-opener-policies:cross-origin-opener-policy-2-3>Cross-Origin-Opener-Policy</a>: <a href=#coop-same-origin id=cross-origin-opener-policies:coop-same-origin-2>same-origin</a></code>` and a
-    `<code id=cross-origin-opener-policies:cross-origin-embedder-policy><a href=iana.html#cross-origin-embedder-policy>Cross-Origin-Embedder-Policy</a></code>` header whose value is <a href=#compatible-with-cross-origin-isolation id=cross-origin-opener-policies:compatible-with-cross-origin-isolation>compatible with
+    be directly set via the `<code id=cross-origin-opener-policies:cross-origin-opener-policy-2-2><a href=#cross-origin-opener-policy-2>Cross-Origin-Opener-Policy</a></code>` header, but results
+    from a combination of setting both `<code><a href=#cross-origin-opener-policy-2 id=cross-origin-opener-policies:cross-origin-opener-policy-2-3>Cross-Origin-Opener-Policy</a>:
+    <a href=#coop-same-origin id=cross-origin-opener-policies:coop-same-origin-2>same-origin</a></code>` and a
+    `<code id=cross-origin-opener-policies:cross-origin-embedder-policy><a href=#cross-origin-embedder-policy>Cross-Origin-Embedder-Policy</a></code>` header whose value is <a href=#compatible-with-cross-origin-isolation id=cross-origin-opener-policies:compatible-with-cross-origin-isolation>compatible with
     cross-origin isolation</a> together.<p>
    </dl>
 
@@ -624,63 +627,64 @@
    "<code id=cross-origin-opener-policies:coop-unsafe-none-6><a href=#coop-unsafe-none>unsafe-none</a></code>", then return false.<li><p>If <var>A</var> is <var>B</var> and <var>originA</var> is <a href=#same-origin id=cross-origin-opener-policies:same-origin-3>same origin</a> with
    <var>originB</var>, then return true.<li><p>Return false.</ol>
 
-  <h4 id=the-headers><span class=secno>7.7.1</span> The headers<a href=#the-headers class=self-link></a></h4><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy title="The HTTP Cross-Origin-Opener-Policy (COOP) response header allows you to ensure a top-level document does not share a browsing context group with cross-origin documents.">Headers/Cross-Origin-Opener-Policy</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>79+</span></span><span class="safari yes"><span>Safari</span><span title="Requires setting a user preference or runtime flag.">🔰 preview+</span></span><span class="chrome yes"><span>Chrome</span><span>83+</span></span><hr><span class="opera no"><span>Opera</span><span>No</span></span><span class="edge_blink yes"><span>Edge</span><span>83+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>79+</span></span><span class="safari_ios no"><span>Safari iOS</span><span>No</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>83+</span></span><span class="webview_android no"><span>WebView Android</span><span>No</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>13.0+</span></span><span class="opera_android no"><span>Opera Android</span><span>No</span></span></div></div></div>
+  <h4 id=the-coop-headers><span class=secno>7.7.1</span> The headers<a href=#the-coop-headers class=self-link></a></h4>
 
-  <p>A <code id=the-headers:document><a href=dom.html#document>Document</a></code>'s <a href=dom.html#concept-document-coop id=the-headers:concept-document-coop>cross-origin opener
-  policy</a> is derived from the `<code id=the-headers:cross-origin-opener-policy-2><a href=iana.html#cross-origin-opener-policy-2>Cross-Origin-Opener-Policy</a></code>`  and the `<code id=the-headers:cross-origin-opener-policy-report-only><a href=iana.html#cross-origin-opener-policy-report-only>Cross-Origin-Opener-Policy-Report-Only</a></code>`
-  HTTP response headers. These headers are <a href=https://httpwg.org/http-extensions/draft-ietf-httpbis-header-structure.html id=the-headers:http-structured-header data-x-internal=http-structured-header>structured
-  headers</a> whose value must be a <a href=https://httpwg.org/http-extensions/draft-ietf-httpbis-header-structure.html#token id=the-headers:http-structured-header-token data-x-internal=http-structured-header-token>token</a>.
-  <a href=references.html#refsSTRUCTURED-FIELDS>[STRUCTURED-FIELDS]</a></p>
+  <p>A <code id=the-coop-headers:document><a href=dom.html#document>Document</a></code>'s <a href=dom.html#concept-document-coop id=the-coop-headers:concept-document-coop>cross-origin opener
+  policy</a> is derived from the `<dfn id=cross-origin-opener-policy-2 data-dfn-type=http-header><code>Cross-Origin-Opener-Policy</code></dfn>` and `<dfn id=cross-origin-opener-policy-report-only data-dfn-type=http-header><code>Cross-Origin-Opener-Policy-Report-Only</code></dfn>` HTTP response headers.
+  These headers are <a href=https://httpwg.org/http-extensions/draft-ietf-httpbis-header-structure.html id=the-coop-headers:http-structured-header data-x-internal=http-structured-header>structured headers</a> whose value must
+  be a <a href=https://httpwg.org/http-extensions/draft-ietf-httpbis-header-structure.html#token id=the-coop-headers:http-structured-header-token data-x-internal=http-structured-header-token>token</a>. <a href=references.html#refsSTRUCTURED-FIELDS>[STRUCTURED-FIELDS]</a></p>
 
-  <p>The valid <a href=https://httpwg.org/http-extensions/draft-ietf-httpbis-header-structure.html#token id=the-headers:http-structured-header-token-2 data-x-internal=http-structured-header-token>token</a> values are the <a href=#cross-origin-opener-policy-value id=the-headers:cross-origin-opener-policy-value>opener policy values</a>. The token may also have
-  attached <a href=https://httpwg.org/http-extensions/draft-ietf-httpbis-header-structure.html#param id=the-headers:http-structured-header-parameters data-x-internal=http-structured-header-parameters>parameters</a>; of these, the "<dfn id=coop-report-to><code>report-to</code></dfn>" parameter can have a <a id=the-headers:valid-url-string href=https://url.spec.whatwg.org/#valid-url-string data-x-internal=valid-url-string>valid URL
+  <p>The valid <a href=https://httpwg.org/http-extensions/draft-ietf-httpbis-header-structure.html#token id=the-coop-headers:http-structured-header-token-2 data-x-internal=http-structured-header-token>token</a> values are the <a href=#cross-origin-opener-policy-value id=the-coop-headers:cross-origin-opener-policy-value>opener policy values</a>. The token may also have
+  attached <a href=https://httpwg.org/http-extensions/draft-ietf-httpbis-header-structure.html#param id=the-coop-headers:http-structured-header-parameters data-x-internal=http-structured-header-parameters>parameters</a>; of these, the "<dfn id=coop-report-to><code>report-to</code></dfn>" parameter can have a <a id=the-coop-headers:valid-url-string href=https://url.spec.whatwg.org/#valid-url-string data-x-internal=valid-url-string>valid URL
   string</a> identifying an appropriate reporting endpoint. <a href=references.html#refsREPORTING>[REPORTING]</a></p>
 
   <p class=note>Per the processing model described below, user agents will ignore this header if
   it contains an invalid value. Likewise, user agents will ignore this header if the value cannot be
-  parsed as a <a href=https://httpwg.org/http-extensions/draft-ietf-httpbis-header-structure.html#token id=the-headers:http-structured-header-token-3 data-x-internal=http-structured-header-token>token</a>.</p>
+  parsed as a <a href=https://httpwg.org/http-extensions/draft-ietf-httpbis-header-structure.html#token id=the-coop-headers:http-structured-header-token-3 data-x-internal=http-structured-header-token>token</a>.</p>
 
   <hr>
 
-  <p>To <dfn id=obtain-coop>obtain a cross-origin opener policy</dfn> given a <a href=https://fetch.spec.whatwg.org/#concept-response id=the-headers:concept-response data-x-internal=concept-response>response</a> <var>response</var> and an <a id=the-headers:environment href=webappapis.html#environment>environment</a>
+  <p>To <dfn id=obtain-coop>obtain a cross-origin opener policy</dfn> given a <a href=https://fetch.spec.whatwg.org/#concept-response id=the-coop-headers:concept-response data-x-internal=concept-response>response</a> <var>response</var> and an <a id=the-coop-headers:environment href=webappapis.html#environment>environment</a>
   <var>reservedEnvironment</var>:</p>
 
-  <ol><li><p>Let <var>policy</var> be a new <a href=#cross-origin-opener-policy id=the-headers:cross-origin-opener-policy>cross-origin opener policy</a>.<li><p>If <var>reservedEnvironment</var> is a <a id=the-headers:non-secure-context href=webappapis.html#non-secure-context>non-secure context</a>, then return
-   <var>policy</var>.<li><p>Let <var>value</var> be the result of <a id=the-headers:getting-a-structured-field-value href=https://fetch.spec.whatwg.org/#concept-header-list-get-structured-header data-x-internal=getting-a-structured-field-value>getting a structured field value</a> given
-   `<code id=the-headers:cross-origin-opener-policy-2-2><a href=iana.html#cross-origin-opener-policy-2>Cross-Origin-Opener-Policy</a></code>` and "<code>item</code>" from <var>response</var>'s <a href=https://fetch.spec.whatwg.org/#concept-response-header-list id=the-headers:concept-response-header-list data-x-internal=concept-response-header-list>header list</a>.<li>
+  <ol><li><p>Let <var>policy</var> be a new <a href=#cross-origin-opener-policy id=the-coop-headers:cross-origin-opener-policy>cross-origin opener policy</a>.<li><p>If <var>reservedEnvironment</var> is a <a id=the-coop-headers:non-secure-context href=webappapis.html#non-secure-context>non-secure context</a>, then return
+   <var>policy</var>.<li><p>Let <var>value</var> be the result of <a id=the-coop-headers:getting-a-structured-field-value href=https://fetch.spec.whatwg.org/#concept-header-list-get-structured-header data-x-internal=getting-a-structured-field-value>getting a structured field value</a> given
+   `<code id=the-coop-headers:cross-origin-opener-policy-2><a href=#cross-origin-opener-policy-2>Cross-Origin-Opener-Policy</a></code>` and "<code>item</code>" from
+   <var>response</var>'s <a href=https://fetch.spec.whatwg.org/#concept-response-header-list id=the-coop-headers:concept-response-header-list data-x-internal=concept-response-header-list>header list</a>.<li>
     <p>If <var>parsedItem</var> is not null, then:</p>
 
     <ol><li>
-      <p>If <var>parsedItem</var>[0] is "<code id=the-headers:coop-same-origin><a href=#coop-same-origin>same-origin</a></code>", then:</p>
+      <p>If <var>parsedItem</var>[0] is "<code id=the-coop-headers:coop-same-origin><a href=#coop-same-origin>same-origin</a></code>", then:</p>
 
-      <ol><li><p>Let <var>coep</var> be the result of <a href=#obtain-an-embedder-policy id=the-headers:obtain-an-embedder-policy>obtaining a cross-origin embedder policy</a> from <var>response</var> and
-       <var>reservedEnvironment</var>.<li><p>If <var>coep</var>'s <a href=#embedder-policy-value-2 id=the-headers:embedder-policy-value-2>value</a> is
-       <a href=#compatible-with-cross-origin-isolation id=the-headers:compatible-with-cross-origin-isolation>compatible with cross-origin isolation</a>, then set <var>policy</var>'s <a href=#coop-struct-value id=the-headers:coop-struct-value>value</a> to "<code id=the-headers:coop-same-origin-plus-coep><a href=#coop-same-origin-plus-coep>same-origin-plus-COEP</a></code>".<li><p>Otherwise, set <var>policy</var>'s <a href=#coop-struct-value id=the-headers:coop-struct-value-2>value</a> to "<code id=the-headers:coop-same-origin-2><a href=#coop-same-origin>same-origin</a></code>".</ol>
-     <li><p>If <var>parsedItem</var>[0] is "<code id=the-headers:coop-same-origin-allow-popups><a href=#coop-same-origin-allow-popups>same-origin-allow-popups</a></code>", then set
-     <var>policy</var>'s <a href=#coop-struct-value id=the-headers:coop-struct-value-3>value</a> to "<code id=the-headers:coop-same-origin-allow-popups-2><a href=#coop-same-origin-allow-popups>same-origin-allow-popups</a></code>".<li><p>If <var>parsedItem</var>[1]["<code id=the-headers:coop-report-to><a href=#coop-report-to>report-to</a></code>"] <a href=https://infra.spec.whatwg.org/#map-exists id=the-headers:map-exists data-x-internal=map-exists>exists</a> and it is a string, then set <var>policy</var>'s <a href=#coop-struct-report-endpoint id=the-headers:coop-struct-report-endpoint>reporting endpoint</a> to
-     <var>parsedItem</var>[1]["<code id=the-headers:coop-report-to-2><a href=#coop-report-to>report-to</a></code>"].</ol>
-   <li><p>Set <var>parsedItem</var> to the result of <a id=the-headers:getting-a-structured-field-value-2 href=https://fetch.spec.whatwg.org/#concept-header-list-get-structured-header data-x-internal=getting-a-structured-field-value>getting a structured field value</a>
-   given `<code id=the-headers:cross-origin-opener-policy-2-3><a href=iana.html#cross-origin-opener-policy-2>Cross-Origin-Opener-Policy-Report-Only</a></code>` and
-   "<code>item</code>" from <var>response</var>'s <a href=https://fetch.spec.whatwg.org/#concept-response-header-list id=the-headers:concept-response-header-list-2 data-x-internal=concept-response-header-list>header list</a>.<li>
+      <ol><li><p>Let <var>coep</var> be the result of <a href=#obtain-an-embedder-policy id=the-coop-headers:obtain-an-embedder-policy>obtaining a cross-origin embedder policy</a> from <var>response</var> and
+       <var>reservedEnvironment</var>.<li><p>If <var>coep</var>'s <a href=#embedder-policy-value-2 id=the-coop-headers:embedder-policy-value-2>value</a> is
+       <a href=#compatible-with-cross-origin-isolation id=the-coop-headers:compatible-with-cross-origin-isolation>compatible with cross-origin isolation</a>, then set <var>policy</var>'s <a href=#coop-struct-value id=the-coop-headers:coop-struct-value>value</a> to "<code id=the-coop-headers:coop-same-origin-plus-coep><a href=#coop-same-origin-plus-coep>same-origin-plus-COEP</a></code>".<li><p>Otherwise, set <var>policy</var>'s <a href=#coop-struct-value id=the-coop-headers:coop-struct-value-2>value</a> to "<code id=the-coop-headers:coop-same-origin-2><a href=#coop-same-origin>same-origin</a></code>".</ol>
+     <li><p>If <var>parsedItem</var>[0] is "<code id=the-coop-headers:coop-same-origin-allow-popups><a href=#coop-same-origin-allow-popups>same-origin-allow-popups</a></code>", then set
+     <var>policy</var>'s <a href=#coop-struct-value id=the-coop-headers:coop-struct-value-3>value</a> to "<code id=the-coop-headers:coop-same-origin-allow-popups-2><a href=#coop-same-origin-allow-popups>same-origin-allow-popups</a></code>".<li><p>If <var>parsedItem</var>[1]["<code id=the-coop-headers:coop-report-to><a href=#coop-report-to>report-to</a></code>"] <a href=https://infra.spec.whatwg.org/#map-exists id=the-coop-headers:map-exists data-x-internal=map-exists>exists</a> and it is a string, then set <var>policy</var>'s <a href=#coop-struct-report-endpoint id=the-coop-headers:coop-struct-report-endpoint>reporting endpoint</a> to
+     <var>parsedItem</var>[1]["<code id=the-coop-headers:coop-report-to-2><a href=#coop-report-to>report-to</a></code>"].</ol>
+   <li><p>Set <var>parsedItem</var> to the result of <a id=the-coop-headers:getting-a-structured-field-value-2 href=https://fetch.spec.whatwg.org/#concept-header-list-get-structured-header data-x-internal=getting-a-structured-field-value>getting a structured field value</a>
+   given `<code id=the-coop-headers:cross-origin-opener-policy-report-only><a href=#cross-origin-opener-policy-report-only>Cross-Origin-Opener-Policy-Report-Only</a></code>` and "<code>item</code>"
+   from <var>response</var>'s <a href=https://fetch.spec.whatwg.org/#concept-response-header-list id=the-coop-headers:concept-response-header-list-2 data-x-internal=concept-response-header-list>header
+   list</a>.<li>
     <p>If <var>parsedItem</var> is not null, then:</p>
 
     <ol><li>
-      <p>If <var>parsedItem</var>[0] is "<code id=the-headers:coop-same-origin-3><a href=#coop-same-origin>same-origin</a></code>", then:</p>
+      <p>If <var>parsedItem</var>[0] is "<code id=the-coop-headers:coop-same-origin-3><a href=#coop-same-origin>same-origin</a></code>", then:</p>
 
-      <ol><li><p>Let <var>coep</var> be the result of <a href=#obtain-an-embedder-policy id=the-headers:obtain-an-embedder-policy-2>obtaining a cross-origin embedder policy</a> from <var>response</var> and
+      <ol><li><p>Let <var>coep</var> be the result of <a href=#obtain-an-embedder-policy id=the-coop-headers:obtain-an-embedder-policy-2>obtaining a cross-origin embedder policy</a> from <var>response</var> and
        <var>reservedEnvironment</var>.<li>
-        <p>If <var>coep</var>'s <a href=#embedder-policy-value-2 id=the-headers:embedder-policy-value-2-2>value</a> is
-        <a href=#compatible-with-cross-origin-isolation id=the-headers:compatible-with-cross-origin-isolation-2>compatible with cross-origin isolation</a> or <var>coep</var>'s <a href=#embedder-policy-report-only-value id=the-headers:embedder-policy-report-only-value>report-only value</a> is <a href=#compatible-with-cross-origin-isolation id=the-headers:compatible-with-cross-origin-isolation-3>compatible with
-        cross-origin isolation</a>, then set <var>policy</var>'s <a href=#coop-struct-report-only-value id=the-headers:coop-struct-report-only-value>report-only value</a> to "<code id=the-headers:coop-same-origin-plus-coep-2><a href=#coop-same-origin-plus-coep>same-origin-plus-COEP</a></code>".</p>
+        <p>If <var>coep</var>'s <a href=#embedder-policy-value-2 id=the-coop-headers:embedder-policy-value-2-2>value</a> is
+        <a href=#compatible-with-cross-origin-isolation id=the-coop-headers:compatible-with-cross-origin-isolation-2>compatible with cross-origin isolation</a> or <var>coep</var>'s <a href=#embedder-policy-report-only-value id=the-coop-headers:embedder-policy-report-only-value>report-only value</a> is <a href=#compatible-with-cross-origin-isolation id=the-coop-headers:compatible-with-cross-origin-isolation-3>compatible with
+        cross-origin isolation</a>, then set <var>policy</var>'s <a href=#coop-struct-report-only-value id=the-coop-headers:coop-struct-report-only-value>report-only value</a> to "<code id=the-coop-headers:coop-same-origin-plus-coep-2><a href=#coop-same-origin-plus-coep>same-origin-plus-COEP</a></code>".</p>
 
         <p class=note>Report only COOP also considers report-only COEP to assign the special
-        "<code id=the-headers:coop-same-origin-plus-coep-3><a href=#coop-same-origin-plus-coep>same-origin-plus-COEP</a></code>" value. This allows
+        "<code id=the-coop-headers:coop-same-origin-plus-coep-3><a href=#coop-same-origin-plus-coep>same-origin-plus-COEP</a></code>" value. This allows
         developers more freedom in the order of deployment of COOP and COEP.</p>
-       <li><p>Otherwise, set <var>policy</var>'s <a href=#coop-struct-report-only-value id=the-headers:coop-struct-report-only-value-2>report-only value</a> to "<code id=the-headers:coop-same-origin-4><a href=#coop-same-origin>same-origin</a></code>".</ol>
-     <li><p>If <var>parsedItem</var>[0] is "<code id=the-headers:coop-same-origin-allow-popups-3><a href=#coop-same-origin-allow-popups>same-origin-allow-popups</a></code>", then set
-     <var>policy</var>'s <a href=#coop-struct-report-only-value id=the-headers:coop-struct-report-only-value-3>report-only value</a> to
-     "<code id=the-headers:coop-same-origin-allow-popups-4><a href=#coop-same-origin-allow-popups>same-origin-allow-popups</a></code>".<li><p>If <var>parsedItem</var>[1]["<code id=the-headers:coop-report-to-3><a href=#coop-report-to>report-to</a></code>"] <a href=https://infra.spec.whatwg.org/#map-exists id=the-headers:map-exists-2 data-x-internal=map-exists>exists</a> and it is a string, then set <var>policy</var>'s <a href=#coop-struct-report-only-endpoint id=the-headers:coop-struct-report-only-endpoint>report-only reporting endpoint</a> to
-     <var>parsedItem</var>[1]["<code id=the-headers:coop-report-to-4><a href=#coop-report-to>report-to</a></code>"].</ol>
+       <li><p>Otherwise, set <var>policy</var>'s <a href=#coop-struct-report-only-value id=the-coop-headers:coop-struct-report-only-value-2>report-only value</a> to "<code id=the-coop-headers:coop-same-origin-4><a href=#coop-same-origin>same-origin</a></code>".</ol>
+     <li><p>If <var>parsedItem</var>[0] is "<code id=the-coop-headers:coop-same-origin-allow-popups-3><a href=#coop-same-origin-allow-popups>same-origin-allow-popups</a></code>", then set
+     <var>policy</var>'s <a href=#coop-struct-report-only-value id=the-coop-headers:coop-struct-report-only-value-3>report-only value</a> to
+     "<code id=the-coop-headers:coop-same-origin-allow-popups-4><a href=#coop-same-origin-allow-popups>same-origin-allow-popups</a></code>".<li><p>If <var>parsedItem</var>[1]["<code id=the-coop-headers:coop-report-to-3><a href=#coop-report-to>report-to</a></code>"] <a href=https://infra.spec.whatwg.org/#map-exists id=the-coop-headers:map-exists-2 data-x-internal=map-exists>exists</a> and it is a string, then set <var>policy</var>'s <a href=#coop-struct-report-only-endpoint id=the-coop-headers:coop-struct-report-only-endpoint>report-only reporting endpoint</a> to
+     <var>parsedItem</var>[1]["<code id=the-coop-headers:coop-report-to-4><a href=#coop-report-to>report-to</a></code>"].</ol>
    <li><p>Return <var>policy</var>.</ol>
 
 
@@ -1163,52 +1167,52 @@
   is "<code>coep</code>". It is <a id=coep:visible-to-reportingobservers href=https://w3c.github.io/reporting/#visible-to-reportingobservers data-x-internal=visible-to-reportingobservers>visible to
   <code>ReportingObserver</code>s</a>.</p>
 
-  <h4 id=the-headers-2><span class=secno>7.8.1</span> The headers<a href=#the-headers-2 class=self-link></a></h4>
+  <h4 id=the-coep-headers><span class=secno>7.8.1</span> The headers<a href=#the-coep-headers class=self-link></a></h4>
 
-  <p>The `<code id=the-headers-2:cross-origin-embedder-policy><a href=iana.html#cross-origin-embedder-policy>Cross-Origin-Embedder-Policy</a></code>` and
-  `<code id=the-headers-2:cross-origin-embedder-policy-report-only><a href=iana.html#cross-origin-embedder-policy-report-only>Cross-Origin-Embedder-Policy-Report-Only</a></code>` HTTP response header fields allow a server
-  to declare an <a href=#embedder-policy id=the-headers-2:embedder-policy>embedder policy</a> for an <a id=the-headers-2:environment-settings-object href=webappapis.html#environment-settings-object>environment settings object</a>. These
-  headers are <a href=https://httpwg.org/http-extensions/draft-ietf-httpbis-header-structure.html id=the-headers-2:http-structured-header data-x-internal=http-structured-header>structured headers</a> whose values must be
-  <a href=https://httpwg.org/http-extensions/draft-ietf-httpbis-header-structure.html#token id=the-headers-2:http-structured-header-token data-x-internal=http-structured-header-token>token</a>. <a href=references.html#refsSTRUCTURED-FIELDS>[STRUCTURED-FIELDS]</a>
+  <p>The `<dfn id=cross-origin-embedder-policy data-dfn-type=http-header><code>Cross-Origin-Embedder-Policy</code></dfn>` and
+  `<dfn id=cross-origin-embedder-policy-report-only data-dfn-type=http-header><code>Cross-Origin-Embedder-Policy-Report-Only</code></dfn>` HTTP response
+  headers allow a server to declare an <a href=#embedder-policy id=the-coep-headers:embedder-policy>embedder policy</a> for an <a id=the-coep-headers:environment-settings-object href=webappapis.html#environment-settings-object>environment
+  settings object</a>. These headers are <a href=https://httpwg.org/http-extensions/draft-ietf-httpbis-header-structure.html id=the-coep-headers:http-structured-header data-x-internal=http-structured-header>structured
+  headers</a> whose values must be <a href=https://httpwg.org/http-extensions/draft-ietf-httpbis-header-structure.html#token id=the-coep-headers:http-structured-header-token data-x-internal=http-structured-header-token>token</a>. <a href=references.html#refsSTRUCTURED-FIELDS>[STRUCTURED-FIELDS]</a>
 
-  <p>The valid <a href=https://httpwg.org/http-extensions/draft-ietf-httpbis-header-structure.html#token id=the-headers-2:http-structured-header-token-2 data-x-internal=http-structured-header-token>token</a> values are the <a href=#embedder-policy-value id=the-headers-2:embedder-policy-value>embedder policy values</a>. The token may also have attached <a href=https://httpwg.org/http-extensions/draft-ietf-httpbis-header-structure.html#param id=the-headers-2:http-structured-header-parameters data-x-internal=http-structured-header-parameters>parameters</a>; of these, the "<dfn id=coep-report-to><code>report-to</code></dfn>" parameter can have a <a id=the-headers-2:valid-url-string href=https://url.spec.whatwg.org/#valid-url-string data-x-internal=valid-url-string>valid URL
+  <p>The valid <a href=https://httpwg.org/http-extensions/draft-ietf-httpbis-header-structure.html#token id=the-coep-headers:http-structured-header-token-2 data-x-internal=http-structured-header-token>token</a> values are the <a href=#embedder-policy-value id=the-coep-headers:embedder-policy-value>embedder policy values</a>. The token may also have attached <a href=https://httpwg.org/http-extensions/draft-ietf-httpbis-header-structure.html#param id=the-coep-headers:http-structured-header-parameters data-x-internal=http-structured-header-parameters>parameters</a>; of these, the "<dfn id=coep-report-to><code>report-to</code></dfn>" parameter can have a <a id=the-coep-headers:valid-url-string href=https://url.spec.whatwg.org/#valid-url-string data-x-internal=valid-url-string>valid URL
   string</a> identifying an appropriate reporting endpoint. <a href=references.html#refsREPORTING>[REPORTING]</a></p>
 
   <div class=note>
-   <p>The <a href=#obtain-an-embedder-policy id=the-headers-2:obtain-an-embedder-policy>processing model</a> fails open (by defaulting
-   to "<code id=the-headers-2:coep-unsafe-none><a href=#coep-unsafe-none>unsafe-none</a></code>") in the presence of a header that cannot
+   <p>The <a href=#obtain-an-embedder-policy id=the-coep-headers:obtain-an-embedder-policy>processing model</a> fails open (by defaulting
+   to "<code id=the-coep-headers:coep-unsafe-none><a href=#coep-unsafe-none>unsafe-none</a></code>") in the presence of a header that cannot
    be parsed as a token. This includes inadvertent lists created by combining multiple instances of
-   the `<code id=the-headers-2:cross-origin-embedder-policy-2><a href=iana.html#cross-origin-embedder-policy>Cross-Origin-Embedder-Policy</a></code>` header present in a given response:</p>
+   the `<code id=the-coep-headers:cross-origin-embedder-policy><a href=#cross-origin-embedder-policy>Cross-Origin-Embedder-Policy</a></code>` header present in a given response:</p>
 
-   <table class=data><thead><tr><th>`<code id=the-headers-2:cross-origin-embedder-policy-3><a href=iana.html#cross-origin-embedder-policy>Cross-Origin-Embedder-Policy</a></code>`<th>Final <a href=#embedder-policy-value id=the-headers-2:embedder-policy-value-2>embedder policy value</a><tbody><tr><td><em>No header delivered</em><td>"<code id=the-headers-2:coep-unsafe-none-2><a href=#coep-unsafe-none>unsafe-none</a></code>"<tr><td>`<code>require-corp</code>`<td>"<code id=the-headers-2:coep-require-corp><a href=#coep-require-corp>require-corp</a></code>"<tr><td>`<code>unknown-value</code>`<td>"<code id=the-headers-2:coep-unsafe-none-3><a href=#coep-unsafe-none>unsafe-none</a></code>"<tr><td>`<code>require-corp, unknown-value</code>`<td>"<code id=the-headers-2:coep-unsafe-none-4><a href=#coep-unsafe-none>unsafe-none</a></code>"<tr><td>`<code>unknown-value, unknown-value</code>`<td>"<code id=the-headers-2:coep-unsafe-none-5><a href=#coep-unsafe-none>unsafe-none</a></code>"<tr><td>`<code>unknown-value, require-corp</code>`<td>"<code id=the-headers-2:coep-unsafe-none-6><a href=#coep-unsafe-none>unsafe-none</a></code>"<tr><td>`<code>require-corp, require-corp</code>`<td>"<code id=the-headers-2:coep-unsafe-none-7><a href=#coep-unsafe-none>unsafe-none</a></code>"</table>
+   <table class=data><thead><tr><th>`<code id=the-coep-headers:cross-origin-embedder-policy-2><a href=#cross-origin-embedder-policy>Cross-Origin-Embedder-Policy</a></code>`<th>Final <a href=#embedder-policy-value id=the-coep-headers:embedder-policy-value-2>embedder policy value</a><tbody><tr><td><em>No header delivered</em><td>"<code id=the-coep-headers:coep-unsafe-none-2><a href=#coep-unsafe-none>unsafe-none</a></code>"<tr><td>`<code>require-corp</code>`<td>"<code id=the-coep-headers:coep-require-corp><a href=#coep-require-corp>require-corp</a></code>"<tr><td>`<code>unknown-value</code>`<td>"<code id=the-coep-headers:coep-unsafe-none-3><a href=#coep-unsafe-none>unsafe-none</a></code>"<tr><td>`<code>require-corp, unknown-value</code>`<td>"<code id=the-coep-headers:coep-unsafe-none-4><a href=#coep-unsafe-none>unsafe-none</a></code>"<tr><td>`<code>unknown-value, unknown-value</code>`<td>"<code id=the-coep-headers:coep-unsafe-none-5><a href=#coep-unsafe-none>unsafe-none</a></code>"<tr><td>`<code>unknown-value, require-corp</code>`<td>"<code id=the-coep-headers:coep-unsafe-none-6><a href=#coep-unsafe-none>unsafe-none</a></code>"<tr><td>`<code>require-corp, require-corp</code>`<td>"<code id=the-coep-headers:coep-unsafe-none-7><a href=#coep-unsafe-none>unsafe-none</a></code>"</table>
 
-   <p>(The same applies to `<code id=the-headers-2:cross-origin-embedder-policy-report-only-2><a href=iana.html#cross-origin-embedder-policy-report-only>Cross-Origin-Embedder-Policy-Report-Only</a></code>`.)</p>
+   <p>(The same applies to `<code id=the-coep-headers:cross-origin-embedder-policy-report-only><a href=#cross-origin-embedder-policy-report-only>Cross-Origin-Embedder-Policy-Report-Only</a></code>`.)</p>
   </div>
 
   <hr>
 
-  <p>To <dfn id=obtain-an-embedder-policy data-export="">obtain an embedder policy</dfn> from a <a href=https://fetch.spec.whatwg.org/#concept-response id=the-headers-2:concept-response data-x-internal=concept-response>response</a> <var>response</var> and an <a id=the-headers-2:environment href=webappapis.html#environment>environment</a>
+  <p>To <dfn id=obtain-an-embedder-policy data-export="">obtain an embedder policy</dfn> from a <a href=https://fetch.spec.whatwg.org/#concept-response id=the-coep-headers:concept-response data-x-internal=concept-response>response</a> <var>response</var> and an <a id=the-coep-headers:environment href=webappapis.html#environment>environment</a>
   <var>environment</var>:</p>
 
-  <ol><li><p>Let <var>policy</var> be a new <a href=#embedder-policy id=the-headers-2:embedder-policy-2>embedder policy</a>.<li><p>If <var>environment</var> is a <a id=the-headers-2:non-secure-context href=webappapis.html#non-secure-context>non-secure context</a>, then return
-   <var>policy</var>.<li><p>Let <var>parsedItem</var> be the result of <a id=the-headers-2:getting-a-structured-field-value href=https://fetch.spec.whatwg.org/#concept-header-list-get-structured-header data-x-internal=getting-a-structured-field-value>getting a structured field value</a>
-   with `<code id=the-headers-2:cross-origin-embedder-policy-4><a href=iana.html#cross-origin-embedder-policy>Cross-Origin-Embedder-Policy</a></code>` and "<code>item</code>" from
-   <var>response</var>'s <a href=https://fetch.spec.whatwg.org/#concept-response-header-list id=the-headers-2:concept-response-header-list data-x-internal=concept-response-header-list>header list</a>.<li>
-    <p>If <var>parsedItem</var> is non-null and <var>parsedItem</var>[0] is <a href=#compatible-with-cross-origin-isolation id=the-headers-2:compatible-with-cross-origin-isolation>compatible with
+  <ol><li><p>Let <var>policy</var> be a new <a href=#embedder-policy id=the-coep-headers:embedder-policy-2>embedder policy</a>.<li><p>If <var>environment</var> is a <a id=the-coep-headers:non-secure-context href=webappapis.html#non-secure-context>non-secure context</a>, then return
+   <var>policy</var>.<li><p>Let <var>parsedItem</var> be the result of <a id=the-coep-headers:getting-a-structured-field-value href=https://fetch.spec.whatwg.org/#concept-header-list-get-structured-header data-x-internal=getting-a-structured-field-value>getting a structured field value</a>
+   with `<code id=the-coep-headers:cross-origin-embedder-policy-3><a href=#cross-origin-embedder-policy>Cross-Origin-Embedder-Policy</a></code>` and "<code>item</code>" from
+   <var>response</var>'s <a href=https://fetch.spec.whatwg.org/#concept-response-header-list id=the-coep-headers:concept-response-header-list data-x-internal=concept-response-header-list>header list</a>.<li>
+    <p>If <var>parsedItem</var> is non-null and <var>parsedItem</var>[0] is <a href=#compatible-with-cross-origin-isolation id=the-coep-headers:compatible-with-cross-origin-isolation>compatible with
     cross-origin isolation</a>:</p>
 
-    <ol><li><p>Set <var>policy</var>'s <a href=#embedder-policy-value-2 id=the-headers-2:embedder-policy-value-2-2>value</a> to
-     <var>parsedItem</var>[0].<li><p>If <var>parsedItem</var>[1]["<code id=the-headers-2:coep-report-to><a href=#coep-report-to>report-to</a></code>"] <a href=https://infra.spec.whatwg.org/#map-exists id=the-headers-2:map-exists data-x-internal=map-exists>exists</a>, then set <var>policy</var>'s <a href=#embedder-policy-reporting-endpoint id=the-headers-2:embedder-policy-reporting-endpoint>endpoint</a> to
-     <var>parsedItem</var>[1]["<code id=the-headers-2:coep-report-to-2><a href=#coep-report-to>report-to</a></code>"].</ol>
-   <li><p>Set <var>parsedItem</var> to the result of <a id=the-headers-2:getting-a-structured-field-value-2 href=https://fetch.spec.whatwg.org/#concept-header-list-get-structured-header data-x-internal=getting-a-structured-field-value>getting a structured field value</a>
-   with `<code id=the-headers-2:cross-origin-embedder-policy-report-only-3><a href=iana.html#cross-origin-embedder-policy-report-only>Cross-Origin-Embedder-Policy-Report-Only</a></code>` and "<code>item</code>"
-   from <var>response</var>'s <a href=https://fetch.spec.whatwg.org/#concept-response-header-list id=the-headers-2:concept-response-header-list-2 data-x-internal=concept-response-header-list>header
+    <ol><li><p>Set <var>policy</var>'s <a href=#embedder-policy-value-2 id=the-coep-headers:embedder-policy-value-2-2>value</a> to
+     <var>parsedItem</var>[0].<li><p>If <var>parsedItem</var>[1]["<code id=the-coep-headers:coep-report-to><a href=#coep-report-to>report-to</a></code>"] <a href=https://infra.spec.whatwg.org/#map-exists id=the-coep-headers:map-exists data-x-internal=map-exists>exists</a>, then set <var>policy</var>'s <a href=#embedder-policy-reporting-endpoint id=the-coep-headers:embedder-policy-reporting-endpoint>endpoint</a> to
+     <var>parsedItem</var>[1]["<code id=the-coep-headers:coep-report-to-2><a href=#coep-report-to>report-to</a></code>"].</ol>
+   <li><p>Set <var>parsedItem</var> to the result of <a id=the-coep-headers:getting-a-structured-field-value-2 href=https://fetch.spec.whatwg.org/#concept-header-list-get-structured-header data-x-internal=getting-a-structured-field-value>getting a structured field value</a>
+   with `<code id=the-coep-headers:cross-origin-embedder-policy-report-only-2><a href=#cross-origin-embedder-policy-report-only>Cross-Origin-Embedder-Policy-Report-Only</a></code>` and "<code>item</code>"
+   from <var>response</var>'s <a href=https://fetch.spec.whatwg.org/#concept-response-header-list id=the-coep-headers:concept-response-header-list-2 data-x-internal=concept-response-header-list>header
    list</a>.<li>
-    <p>If <var>parsedItem</var> is non-null and <var>parsedItem</var>[0] is <a href=#compatible-with-cross-origin-isolation id=the-headers-2:compatible-with-cross-origin-isolation-2>compatible with
+    <p>If <var>parsedItem</var> is non-null and <var>parsedItem</var>[0] is <a href=#compatible-with-cross-origin-isolation id=the-coep-headers:compatible-with-cross-origin-isolation-2>compatible with
     cross-origin isolation</a>:</p>
 
-    <ol><li><p>Set <var>policy</var>'s <a href=#embedder-policy-report-only-value id=the-headers-2:embedder-policy-report-only-value>value</a> to <var>parsedItem</var>[0].<li><p>If <var>parsedItem</var>[1]["<code id=the-headers-2:coep-report-to-3><a href=#coep-report-to>report-to</a></code>"] <a href=https://infra.spec.whatwg.org/#map-exists id=the-headers-2:map-exists-2 data-x-internal=map-exists>exists</a>, then set <var>policy</var>'s <a href=#embedder-policy-report-only-reporting-endpoint id=the-headers-2:embedder-policy-report-only-reporting-endpoint>endpoint</a> to
-     <var>parsedItem</var>[1]["<code id=the-headers-2:coep-report-to-4><a href=#coep-report-to>report-to</a></code>"].</ol>
+    <ol><li><p>Set <var>policy</var>'s <a href=#embedder-policy-report-only-value id=the-coep-headers:embedder-policy-report-only-value>value</a> to <var>parsedItem</var>[0].<li><p>If <var>parsedItem</var>[1]["<code id=the-coep-headers:coep-report-to-3><a href=#coep-report-to>report-to</a></code>"] <a href=https://infra.spec.whatwg.org/#map-exists id=the-coep-headers:map-exists-2 data-x-internal=map-exists>exists</a>, then set <var>policy</var>'s <a href=#embedder-policy-report-only-reporting-endpoint id=the-coep-headers:embedder-policy-report-only-reporting-endpoint>endpoint</a> to
+     <var>parsedItem</var>[1]["<code id=the-coep-headers:coep-report-to-4><a href=#coep-report-to>report-to</a></code>"].</ol>
    <li><p>Return <var>policy</var>.</ol>
 
   <h4 id=embedder-policy-checks><span class=secno>7.8.2</span> Embedder policy checks<a href=#embedder-policy-checks class=self-link></a></h4>

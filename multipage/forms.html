@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Standard</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/spec.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/styles.css crossorigin=""><script>
+<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Specification Draft: &lt;search> element with form functionality</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/spec.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/styles.css crossorigin=""><script>
    function toggleStatus(div) {
      div.parentNode.classList.toggle('wrapped');
    }
@@ -8,12 +8,13 @@
   </script><body>
   
   <script async="" crossorigin="" src=/html-dfn.js></script>
-  <script data-file-issue-url=https://github.com/whatwg/html/issues/new async="" crossorigin="" src=https://resources.whatwg.org/file-issue.js></script>
+  <script data-file-issue-url=https://github.com/Kaleidea/whatwg-html-draft/issues/new async="" crossorigin="" src=https://resources.whatwg.org/file-issue.js></script>
   
   <header id=head class="head with-buttons">
    <a href=https://whatwg.org/ class=logo><img width=100 alt=WHATWG crossorigin="" src=https://resources.whatwg.org/logo.svg height=100></a>
-   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Living Standard — Last Updated <span class=pubdate>22 November 2021</span></h2></hgroup>
+   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Review Draft: <code id=living-standard:the-search-element><a href=forms.html#the-search-element>search</a></code> element with form functionality — Last Updated <span class=pubdate>27 November 2021</span></h2></hgroup>
    
+
    
 
    
@@ -33,15 +34,18 @@
 
   
 
-  <nav><a href=tables.html>← 4.9 Tabular data</a> — <a href=./>Table of Contents</a> — <a href=input.html>4.10.5 The input element →</a></nav><ol class=toc><li id=toc-semantics><ol><li><a href=forms.html#forms><span class=secno>4.10</span> Forms</a><ol><li><a href=forms.html#introduction-4><span class=secno>4.10.1</span> Introduction</a><ol><li><a href="forms.html#writing-a-form's-user-interface"><span class=secno>4.10.1.1</span> Writing a form's user interface</a><li><a href=forms.html#implementing-the-server-side-processing-for-a-form><span class=secno>4.10.1.2</span> Implementing the server-side processing for a form</a><li><a href=forms.html#configuring-a-form-to-communicate-with-a-server><span class=secno>4.10.1.3</span> Configuring a form to communicate with a server</a><li><a href=forms.html#client-side-form-validation><span class=secno>4.10.1.4</span> Client-side form validation</a><li><a href=forms.html#enabling-client-side-automatic-filling-of-form-controls><span class=secno>4.10.1.5</span> Enabling client-side automatic filling of form controls</a><li><a href=forms.html#improving-the-user-experience-on-mobile-devices><span class=secno>4.10.1.6</span> Improving the user experience on mobile devices</a><li><a href=forms.html#the-difference-between-the-field-type,-the-autofill-field-name,-and-the-input-modality><span class=secno>4.10.1.7</span> The difference between the field type, the autofill field name, and the input modality</a><li><a href=forms.html#input-author-notes><span class=secno>4.10.1.8</span> Date, time, and number formats</a></ol><li><a href=forms.html#categories><span class=secno>4.10.2</span> Categories</a><li><a href=forms.html#the-form-element><span class=secno>4.10.3</span> The <code>form</code> element</a><li><a href=forms.html#the-label-element><span class=secno>4.10.4</span> The <code>label</code> element</a></ol></ol></ol><h3 id=forms><span class=secno>4.10</span> Forms<a href=#forms class=self-link></a></h3><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Forms title="This page lists all the HTML elements, which are created using tags.">Element#Forms</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>4+</span></span><span class="safari yes"><span>Safari</span><span>4+</span></span><span class="chrome yes"><span>Chrome</span><span>61+</span></span><hr><span class="opera yes"><span>Opera</span><span>52+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>16+</span></span><span class="ie yes"><span>Internet Explorer</span><span>10+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>5+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>3.2+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>61+</span></span><span class="webview_android yes"><span>WebView Android</span><span>61+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>8.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>47+</span></span></div></div></div>
+  <nav><a href=tables.html>← 4.9 Tabular data</a> — <a href=./>Table of Contents</a> — <a href=input.html>4.10.6 The input element →</a></nav><ol class=toc><li id=toc-semantics><ol><li><a href=forms.html#forms><span class=secno>4.10</span> Forms</a><ol><li><a href=forms.html#introduction-4><span class=secno>4.10.1</span> Introduction</a><ol><li><a href="forms.html#writing-a-form's-user-interface"><span class=secno>4.10.1.1</span> Writing a form's user interface</a><li><a href=forms.html#implementing-the-server-side-processing-for-a-form><span class=secno>4.10.1.2</span> Implementing the server-side processing for a form</a><li><a href=forms.html#configuring-a-form-to-communicate-with-a-server><span class=secno>4.10.1.3</span> Configuring a form to communicate with a server</a><li><a href=forms.html#client-side-form-validation><span class=secno>4.10.1.4</span> Client-side form validation</a><li><a href=forms.html#enabling-client-side-automatic-filling-of-form-controls><span class=secno>4.10.1.5</span> Enabling client-side automatic filling of form controls</a><li><a href=forms.html#improving-the-user-experience-on-mobile-devices><span class=secno>4.10.1.6</span> Improving the user experience on mobile devices</a><li><a href=forms.html#the-difference-between-the-field-type,-the-autofill-field-name,-and-the-input-modality><span class=secno>4.10.1.7</span> The difference between the field type, the autofill field name, and the input modality</a><li><a href=forms.html#input-author-notes><span class=secno>4.10.1.8</span> Date, time, and number formats</a></ol><li><a href=forms.html#categories><span class=secno>4.10.2</span> Categories</a><li><a href=forms.html#the-form-element><span class=secno>4.10.3</span> The <code>form</code> element</a><li><a href=forms.html#the-search-element><span class=secno>4.10.4</span> The <code>search</code> element</a><li><a href=forms.html#the-label-element><span class=secno>4.10.5</span> The <code>label</code> element</a></ol></ol></ol><h3 id=forms><span class=secno>4.10</span> Forms<a href=#forms class=self-link></a></h3><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Forms title="This page lists all the HTML elements, which are created using tags.">Element#Forms</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>4+</span></span><span class="safari yes"><span>Safari</span><span>4+</span></span><span class="chrome yes"><span>Chrome</span><span>61+</span></span><hr><span class="opera yes"><span>Opera</span><span>52+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>16+</span></span><span class="ie yes"><span>Internet Explorer</span><span>10+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>5+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>3.2+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>61+</span></span><span class="webview_android yes"><span>WebView Android</span><span>61+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>8.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>47+</span></span></div></div></div>
 
   <h4 id=introduction-4><span class=secno>4.10.1</span> Introduction<a href=#introduction-4 class=self-link></a></h4>
 
+  <p>A <dfn id=concept-form>form</dfn> is either a <code id=introduction-4:the-form-element><a href=#the-form-element>form</a></code> or a <code id=introduction-4:the-search-element><a href=#the-search-element>search</a></code> element.</p>
+
   <p><i>This section is non-normative.</i></p>
 
-  <p>A form is a component of a web page that has form controls, such as text, buttons, checkboxes,
-  range, or color picker controls. A user can interact with such a form, providing data that can
-  then be sent to the server for further processing (e.g. returning the results of a search or
+  <p>A form is a component of a web page that groups form controls, such as text, buttons,
+  checkboxes, range, or color picker controls. A user can interact with the form controls,
+  inputting data. The form can submit all the data in its form controls in one batch to the
+  server for further processing (e.g. returning the results of a search or
   calculation). No client-side scripting is needed in many cases, though an API is available so that
   scripts can augment the user experience or use forms for purposes other than submitting data to a
   server.</p>
@@ -57,7 +61,9 @@
 
   <p>For the purposes of this brief introduction, we will create a pizza ordering form.</p>
 
-  <p>Any form starts with a <code id="writing-a-form's-user-interface:the-form-element"><a href=#the-form-element>form</a></code> element, inside which are placed the controls. Most
+  <p>Any <a href=#concept-form id="writing-a-form's-user-interface:concept-form">form</a>
+  starts with a <code id="writing-a-form's-user-interface:the-form-element"><a href=#the-form-element>form</a></code> or <code id="writing-a-form's-user-interface:the-search-element"><a href=#the-search-element>search</a></code> element,
+  which then contains among others <a href=#form-associated-element id="writing-a-form's-user-interface:form-associated-element">form-associated element</a>s. Most
   controls are represented by the <code id="writing-a-form's-user-interface:the-input-element"><a href=input.html#the-input-element>input</a></code> element, which by default provides a text
   control. To label a control, the <code id="writing-a-form's-user-interface:the-label-element"><a href=#the-label-element>label</a></code> element is used; the label text and the
   control itself go inside the <code id="writing-a-form's-user-interface:the-label-element-2"><a href=#the-label-element>label</a></code> element. Each part of a form is considered a
@@ -228,7 +234,8 @@
 
   <p>Form submissions are exposed to servers in a variety of ways, most commonly as HTTP GET or POST
   requests. To specify the exact method used, the <code id=configuring-a-form-to-communicate-with-a-server:attr-fs-method><a href=form-control-infrastructure.html#attr-fs-method>method</a></code>
-  attribute is specified on the <code id=configuring-a-form-to-communicate-with-a-server:the-form-element><a href=#the-form-element>form</a></code> element. This doesn't specify how the form data is
+  attribute is specified on the <a href=#concept-form id=configuring-a-form-to-communicate-with-a-server:concept-form>form</a>.
+  This doesn't specify how the form data is
   encoded, though; to specify that, you use the <code id=configuring-a-form-to-communicate-with-a-server:attr-fs-enctype><a href=form-control-infrastructure.html#attr-fs-enctype>enctype</a></code>
   attribute. You also have to specify the <a id=configuring-a-form-to-communicate-with-a-server:url href=https://url.spec.whatwg.org/#concept-url data-x-internal=url>URL</a> of the service that will handle the
   submitted data, using the <code id=configuring-a-form-to-communicate-with-a-server:attr-fs-action><a href=form-control-infrastructure.html#attr-fs-action>action</a></code> attribute.</p>
@@ -581,7 +588,8 @@
     <ul class="brief category-list"><li><code id=categories:the-button-element-2><a href=form-elements.html#the-button-element>button</a></code><li><code id=categories:the-fieldset-element-2><a href=form-elements.html#the-fieldset-element>fieldset</a></code><li><code id=categories:the-input-element-2><a href=input.html#the-input-element>input</a></code><li><code id=categories:the-object-element-2><a href=iframe-embed-object.html#the-object-element>object</a></code><li><code id=categories:the-output-element-2><a href=form-elements.html#the-output-element>output</a></code><li><code id=categories:the-select-element-2><a href=form-elements.html#the-select-element>select</a></code><li><code id=categories:the-textarea-element-2><a href=form-elements.html#the-textarea-element>textarea</a></code><li><a href=custom-elements.html#form-associated-custom-element id=categories:form-associated-custom-element-2>form-associated custom elements</a></ul>
    <dt><dfn id=category-submit>Submittable elements</dfn><dd>
     <p>Denotes elements that can be used for <a id=categories:constructing-the-form-data-set href=form-control-infrastructure.html#constructing-the-form-data-set>constructing the entry list</a> when a
-    <code id=categories:the-form-element><a href=#the-form-element>form</a></code> element is <a href=form-control-infrastructure.html#concept-form-submit id=categories:concept-form-submit>submitted</a>.</p>
+    <a href=#concept-form id=categories:concept-form>form</a> is
+    <a href=form-control-infrastructure.html#concept-form-submit id=categories:concept-form-submit>submitted</a>.</p>
 
     
     <ul class="brief category-list"><li><code id=categories:the-button-element-3><a href=form-elements.html#the-button-element>button</a></code><li><code id=categories:the-input-element-3><a href=input.html#the-input-element>input</a></code><li><code id=categories:the-select-element-3><a href=form-elements.html#the-select-element>select</a></code><li><code id=categories:the-textarea-element-3><a href=form-elements.html#the-textarea-element>textarea</a></code><li><a href=custom-elements.html#form-associated-custom-element id=categories:form-associated-custom-element-3>form-associated custom elements</a></ul>
@@ -591,7 +599,8 @@
     is a button. Some buttons are specifically <dfn id=concept-submit-button>submit
     buttons</dfn>.</p>
    <dt><dfn id=category-reset>Resettable elements</dfn><dd>
-    <p>Denotes elements that can be affected when a <code id=categories:the-form-element-2><a href=#the-form-element>form</a></code> element is <a href=form-control-infrastructure.html#concept-form-reset id=categories:concept-form-reset>reset</a>.</p>
+    <p>Denotes elements that can be affected when a <a href=#concept-form id=categories:concept-form-2>form</a> is
+    <a href=form-control-infrastructure.html#concept-form-reset id=categories:concept-form-reset>reset</a>.</p>
 
     
     <ul class="brief category-list"><li><code id=categories:the-input-element-4><a href=input.html#the-input-element>input</a></code><li><code id=categories:the-output-element-3><a href=form-elements.html#the-output-element>output</a></code><li><code id=categories:the-select-element-4><a href=form-elements.html#the-select-element>select</a></code><li><code id=categories:the-textarea-element-4><a href=form-elements.html#the-textarea-element>textarea</a></code><li><a href=custom-elements.html#form-associated-custom-element id=categories:form-associated-custom-element-4>form-associated custom elements</a></ul>
@@ -613,7 +622,9 @@
 
   <h4 id=the-form-element><span class=secno>4.10.3</span> The <dfn data-dfn-type=element><code>form</code></dfn> element<a href=#the-form-element class=self-link></a></h4><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form title="The <form> HTML element represents a document section containing interactive controls for submitting information.">Element/form</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>Yes</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>Yes</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>Yes</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div>
 
-  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement title="The HTMLFormElement interface represents a <form> element in the DOM. It allows access to—and, in some cases, modification of—aspects of the form, as well as access to its component elements.">HTMLFormElement</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>3+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>8+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>5.5+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>1+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span></div></div></div><dl class=element><dt><a href=dom.html#concept-element-categories id=the-form-element:concept-element-categories>Categories</a>:<dd><a id=the-form-element:flow-content-2 href=dom.html#flow-content-2>Flow content</a>.<dd><a id=the-form-element:palpable-content-2 href=dom.html#palpable-content-2>Palpable content</a>.<dt><a href=dom.html#concept-element-contexts id=the-form-element:concept-element-contexts>Contexts in which this element can be used</a>:<dd>Where <a id=the-form-element:flow-content-2-2 href=dom.html#flow-content-2>flow content</a> is expected.<dt><a href=dom.html#concept-element-content-model id=the-form-element:concept-element-content-model>Content model</a>:<dd><a id=the-form-element:flow-content-2-3 href=dom.html#flow-content-2>Flow content</a>, but with no <code id=the-form-element:the-form-element><a href=#the-form-element>form</a></code> element descendants.<dt><a href=dom.html#concept-element-tag-omission id=the-form-element:concept-element-tag-omission>Tag omission in text/html</a>:<dd>Neither tag is omissible.<dt><a href=dom.html#concept-element-attributes id=the-form-element:concept-element-attributes>Content attributes</a>:<dd><a id=the-form-element:global-attributes href=dom.html#global-attributes>Global attributes</a><dd><code id=the-form-element:attr-form-accept-charset><a href=#attr-form-accept-charset>accept-charset</a></code> — Character encodings to use for <a id=the-form-element:form-submission-2 href=form-control-infrastructure.html#form-submission-2>form submission</a><dd><code id=the-form-element:attr-fs-action><a href=form-control-infrastructure.html#attr-fs-action>action</a></code> — <a id=the-form-element:url href=https://url.spec.whatwg.org/#concept-url data-x-internal=url>URL</a> to use for <a id=the-form-element:form-submission-2-2 href=form-control-infrastructure.html#form-submission-2>form submission</a><dd><code id=the-form-element:attr-form-autocomplete><a href=#attr-form-autocomplete>autocomplete</a></code> — Default setting for autofill feature for controls in the form<dd><code id=the-form-element:attr-fs-enctype><a href=form-control-infrastructure.html#attr-fs-enctype>enctype</a></code> — Entry list encoding type to use for <a id=the-form-element:form-submission-2-3 href=form-control-infrastructure.html#form-submission-2>form submission</a><dd><code id=the-form-element:attr-fs-method><a href=form-control-infrastructure.html#attr-fs-method>method</a></code> — Variant to use for <a id=the-form-element:form-submission-2-4 href=form-control-infrastructure.html#form-submission-2>form submission</a><dd><code id=the-form-element:attr-form-name><a href=#attr-form-name>name</a></code> — Name of form to use in the <code id=the-form-element:dom-document-forms><a href=dom.html#dom-document-forms>document.forms</a></code> API<dd><code id=the-form-element:attr-fs-novalidate><a href=form-control-infrastructure.html#attr-fs-novalidate>novalidate</a></code> — Bypass form control validation for <a id=the-form-element:form-submission-2-5 href=form-control-infrastructure.html#form-submission-2>form submission</a><dd><code id=the-form-element:attr-fs-target><a href=form-control-infrastructure.html#attr-fs-target>target</a></code> — <a id=the-form-element:browsing-context href=browsers.html#browsing-context>Browsing context</a> for <a id=the-form-element:form-submission-2-6 href=form-control-infrastructure.html#form-submission-2>form submission</a><dd><code id=the-form-element:attr-form-rel><a href=#attr-form-rel>rel</a></code><dt><a href=dom.html#concept-element-accessibility-considerations id=the-form-element:concept-element-accessibility-considerations>Accessibility considerations</a>:<dd><a href=https://w3c.github.io/html-aria/#el-form>For authors</a>.<dd><a href=https://w3c.github.io/html-aam/#el-form>For implementers</a>.<dt><a href=dom.html#concept-element-dom id=the-form-element:concept-element-dom>DOM interface</a>:<dd>
+  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement title="The HTMLFormElement interface represents a <form> element in the DOM. It allows access to—and, in some cases, modification of—aspects of the form, as well as access to its component elements.">HTMLFormElement</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>3+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>8+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>5.5+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>1+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>10.1+</span></span></div></div></div><dl class=element><dt><a href=dom.html#concept-element-categories id=the-form-element:concept-element-categories>Categories</a>:<dd><a id=the-form-element:flow-content-2 href=dom.html#flow-content-2>Flow content</a>.<dd><a id=the-form-element:palpable-content-2 href=dom.html#palpable-content-2>Palpable content</a>.<dt><a href=dom.html#concept-element-contexts id=the-form-element:concept-element-contexts>Contexts in which this element can be used</a>:<dd>Where <a id=the-form-element:flow-content-2-2 href=dom.html#flow-content-2>flow content</a> is expected, but not as a descendant of
+   another <code id=the-form-element:the-form-element><a href=#the-form-element>form</a></code> or <code id=the-form-element:the-search-element><a href=#the-search-element>search</a></code> element.<dt><a href=dom.html#concept-element-content-model id=the-form-element:concept-element-content-model>Content model</a>:<dd><a id=the-form-element:flow-content-2-3 href=dom.html#flow-content-2>Flow content</a>, but with no <code id=the-form-element:the-form-element-2><a href=#the-form-element>form</a></code> or <code id=the-form-element:the-search-element-2><a href=#the-search-element>search</a></code> element
+   descendants.<dt><a href=dom.html#concept-element-tag-omission id=the-form-element:concept-element-tag-omission>Tag omission in text/html</a>:<dd>Neither tag is omissible.<dt><a href=dom.html#concept-element-attributes id=the-form-element:concept-element-attributes>Content attributes</a>:<dd><a id=the-form-element:global-attributes href=dom.html#global-attributes>Global attributes</a><dd><code id=the-form-element:attr-form-accept-charset><a href=#attr-form-accept-charset>accept-charset</a></code> — Character encodings to use for <a id=the-form-element:form-submission-2 href=form-control-infrastructure.html#form-submission-2>form submission</a><dd><code id=the-form-element:attr-fs-action><a href=form-control-infrastructure.html#attr-fs-action>action</a></code> — <a id=the-form-element:url href=https://url.spec.whatwg.org/#concept-url data-x-internal=url>URL</a> to use for <a id=the-form-element:form-submission-2-2 href=form-control-infrastructure.html#form-submission-2>form submission</a><dd><code id=the-form-element:attr-form-autocomplete><a href=#attr-form-autocomplete>autocomplete</a></code> — Default setting for autofill feature for controls in the form<dd><code id=the-form-element:attr-fs-enctype><a href=form-control-infrastructure.html#attr-fs-enctype>enctype</a></code> — Entry list encoding type to use for <a id=the-form-element:form-submission-2-3 href=form-control-infrastructure.html#form-submission-2>form submission</a><dd><code id=the-form-element:attr-fs-method><a href=form-control-infrastructure.html#attr-fs-method>method</a></code> — Variant to use for <a id=the-form-element:form-submission-2-4 href=form-control-infrastructure.html#form-submission-2>form submission</a><dd><code id=the-form-element:attr-form-name><a href=#attr-form-name>name</a></code> — Name of form to use in the <code id=the-form-element:dom-document-forms><a href=dom.html#dom-document-forms>document.forms</a></code> API<dd><code id=the-form-element:attr-fs-novalidate><a href=form-control-infrastructure.html#attr-fs-novalidate>novalidate</a></code> — Bypass form control validation for <a id=the-form-element:form-submission-2-5 href=form-control-infrastructure.html#form-submission-2>form submission</a><dd><code id=the-form-element:attr-fs-target><a href=form-control-infrastructure.html#attr-fs-target>target</a></code> — <a id=the-form-element:browsing-context href=browsers.html#browsing-context>Browsing context</a> for <a id=the-form-element:form-submission-2-6 href=form-control-infrastructure.html#form-submission-2>form submission</a><dd><code id=the-form-element:attr-form-rel><a href=#attr-form-rel>rel</a></code><dt><a href=dom.html#concept-element-accessibility-considerations id=the-form-element:concept-element-accessibility-considerations>Accessibility considerations</a>:<dd><a href=https://w3c.github.io/html-aria/#el-form>For authors</a>.<dd><a href=https://w3c.github.io/html-aam/#el-form>For implementers</a>.<dt><a href=dom.html#concept-element-dom id=the-form-element:concept-element-dom>DOM interface</a>:<dd>
     <pre><code class='idl'>[<c- g>Exposed</c->=<c- n>Window</c->,
  <a id='the-form-element:legacyoverridebuiltins' href='https://webidl.spec.whatwg.org/#LegacyOverrideBuiltIns' data-x-internal='legacyoverridebuiltins'><c- g>LegacyOverrideBuiltIns</c-></a>,
  <a id='the-form-element:legacyunenumerablenamedproperties' href='https://webidl.spec.whatwg.org/#LegacyUnenumerableNamedProperties' data-x-internal='legacyunenumerablenamedproperties'><c- g>LegacyUnenumerableNamedProperties</c-></a>]
@@ -645,7 +656,8 @@
 };</code></pre>
    </dl>
 
-  <p>The <code id=the-form-element:the-form-element-2><a href=#the-form-element>form</a></code> element <a id=the-form-element:represents href=dom.html#represents>represents</a> a <a id=the-form-element:hyperlink href=links.html#hyperlink>hyperlink</a> that can be
+  <p>A <a href=#concept-form id=the-form-element:concept-form>form</a>
+  <a id=the-form-element:represents href=dom.html#represents>represents</a> a <a id=the-form-element:hyperlink href=links.html#hyperlink>hyperlink</a> that can be
   manipulated through a collection of <a href=#form-associated-element id=the-form-element:form-associated-element>form-associated
   elements</a>, some of which can represent editable values that can be submitted to a server for
   processing.</p>
@@ -655,10 +667,11 @@
   case-insensitive</a> match for "<code>UTF-8</code>". <a href=references.html#refsENCODING>[ENCODING]</a></p>
 
   <p>The <dfn data-dfn-for=form id=attr-form-name data-dfn-type=element-attr><code>name</code></dfn> attribute
-  represents the <code id=the-form-element:the-form-element-3><a href=#the-form-element>form</a></code>'s name within the <code id=the-form-element:dom-document-forms-2><a href=dom.html#dom-document-forms>forms</a></code>
+  represents the <a href=#concept-form id=the-form-element:concept-form-2>form</a>'s
+  name within the <code id=the-form-element:dom-document-forms-2><a href=dom.html#dom-document-forms>forms</a></code>
   collection. The value must not be the empty string, and the value must be unique amongst the
-  <code id=the-form-element:the-form-element-4><a href=#the-form-element>form</a></code> elements in the <code id=the-form-element:dom-document-forms-3><a href=dom.html#dom-document-forms>forms</a></code> collection that
-  it is in, if any.</p>
+  <code id=the-form-element:the-form-element-3><a href=#the-form-element>form</a></code> and <code id=the-form-element:the-search-element-3><a href=#the-search-element>search</a></code> elements in the
+  <code id=the-form-element:dom-document-forms-3><a href=dom.html#dom-document-forms>forms</a></code> collection that it is in, if any.</p>
 
   <p>The <dfn data-dfn-for=form id=attr-form-autocomplete data-dfn-type=element-attr><code>autocomplete</code></dfn> attribute is an <a id=the-form-element:enumerated-attribute href=common-microsyntaxes.html#enumerated-attribute>enumerated
   attribute</a>. The attribute has two states. The <dfn id=attr-form-autocomplete-on><code>on</code></dfn> keyword maps to the <dfn id=attr-form-autocomplete-on-state>on</dfn> state, and the <dfn id=attr-form-autocomplete-off><code>off</code></dfn> keyword maps to the <dfn id=attr-form-autocomplete-off-state>off</dfn> state. The attribute may also be omitted. The
@@ -672,12 +685,14 @@
   submission</a>.</p>
 
   <p>The <dfn data-dfn-for=form id=attr-form-rel data-dfn-type=element-attr><code>rel</code></dfn> attribute on
-  <code id=the-form-element:the-form-element-5><a href=#the-form-element>form</a></code> elements controls what kinds of links the elements create. The attribute's value
+  <a href=#concept-form id=the-form-element:concept-form-3>forms</a>
+  controls what kinds of links the elements create. The attribute's value
   must be a <a id=the-form-element:unordered-set-of-unique-space-separated-tokens href=common-microsyntaxes.html#unordered-set-of-unique-space-separated-tokens>unordered set of unique space-separated tokens</a>. The <a href=links.html#linkTypes>allowed keywords and their meanings</a> are defined in an earlier section.</p>
 
   <p><code id=the-form-element:attr-form-rel-2><a href=#attr-form-rel>rel</a></code>'s <a href=https://dom.spec.whatwg.org/#concept-supported-tokens id=the-form-element:concept-supported-tokens data-x-internal=concept-supported-tokens>supported
   tokens</a> are the keywords defined in <a href=links.html#linkTypes>HTML link types</a> which are
-  allowed on <code id=the-form-element:the-form-element-6><a href=#the-form-element>form</a></code> elements, impact the processing model, and are supported by the user
+  allowed on <a href=#concept-form id=the-form-element:concept-form-4>forms</a>,
+  impact the processing model, and are supported by the user
   agent. The possible <a href=https://dom.spec.whatwg.org/#concept-supported-tokens id=the-form-element:concept-supported-tokens-2 data-x-internal=concept-supported-tokens>supported tokens</a> are <code id=the-form-element:link-type-noreferrer><a href=links.html#link-type-noreferrer>noreferrer</a></code>, <code id=the-form-element:link-type-noopener><a href=links.html#link-type-noopener>noopener</a></code>, and <code id=the-form-element:link-type-opener><a href=links.html#link-type-opener>opener</a></code>. <code id=the-form-element:attr-form-rel-3><a href=#attr-form-rel>rel</a></code>'s <a href=https://dom.spec.whatwg.org/#concept-supported-tokens id=the-form-element:concept-supported-tokens-3 data-x-internal=concept-supported-tokens>supported tokens</a> must only include the tokens from this
   list that the user agent implements the processing model for.</p>
 
@@ -739,8 +754,9 @@
 
   <p>The <dfn data-dfn-for=HTMLFormElement id=dom-form-elements data-dfn-type=attribute><code>elements</code></dfn>
   IDL attribute must return an <code id=the-form-element:htmlformcontrolscollection-3><a href=common-dom-interfaces.html#htmlformcontrolscollection>HTMLFormControlsCollection</a></code> rooted at the
-  <code id=the-form-element:the-form-element-7><a href=#the-form-element>form</a></code> element's <a id=the-form-element:root href=https://dom.spec.whatwg.org/#concept-tree-root data-x-internal=root>root</a>, whose filter matches <a href=#category-listed id=the-form-element:category-listed>listed elements</a> whose <a id=the-form-element:form-owner href=form-control-infrastructure.html#form-owner>form owner</a> is the
-  <code id=the-form-element:the-form-element-8><a href=#the-form-element>form</a></code> element, with the exception of <code id=the-form-element:the-input-element><a href=input.html#the-input-element>input</a></code> elements whose <code id=the-form-element:attr-input-type><a href=input.html#attr-input-type>type</a></code> attribute is in the <a href="input.html#image-button-state-(type=image)" id="the-form-element:image-button-state-(type=image)">Image Button</a> state, which must, for historical reasons, be
+  <a href=#concept-form id=the-form-element:concept-form-5>form</a>'s <a id=the-form-element:root href=https://dom.spec.whatwg.org/#concept-tree-root data-x-internal=root>root</a>, whose filter matches <a href=#category-listed id=the-form-element:category-listed>listed elements</a> whose <a id=the-form-element:form-owner href=form-control-infrastructure.html#form-owner>form owner</a> is the
+  <a href=#concept-form id=the-form-element:concept-form-6>form</a>, with the exception of <code id=the-form-element:the-input-element><a href=input.html#the-input-element>input</a></code> elements whose
+  <code id=the-form-element:attr-input-type><a href=input.html#attr-input-type>type</a></code> attribute is in the <a href="input.html#image-button-state-(type=image)" id="the-form-element:image-button-state-(type=image)">Image Button</a> state, which must, for historical reasons, be
   excluded from this particular collection.</p>
 
   <p>The <dfn data-dfn-for=HTMLFormElement id=dom-form-length data-dfn-type=attribute><code>length</code></dfn> IDL
@@ -752,12 +768,14 @@
   instant.</p>
 
   <p id=dom-form-item>To <a id=the-form-element:determine-the-value-of-an-indexed-property href=https://webidl.spec.whatwg.org/#dfn-determine-the-value-of-an-indexed-property data-x-internal=determine-the-value-of-an-indexed-property>determine the value of an indexed property</a> for a
-  <code id=the-form-element:the-form-element-9><a href=#the-form-element>form</a></code> element, the user agent must return the value returned by the <code id=the-form-element:dom-htmlcollection-item><a data-x-internal=dom-htmlcollection-item href=https://dom.spec.whatwg.org/#dom-htmlcollection-item>item</a></code> method on the <code id=the-form-element:dom-form-elements-4><a href=#dom-form-elements>elements</a></code> collection, when invoked with the given index as its
+  <a href=#concept-form id=the-form-element:concept-form-7>form</a>,
+  the user agent must return the value returned by the <code id=the-form-element:dom-htmlcollection-item><a data-x-internal=dom-htmlcollection-item href=https://dom.spec.whatwg.org/#dom-htmlcollection-item>item</a></code> method on the <code id=the-form-element:dom-form-elements-4><a href=#dom-form-elements>elements</a></code> collection, when invoked with the given index as its
   argument.</p>
 
   <hr>
 
-  <p>Each <code id=the-form-element:the-form-element-10><a href=#the-form-element>form</a></code> element has a mapping of names to elements called the <dfn id=past-names-map>past names
+  <p>Each <a href=#concept-form id=the-form-element:concept-form-8>form</a>
+  has a mapping of names to elements called the <dfn id=past-names-map>past names
   map</dfn>. It is used to persist names of controls even when they change names.</p>
 
   <p>The <a id=the-form-element:supported-property-names href=https://webidl.spec.whatwg.org/#dfn-supported-property-names data-x-internal=supported-property-names>supported property names</a> consist of the names obtained from the following
@@ -767,7 +785,8 @@
    consisting of a string, an element, a source, where the source is either <i>id</i>, <i>name</i>,
    or <i>past</i>, and, if the source is <i>past</i>, an age.<li>
     <p>For each <a href=#category-listed id=the-form-element:category-listed-2>listed element</a> <var>candidate</var>
-    whose <a id=the-form-element:form-owner-2 href=form-control-infrastructure.html#form-owner>form owner</a> is the <code id=the-form-element:the-form-element-11><a href=#the-form-element>form</a></code> element, with the exception of any
+    whose <a id=the-form-element:form-owner-2 href=form-control-infrastructure.html#form-owner>form owner</a> is the <a href=#concept-form id=the-form-element:concept-form-9>form</a>,
+    with the exception of any
     <code id=the-form-element:the-input-element-2><a href=input.html#the-input-element>input</a></code> elements whose <code id=the-form-element:attr-input-type-2><a href=input.html#attr-input-type>type</a></code> attribute is in the
     <a href="input.html#image-button-state-(type=image)" id="the-form-element:image-button-state-(type=image)-2">Image Button</a> state:</p>
 
@@ -779,7 +798,7 @@
      as the element, and <i>name</i> as the source.</ol>
    <li>
     <p>For each <code id=the-form-element:the-img-element-2><a href=embedded-content.html#the-img-element>img</a></code> element <var>candidate</var> whose <a id=the-form-element:form-owner-3 href=form-control-infrastructure.html#form-owner>form owner</a> is the
-    <code id=the-form-element:the-form-element-12><a href=#the-form-element>form</a></code> element:</p>
+    <a href=#concept-form id=the-form-element:concept-form-10>form</a>:</p>
 
     <ol><li><p>If <var>candidate</var> has an <code id=the-form-element:the-id-attribute-3><a href=dom.html#the-id-attribute>id</a></code> attribute, add
      an entry to <var>sourced names</var> with that <code id=the-form-element:the-id-attribute-4><a href=dom.html#the-id-attribute>id</a></code>
@@ -802,22 +821,23 @@
    relative order.</ol>
 
   <p id=dom-form-nameditem>To <a id=the-form-element:determine-the-value-of-a-named-property href=https://webidl.spec.whatwg.org/#dfn-determine-the-value-of-a-named-property data-x-internal=determine-the-value-of-a-named-property>determine the value of a named property</a> <var>name</var>
-  for a <code id=the-form-element:the-form-element-13><a href=#the-form-element>form</a></code> element, the user agent must run the following steps:</p>
+  for a <a href=#concept-form id=the-form-element:concept-form-11>form</a>, the user agent must run the following steps:</p>
 
   <ol><li><p>Let <var>candidates</var> be a <a id=the-form-element:live href=infrastructure.html#live>live</a> <code id=the-form-element:radionodelist-4><a href=common-dom-interfaces.html#radionodelist>RadioNodeList</a></code> object
    containing all the <a href=#category-listed id=the-form-element:category-listed-3>listed elements</a>, whose <a id=the-form-element:form-owner-4 href=form-control-infrastructure.html#form-owner>form
-   owner</a> is the <code id=the-form-element:the-form-element-14><a href=#the-form-element>form</a></code> element, that have either an <code id=the-form-element:the-id-attribute-5><a href=dom.html#the-id-attribute>id</a></code> attribute or a <code id=the-form-element:attr-fe-name-5><a href=form-control-infrastructure.html#attr-fe-name>name</a></code> attribute equal
+   owner</a> is the <a href=#concept-form id=the-form-element:concept-form-12>form</a>, that have either an <code id=the-form-element:the-id-attribute-5><a href=dom.html#the-id-attribute>id</a></code> attribute or a <code id=the-form-element:attr-fe-name-5><a href=form-control-infrastructure.html#attr-fe-name>name</a></code> attribute equal
    to <var>name</var>, with the exception of <code id=the-form-element:the-input-element-3><a href=input.html#the-input-element>input</a></code> elements whose <code id=the-form-element:attr-input-type-3><a href=input.html#attr-input-type>type</a></code> attribute is in the <a href="input.html#image-button-state-(type=image)" id="the-form-element:image-button-state-(type=image)-3">Image Button</a> state, in <a id=the-form-element:tree-order-2 href=https://dom.spec.whatwg.org/#concept-tree-order data-x-internal=tree-order>tree order</a>.<li><p>If <var>candidates</var> is empty, let <var>candidates</var> be a <a id=the-form-element:live-2 href=infrastructure.html#live>live</a>
    <code id=the-form-element:radionodelist-5><a href=common-dom-interfaces.html#radionodelist>RadioNodeList</a></code> object containing all the <code id=the-form-element:the-img-element-3><a href=embedded-content.html#the-img-element>img</a></code> elements, whose <a id=the-form-element:form-owner-5 href=form-control-infrastructure.html#form-owner>form
-   owner</a> is the <code id=the-form-element:the-form-element-15><a href=#the-form-element>form</a></code> element, that have either an <code id=the-form-element:the-id-attribute-6><a href=dom.html#the-id-attribute>id</a></code> attribute or a <code id=the-form-element:attr-img-name-3><a href=obsolete.html#attr-img-name>name</a></code> attribute
+   owner</a> is the <a href=#concept-form id=the-form-element:concept-form-13>form</a>, that have either an <code id=the-form-element:the-id-attribute-6><a href=dom.html#the-id-attribute>id</a></code> attribute or a <code id=the-form-element:attr-img-name-3><a href=obsolete.html#attr-img-name>name</a></code> attribute
    equal to <var>name</var>, in <a id=the-form-element:tree-order-3 href=https://dom.spec.whatwg.org/#concept-tree-order data-x-internal=tree-order>tree order</a>.<li><p>If <var>candidates</var> is empty, <var>name</var> is the name of one of
-   the entries in the <code id=the-form-element:the-form-element-16><a href=#the-form-element>form</a></code> element's <a href=#past-names-map id=the-form-element:past-names-map-3>past names map</a>: return the object
-   associated with <var>name</var> in that map.<li><p>If <var>candidates</var> contains more than one node, return <var>candidates</var>.<li><p>Otherwise, <var>candidates</var> contains exactly one node. Add a mapping from
-   <var>name</var> to the node in <var>candidates</var> in the <code id=the-form-element:the-form-element-17><a href=#the-form-element>form</a></code>
-   element's <a href=#past-names-map id=the-form-element:past-names-map-4>past names map</a>, replacing the previous entry with the same name, if
-   any.<li><p>Return the node in <var>candidates</var>.</ol>
+   the entries in the <a href=#concept-form id=the-form-element:concept-form-14>form</a>'s <a href=#past-names-map id=the-form-element:past-names-map-3>past names map</a>:
+   return the object associated with <var>name</var> in that map.<li><p>If <var>candidates</var> contains more than one node, return <var>candidates</var>.<li><p>Otherwise, <var>candidates</var> contains exactly one node. Add a mapping from
+   <var>name</var> to the node in <var>candidates</var> in the
+   <a href=#concept-form id=the-form-element:concept-form-15>form</a>'s <a href=#past-names-map id=the-form-element:past-names-map-4>past names map</a>,
+   replacing the previous entry with the same name, if any.<li><p>Return the node in <var>candidates</var>.</ol>
 
-  <p>If an element listed in a <code id=the-form-element:the-form-element-18><a href=#the-form-element>form</a></code> element's <a href=#past-names-map id=the-form-element:past-names-map-5>past names map</a> changes
+  <p>If an element listed in a <a href=#concept-form id=the-form-element:concept-form-16>form</a>'s
+  <a href=#past-names-map id=the-form-element:past-names-map-5>past names map</a> changes
   <a id=the-form-element:form-owner-6 href=form-control-infrastructure.html#form-owner>form owner</a>, then its entries must be removed from that map.</p>
 
   
@@ -825,8 +845,9 @@
   <hr>
 
   <p>The <dfn data-dfn-for=HTMLFormElement id=dom-form-submit data-dfn-type=method><code>submit()</code></dfn>
-  method, when invoked, must <a href=form-control-infrastructure.html#concept-form-submit id=the-form-element:concept-form-submit>submit</a> the <code id=the-form-element:the-form-element-19><a href=#the-form-element>form</a></code>
-  element from the <code id=the-form-element:the-form-element-20><a href=#the-form-element>form</a></code> element itself, with the <var>submitted from <code id=the-form-element:dom-form-submit-3><a href=#dom-form-submit>submit()</a></code> method</var> flag set.</p>
+  method, when invoked, must <a href=form-control-infrastructure.html#concept-form-submit id=the-form-element:concept-form-submit>submit</a> the
+  <a href=#concept-form id=the-form-element:concept-form-17>form</a> from the <a href=#concept-form id=the-form-element:concept-form-18>form</a>
+  itself, with the <var>submitted from <code id=the-form-element:dom-form-submit-3><a href=#dom-form-submit>submit()</a></code> method</var> flag set.</p>
 
   <p>The <dfn data-dfn-for=HTMLFormElement id=dom-form-requestsubmit data-dfn-type=method><code>requestSubmit(<var>submitter</var>)</code></dfn> method, when
   invoked, must run the following steps:</p>
@@ -835,23 +856,30 @@
     <p>If <var>submitter</var> is not null, then:</p>
 
     <ol><li><p>If <var>submitter</var> is not a <a href=#concept-submit-button id=the-form-element:concept-submit-button-2>submit
-     button</a>, then throw a <code id=the-form-element:typeerror><a data-x-internal=typeerror href=https://tc39.es/ecma262/#sec-native-error-types-used-in-this-standard-typeerror>TypeError</a></code>.<li><p>If <var>submitter</var>'s <a id=the-form-element:form-owner-7 href=form-control-infrastructure.html#form-owner>form owner</a> is not this <code id=the-form-element:the-form-element-21><a href=#the-form-element>form</a></code> element,
+     button</a>, then throw a <code id=the-form-element:typeerror><a data-x-internal=typeerror href=https://tc39.es/ecma262/#sec-native-error-types-used-in-this-standard-typeerror>TypeError</a></code>.<li><p>If <var>submitter</var>'s <a id=the-form-element:form-owner-7 href=form-control-infrastructure.html#form-owner>form owner</a> is not this
+     <a href=#concept-form id=the-form-element:concept-form-19>form</a>,
      then throw a <a id=the-form-element:notfounderror href=https://webidl.spec.whatwg.org/#notfounderror data-x-internal=notfounderror>"<code>NotFoundError</code>"</a> <code id=the-form-element:domexception><a data-x-internal=domexception href=https://webidl.spec.whatwg.org/#dfn-DOMException>DOMException</a></code>.</ol>
-   <li><p>Otherwise, set <var>submitter</var> to this <code id=the-form-element:the-form-element-22><a href=#the-form-element>form</a></code> element.<li><p><a href=form-control-infrastructure.html#concept-form-submit id=the-form-element:concept-form-submit-2>Submit</a> this <code id=the-form-element:the-form-element-23><a href=#the-form-element>form</a></code> element, from
-   <var>submitter</var>.</ol>
+   <li><p>Otherwise, set <var>submitter</var> to this
+   <a href=#concept-form id=the-form-element:concept-form-20>form</a>.<li><p><a href=form-control-infrastructure.html#concept-form-submit id=the-form-element:concept-form-submit-2>Submit</a> this
+   <a href=#concept-form id=the-form-element:concept-form-21>form</a>, from <var>submitter</var>.</ol>
 
   <p>The <dfn data-dfn-for=HTMLFormElement id=dom-form-reset data-dfn-type=method><code>reset()</code></dfn>
   method, when invoked, must run the following steps:</p>
 
-  <ol><li><p>If the <code id=the-form-element:the-form-element-24><a href=#the-form-element>form</a></code> element is marked as <i id=the-form-element:locked-for-reset><a href=#locked-for-reset>locked for reset</a></i>, then return.<li><p>Mark the <code id=the-form-element:the-form-element-25><a href=#the-form-element>form</a></code> element as <dfn id=locked-for-reset>locked for reset</dfn>.<li><p><a href=form-control-infrastructure.html#concept-form-reset id=the-form-element:concept-form-reset>Reset</a> the <code id=the-form-element:the-form-element-26><a href=#the-form-element>form</a></code> element.<li><p>Unmark the <code id=the-form-element:the-form-element-27><a href=#the-form-element>form</a></code> element as <i id=the-form-element:locked-for-reset-2><a href=#locked-for-reset>locked for reset</a></i>.</ol>
+  <ol><li><p>If the <a href=#concept-form id=the-form-element:concept-form-22>form</a> is marked as
+   <i id=the-form-element:locked-for-reset><a href=#locked-for-reset>locked for reset</a></i>, then return.<li><p>Mark the <a href=#concept-form id=the-form-element:concept-form-23>form</a> as <dfn id=locked-for-reset>locked for reset</dfn>.<li><p><a href=form-control-infrastructure.html#concept-form-reset id=the-form-element:concept-form-reset>Reset</a> the
+   <a href=#concept-form id=the-form-element:concept-form-24>form</a>.<li><p>Unmark the <a href=#concept-form id=the-form-element:concept-form-25>form</a>
+   as <i id=the-form-element:locked-for-reset-2><a href=#locked-for-reset>locked for reset</a></i>.</ol>
 
   <p>If the <dfn data-dfn-for=HTMLFormElement id=dom-form-checkvalidity data-dfn-type=method><code>checkValidity()</code></dfn> method is invoked, the user agent
-  must <a id=the-form-element:statically-validate-the-constraints href=form-control-infrastructure.html#statically-validate-the-constraints>statically validate the constraints</a> of the <code id=the-form-element:the-form-element-28><a href=#the-form-element>form</a></code> element, and return
+  must <a id=the-form-element:statically-validate-the-constraints href=form-control-infrastructure.html#statically-validate-the-constraints>statically validate the constraints</a> of the
+  <a href=#concept-form id=the-form-element:concept-form-26>form</a>, and return
   true if the constraint validation return a <i>positive</i> result, and false if it returned a
   <i>negative</i> result.</p>
 
   <p>If the <dfn data-dfn-for=HTMLFormElement id=dom-form-reportvalidity data-dfn-type=method><code>reportValidity()</code></dfn> method is invoked, the user agent
-  must <a id=the-form-element:interactively-validate-the-constraints-3 href=form-control-infrastructure.html#interactively-validate-the-constraints>interactively validate the constraints</a> of the <code id=the-form-element:the-form-element-29><a href=#the-form-element>form</a></code> element, and
+  must <a id=the-form-element:interactively-validate-the-constraints-3 href=form-control-infrastructure.html#interactively-validate-the-constraints>interactively validate the constraints</a> of the
+  <a href=#concept-form id=the-form-element:concept-form-27>form</a>, and
   return true if the constraint validation return a <i>positive</i> result, and false if it returned
   a <i>negative</i> result.</p>
 
@@ -872,7 +900,78 @@
 
 
 
-  <h4 id=the-label-element><span class=secno>4.10.4</span> The <dfn data-dfn-type=element><code>label</code></dfn> element<a href=#the-label-element class=self-link></a></h4><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label title="The <label> HTML element represents a caption for an item in a user interface.">Element/label</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>Yes</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>Yes</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>Yes</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div>
+  <h4 id=the-search-element><span class=secno>4.10.4</span> The <dfn data-dfn-type=element><code>search</code></dfn> element<a href=#the-search-element class=self-link></a></h4>
+
+  <dl class=element><dt><a href=dom.html#concept-element-categories id=the-search-element:concept-element-categories>Categories</a>:<dd><a id=the-search-element:flow-content-2 href=dom.html#flow-content-2>Flow content</a>.<dd><a id=the-search-element:palpable-content-2 href=dom.html#palpable-content-2>Palpable content</a>.<dt><a href=dom.html#concept-element-contexts id=the-search-element:concept-element-contexts>Contexts in which this element can be used</a>:<dd>Where <a id=the-search-element:flow-content-2-2 href=dom.html#flow-content-2>flow content</a> is expected, but not as a descendant of
+   another <code id=the-search-element:the-form-element><a href=#the-form-element>form</a></code> or <code id=the-search-element:the-search-element><a href=#the-search-element>search</a></code> element.<dt><a href=dom.html#concept-element-content-model id=the-search-element:concept-element-content-model>Content model</a>:<dd><a id=the-search-element:flow-content-2-3 href=dom.html#flow-content-2>Flow content</a>, but with no <code id=the-search-element:the-form-element-2><a href=#the-form-element>form</a></code> or <code id=the-search-element:the-search-element-2><a href=#the-search-element>search</a></code> element
+   descendants.<dt><a href=dom.html#concept-element-tag-omission id=the-search-element:concept-element-tag-omission>Tag omission in text/html</a>:<dd>Neither tag is omissible.<dt><a href=dom.html#concept-element-attributes id=the-search-element:concept-element-attributes>Content attributes</a>:<dd><a id=the-search-element:global-attributes href=dom.html#global-attributes>Global attributes</a><dd><a href=#the-form-element id=the-search-element:the-form-element-3>form attributes</a><dd><code id=the-search-element:attr-search-action><a href=form-control-infrastructure.html#attr-search-action>action</a></code> — URL to use for
+   <a id=the-search-element:form-submission-2 href=form-control-infrastructure.html#form-submission-2>form submission</a> or unspecified to disable <a id=the-search-element:form-submission-2-2 href=form-control-infrastructure.html#form-submission-2>form submission</a><dt><a href=dom.html#concept-element-accessibility-considerations id=the-search-element:concept-element-accessibility-considerations>Accessibility considerations</a>:<dd><a href=https://w3c.github.io/html-aria/#el-search>For authors</a>.<dd><a href=https://w3c.github.io/html-aam/#el-search>For implementers</a>.<dt><a href=dom.html#concept-element-dom id=the-search-element:concept-element-dom>DOM interface</a>:<dd>Uses <code id=the-search-element:htmlformelement><a href=#htmlformelement>HTMLFormElement</a></code>, as defined for <code id=the-search-element:the-form-element-4><a href=#the-form-element>form</a></code> elements.</dl>
+
+  <p>The <code id=the-search-element:the-search-element-3><a href=#the-search-element>search</a></code> element <a id=the-search-element:represents href=dom.html#represents>represents</a> a part of a document or application
+  that contains a set of form controls or other content related to performing a search or filtering
+  operation. This could be a search of the web site or application; a way of searching or filtering
+  search results on the current web page; or a global or Internet-wide search function.</p>
+
+  <p>The <code id=the-search-element:the-search-element-4><a href=#the-search-element>search</a></code> element is almost identical to the <code id=the-search-element:the-form-element-5><a href=#the-form-element>form</a></code>
+  element with the following differences:</p>
+
+  <ol><li><p>If the <code id=the-search-element:attr-search-action-2><a href=form-control-infrastructure.html#attr-search-action>action</a></code> attribute is unspecified then
+   <a id=the-search-element:form-submission-2-3 href=form-control-infrastructure.html#form-submission-2>form submission</a> is disabled, only the
+   <code id=the-search-element:event-submit><a href=indices.html#event-submit>submit event</a></code> is fired.<li><p>The <code id=the-search-element:the-search-element-5><a href=#the-search-element>search</a></code> element has the <code id=the-search-element:attr-aria-role-search><a data-x-internal=attr-aria-role-search href=https://w3c.github.io/aria/#search>search</a></code>
+   <code id=the-search-element:attr-aria-role><a href=infrastructure.html#attr-aria-role>role</a></code>, screen readers announce it as the "search landmark" when focus navigates into it.</ol>
+
+  <div class=example>
+   <p>In the following example, the author is including a search form within the
+   <code id=the-search-element:the-header-element><a href=sections.html#the-header-element>header</a></code> of the web page:</p>
+
+   <pre><code class='html'><c- p>&lt;</c-><c- f>header</c-><c- p>&gt;</c->
+  <c- p>&lt;</c-><c- f>h1</c-><c- p>&gt;&lt;</c-><c- f>a</c-> <c- e>href</c-><c- o>=</c-><c- s>&quot;/&quot;</c-><c- p>&gt;</c->My fancy blog<c- p>&lt;/</c-><c- f>a</c-><c- p>&gt;&lt;/</c-><c- f>h1</c-><c- p>&gt;</c->
+  ...
+  <c- p>&lt;</c-><c- f>search</c-> <c- e>action</c-><c- o>=</c-><c- s>&quot;search.php&quot;</c-><c- p>&gt;</c->
+    <c- p>&lt;</c-><c- f>label</c-> <c- e>for</c-><c- o>=</c-><c- s>&quot;query&quot;</c-><c- p>&gt;</c->Find an article<c- p>&lt;/</c-><c- f>label</c-><c- p>&gt;</c->
+    <c- p>&lt;</c-><c- f>input</c-> <c- e>id</c-><c- o>=</c-><c- s>&quot;query&quot;</c-> <c- e>name</c-><c- o>=</c-><c- s>&quot;q&quot;</c-> <c- e>type</c-><c- o>=</c-><c- s>&quot;search&quot;</c-><c- p>&gt;</c->
+    <c- p>&lt;</c-><c- f>button</c-> <c- e>type</c-><c- o>=</c-><c- s>&quot;submit&quot;</c-><c- p>&gt;</c->Go!<c- p>&lt;/</c-><c- f>button</c-><c- p>&gt;</c->
+  <c- p>&lt;/</c-><c- f>search</c-><c- p>&gt;</c->
+<c- p>&lt;/</c-><c- f>header</c-><c- p>&gt;</c-></code></pre>
+  </div>
+
+  <div class=example>
+   <p>In this example, the author has implemented their web application's search functionality
+   entirely with JavaScript. There is no use of the <code id=the-search-element:attr-search-action-3><a href=form-control-infrastructure.html#attr-search-action>action</a></code> attribute to perform
+   server-side submission. The containing <code id=the-search-element:the-search-element-6><a href=#the-search-element>search</a></code> element semantically identifies
+   the purpose of the descendant content as representing search capabilities.</p>
+
+   <pre><code class='html'><c- p>&lt;</c-><c- f>search</c-><c- p>&gt;</c->
+  <c- p>&lt;</c-><c- f>label</c-><c- p>&gt;</c->
+    Find and filter your query
+    <c- p>&lt;</c-><c- f>input</c-> <c- e>type</c-><c- o>=</c-><c- s>&quot;search&quot;</c-> <c- e>id</c-><c- o>=</c-><c- s>&quot;query&quot;</c-><c- p>&gt;</c->
+  <c- p>&lt;/</c-><c- f>label</c-><c- p>&gt;</c->
+  <c- p>&lt;</c-><c- f>label</c-><c- p>&gt;</c->
+    <c- p>&lt;</c-><c- f>input</c-> <c- e>type</c-><c- o>=</c-><c- s>&quot;checkbox&quot;</c-> <c- e>id</c-><c- o>=</c-><c- s>&quot;exact-only&quot;</c-><c- p>&gt;</c->
+    Exact matches only
+  <c- p>&lt;/</c-><c- f>label</c-><c- p>&gt;</c->
+
+  <c- p>&lt;</c-><c- f>section</c-><c- p>&gt;</c->
+    <c- p>&lt;</c-><c- f>h3</c-><c- p>&gt;</c->Results found:<c- p>&lt;/</c-><c- f>h3</c-><c- p>&gt;</c->
+    <c- p>&lt;</c-><c- f>ul</c-> <c- e>id</c-><c- o>=</c-><c- s>&quot;results&quot;</c-><c- p>&gt;</c->
+      <c- p>&lt;</c-><c- f>li</c-><c- p>&gt;</c->
+        <c- p>&lt;</c-><c- f>p</c-><c- p>&gt;&lt;</c-><c- f>a</c-> <c- e>href</c-><c- o>=</c-><c- s>&quot;services/consulting&quot;</c-><c- p>&gt;</c->Consulting services<c- p>&lt;/</c-><c- f>a</c-><c- p>&gt;&lt;/</c-><c- f>p</c-><c- p>&gt;</c->
+        <c- p>&lt;</c-><c- f>p</c-><c- p>&gt;</c->
+          Find out how we can help you improve your business with our integrated consultants, Bob and Rob.
+        <c- p>&lt;/</c-><c- f>p</c-><c- p>&gt;</c->
+      <c- p>&lt;/</c-><c- f>li</c-><c- p>&gt;</c->
+      ...
+    <c- p>&lt;/</c-><c- f>ul</c-><c- p>&gt;</c->
+    <c- c>&lt;!--</c->
+<c- c>      when a query returns or filters out all results</c->
+<c- c>      render the no results message here</c->
+<c- c>    --&gt;</c->
+    <c- p>&lt;</c-><c- f>output</c-> <c- e>id</c-><c- o>=</c-><c- s>&quot;no-results&quot;</c-><c- p>&gt;&lt;/</c-><c- f>output</c-><c- p>&gt;</c->
+  <c- p>&lt;/</c-><c- f>section</c-><c- p>&gt;</c->
+<c- p>&lt;/</c-><c- f>search</c-><c- p>&gt;</c-></code></pre>
+  </div>
+
+  <h4 id=the-label-element><span class=secno>4.10.5</span> The <dfn data-dfn-type=element><code>label</code></dfn> element<a href=#the-label-element class=self-link></a></h4><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label title="The <label> HTML element represents a caption for an item in a user interface.">Element/label</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>Yes</span></span><span class="safari yes"><span>Safari</span><span>Yes</span></span><span class="chrome yes"><span>Chrome</span><span>Yes</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>Yes</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>Yes</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>Yes</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>Yes</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>Yes</span></span><span class="webview_android yes"><span>WebView Android</span><span>Yes</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>Yes</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div>
 
   <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/HTMLLabelElement title="The HTMLLabelElement interface gives access to properties specific to <label> elements. It inherits methods and properties from the base HTMLElement interface.">HTMLLabelElement</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>3+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>12.1+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>5.5+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>1+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>1+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>12.1+</span></span></div></div></div><dl class=element><dt><a href=dom.html#concept-element-categories id=the-label-element:concept-element-categories>Categories</a>:<dd><a id=the-label-element:flow-content-2 href=dom.html#flow-content-2>Flow content</a>.<dd><a id=the-label-element:phrasing-content-2 href=dom.html#phrasing-content-2>Phrasing content</a>.<dd><a id=the-label-element:interactive-content-2 href=dom.html#interactive-content-2>Interactive content</a>.<dd><a id=the-label-element:palpable-content-2 href=dom.html#palpable-content-2>Palpable content</a>.<dt><a href=dom.html#concept-element-contexts id=the-label-element:concept-element-contexts>Contexts in which this element can be used</a>:<dd>Where <a id=the-label-element:phrasing-content-2-2 href=dom.html#phrasing-content-2>phrasing content</a> is expected.<dt><a href=dom.html#concept-element-content-model id=the-label-element:concept-element-content-model>Content model</a>:<dd><a id=the-label-element:phrasing-content-2-3 href=dom.html#phrasing-content-2>Phrasing content</a>, but with no descendant <a href=#category-label id=the-label-element:category-label>labelable elements</a> unless it is the element's <a href=#labeled-control id=the-label-element:labeled-control>labeled control</a>, and no descendant <code id=the-label-element:the-label-element><a href=#the-label-element>label</a></code> elements.<dt><a href=dom.html#concept-element-tag-omission id=the-label-element:concept-element-tag-omission>Tag omission in text/html</a>:<dd>Neither tag is omissible.<dt><a href=dom.html#concept-element-attributes id=the-label-element:concept-element-attributes>Content attributes</a>:<dd><a id=the-label-element:global-attributes href=dom.html#global-attributes>Global attributes</a><dd><code id=the-label-element:attr-label-for><a href=#attr-label-for>for</a></code> — Associate the label with form control<dt><a href=dom.html#concept-element-accessibility-considerations id=the-label-element:concept-element-accessibility-considerations>Accessibility considerations</a>:<dd><a href=https://w3c.github.io/html-aria/#el-label>For authors</a>.<dd><a href=https://w3c.github.io/html-aam/#el-label>For implementers</a>.<dt><a href=dom.html#concept-element-dom id=the-label-element:concept-element-dom>DOM interface</a>:<dd>
     <pre><code class='idl'>[<c- g>Exposed</c->=<c- n>Window</c->]
@@ -1039,4 +1138,4 @@
   
 
 
-  <nav><a href=tables.html>← 4.9 Tabular data</a> — <a href=./>Table of Contents</a> — <a href=input.html>4.10.5 The input element →</a></nav>
+  <nav><a href=tables.html>← 4.9 Tabular data</a> — <a href=./>Table of Contents</a> — <a href=input.html>4.10.6 The input element →</a></nav>

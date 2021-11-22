@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Standard, Edition for Web Developers</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/dev/styles.css crossorigin=""><script>
+<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Specification Draft: &lt;search> element with form functionality, Edition for Web Developers</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/dev/styles.css crossorigin=""><script>
    function toggleStatus(div) {
      div.parentNode.classList.toggle('wrapped');
    }
@@ -13,7 +13,8 @@
   <header id=head class="head with-buttons">
    <a href=https://whatwg.org/ class=logo><img width=100 alt=WHATWG crossorigin="" src=https://resources.whatwg.org/logo.svg height=100></a>
    
-   <hgroup><h1><a rel=home href=/dev/>HTML: The Living Standard</a></h1><h2 id=dev-edition-h2 class="no-num no-toc">Edition for Web Developers — Last Updated <span class=pubdate>22 November 2021</span></h2></hgroup>
+   <hgroup><h1><a rel=home href=/dev/>HTML: The Living Standard — Edition for Web Developers</a></h1><h2 id=dev-edition-h2 class="no-num no-toc">Review Draft: <code id=dev-edition-h2:the-search-element><a href=forms.html#the-search-element>search</a></code> element with form functionality — Last Updated <span class=pubdate>27 November 2021</span></h2></hgroup>
+
    
 
    <div id=search>
@@ -815,8 +816,7 @@ gave me some of the songs they wrote. I love sharing my music.<c- p>&lt;/</c-><c
 
     
 
-    <p>For <code id=pragma-directives:the-meta-element-5><a href=#the-meta-element>meta</a></code> elements with an <code id=pragma-directives:attr-meta-http-equiv-5><a href=#attr-meta-http-equiv>http-equiv</a></code>
-    attribute in the <a href=#attr-meta-http-equiv-refresh id=pragma-directives:attr-meta-http-equiv-refresh-2>Refresh state</a>, the <code id=pragma-directives:attr-meta-content-2><a href=#attr-meta-content>content</a></code> attribute must have a value consisting either of:</p>
+    <p id=conformance-attr-meta-http-equiv-refresh>For <code id=pragma-directives:the-meta-element-5><a href=#the-meta-element>meta</a></code> elements with an <code id=pragma-directives:attr-meta-http-equiv-5><a href=#attr-meta-http-equiv>http-equiv</a></code> attribute in the <a href=#attr-meta-http-equiv-refresh id=pragma-directives:attr-meta-http-equiv-refresh-2>Refresh state</a>, the <code id=pragma-directives:attr-meta-content-2><a href=#attr-meta-content>content</a></code> attribute must have a value consisting either of:</p>
 
     <ul><li>just a <a id=pragma-directives:valid-non-negative-integer href=common-microsyntaxes.html#valid-non-negative-integer>valid non-negative integer</a>, or<li>a <a id=pragma-directives:valid-non-negative-integer-2 href=common-microsyntaxes.html#valid-non-negative-integer>valid non-negative integer</a>, followed by a U+003B SEMICOLON character
      (;), followed by one or more <a id=pragma-directives:space-characters-2 href=https://infra.spec.whatwg.org/#ascii-whitespace data-x-internal=space-characters>ASCII whitespace</a>, followed by a substring that is
@@ -830,22 +830,18 @@ gave me some of the songs they wrote. I love sharing my music.<c- p>&lt;/</c-><c
     replaced by the page at the given <a id=pragma-directives:url href=https://url.spec.whatwg.org/#concept-url data-x-internal=url>URL</a>.</p>
 
     <div class=example>
-
      <p>A news organization's front page could include the following markup in the page's
      <code id=pragma-directives:the-head-element><a href=#the-head-element>head</a></code> element, to ensure that the page automatically reloads from the server every
      five minutes:</p>
 
      <pre><code class='html'><c- p>&lt;</c-><c- f>meta</c-> <c- e>http-equiv</c-><c- o>=</c-><c- s>&quot;Refresh&quot;</c-> <c- e>content</c-><c- o>=</c-><c- s>&quot;300&quot;</c-><c- p>&gt;</c-></code></pre>
-
     </div>
 
     <div class=example>
-
      <p>A sequence of pages could be used as an automated slide show by making each page refresh to
      the next page in the sequence, using markup such as the following:</p>
 
      <pre><code class='html'><c- p>&lt;</c-><c- f>meta</c-> <c- e>http-equiv</c-><c- o>=</c-><c- s>&quot;Refresh&quot;</c-> <c- e>content</c-><c- o>=</c-><c- s>&quot;20; URL=page4.html&quot;</c-><c- p>&gt;</c-></code></pre>
-
     </div>
    <dt><dfn id=attr-meta-http-equiv-x-ua-compatible>X-UA-Compatible state</dfn> (<code>http-equiv="<code id=pragma-directives:attr-meta-http-equiv-keyword-x-ua-compatible><a href=#attr-meta-http-equiv-keyword-x-ua-compatible>x-ua-compatible</a></code>"</code>)
 

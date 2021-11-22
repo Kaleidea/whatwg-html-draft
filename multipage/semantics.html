@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Standard</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/spec.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/styles.css crossorigin=""><script>
+<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Specification Draft: &lt;search> element with form functionality</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/spec.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/styles.css crossorigin=""><script>
    function toggleStatus(div) {
      div.parentNode.classList.toggle('wrapped');
    }
@@ -8,12 +8,13 @@
   </script><body>
   
   <script async="" crossorigin="" src=/html-dfn.js></script>
-  <script data-file-issue-url=https://github.com/whatwg/html/issues/new async="" crossorigin="" src=https://resources.whatwg.org/file-issue.js></script>
+  <script data-file-issue-url=https://github.com/Kaleidea/whatwg-html-draft/issues/new async="" crossorigin="" src=https://resources.whatwg.org/file-issue.js></script>
   
   <header id=head class="head with-buttons">
    <a href=https://whatwg.org/ class=logo><img width=100 alt=WHATWG crossorigin="" src=https://resources.whatwg.org/logo.svg height=100></a>
-   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Living Standard — Last Updated <span class=pubdate>22 November 2021</span></h2></hgroup>
+   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Review Draft: <code id=living-standard:the-search-element><a href=forms.html#the-search-element>search</a></code> element with form functionality — Last Updated <span class=pubdate>27 November 2021</span></h2></hgroup>
    
+
    
 
    
@@ -258,8 +259,8 @@ gave me some of the songs they wrote. I love sharing my music.<c- p>&lt;/</c-><c
 
   <p class=note>If there are multiple <code id=the-base-element:the-base-element-9><a href=#the-base-element>base</a></code> elements with <code id=the-base-element:attr-base-target-4><a href=#attr-base-target>target</a></code> attributes, all but the first are ignored.</p>
 
-  <p>To <dfn id="get-an-element's-target">get an element's target</dfn>, given an <code id=the-base-element:the-a-element><a href=text-level-semantics.html#the-a-element>a</a></code>, <code id=the-base-element:the-area-element><a href=image-maps.html#the-area-element>area</a></code>, or
-  <code id=the-base-element:the-form-element-2><a href=forms.html#the-form-element>form</a></code> element <var>element</var>, run these steps:
+  <p>To <dfn id="get-an-element's-target">get an element's target</dfn>, given an <code id=the-base-element:the-a-element><a href=text-level-semantics.html#the-a-element>a</a></code>, <code id=the-base-element:the-area-element><a href=image-maps.html#the-area-element>area</a></code>,
+  <code id=the-base-element:the-form-element-2><a href=forms.html#the-form-element>form</a></code>, or <code id=the-base-element:the-search-element><a href=forms.html#the-search-element>search</a></code> element <var>element</var>, run these steps:
 
   <ol><li><p>If <var>element</var> has a <code>target</code> attribute, then return that
    attribute's value.<li><p>If <var>element</var>'s <a id=the-base-element:node-document href=https://dom.spec.whatwg.org/#concept-node-document data-x-internal=node-document>node document</a> contains a <code id=the-base-element:the-base-element-10><a href=#the-base-element>base</a></code> element
@@ -1474,7 +1475,7 @@ gave me some of the songs they wrote. I love sharing my music.<c- p>&lt;/</c-><c
         <p class=note>It is important to use <var>document</var> here, and not <var>meta</var>'s
         <a id=pragma-directives:node-document-2 href=https://dom.spec.whatwg.org/#concept-node-document data-x-internal=node-document>node document</a>, as that might have changed between the initial set of steps and
         the refresh coming due and <var>meta</var> is not always given (in case of the HTTP
-        `<code id=pragma-directives:refresh><a href=iana.html#refresh>Refresh</a></code>` header).</p>
+        `<code id=pragma-directives:refresh><a href=browsing-the-web.html#refresh>Refresh</a></code>` header).</p>
        <li><p>Provide the user with an interface that, when selected, <a href=browsing-the-web.html#navigate id=pragma-directives:navigate-2>navigates</a> a <a id=pragma-directives:browsing-context href=browsers.html#browsing-context>browsing context</a>
        to <var>urlRecord</var>, with <var>document</var>'s <a href=browsers.html#concept-document-bc id=pragma-directives:concept-document-bc-3>browsing context</a> as the <a id=pragma-directives:source-browsing-context-2 href=browsing-the-web.html#source-browsing-context>source browsing
        context</a>.<li><p>Do nothing.</ul>
@@ -1486,8 +1487,7 @@ gave me some of the songs they wrote. I love sharing my music.<c- p>&lt;/</c-><c
 
     
 
-    <p>For <code id=pragma-directives:the-meta-element-12><a href=#the-meta-element>meta</a></code> elements with an <code id=pragma-directives:attr-meta-http-equiv-6><a href=#attr-meta-http-equiv>http-equiv</a></code>
-    attribute in the <a href=#attr-meta-http-equiv-refresh id=pragma-directives:attr-meta-http-equiv-refresh-2>Refresh state</a>, the <code id=pragma-directives:attr-meta-content-9><a href=#attr-meta-content>content</a></code> attribute must have a value consisting either of:</p>
+    <p id=conformance-attr-meta-http-equiv-refresh>For <code id=pragma-directives:the-meta-element-12><a href=#the-meta-element>meta</a></code> elements with an <code id=pragma-directives:attr-meta-http-equiv-6><a href=#attr-meta-http-equiv>http-equiv</a></code> attribute in the <a href=#attr-meta-http-equiv-refresh id=pragma-directives:attr-meta-http-equiv-refresh-2>Refresh state</a>, the <code id=pragma-directives:attr-meta-content-9><a href=#attr-meta-content>content</a></code> attribute must have a value consisting either of:</p>
 
     <ul><li>just a <a id=pragma-directives:valid-non-negative-integer href=common-microsyntaxes.html#valid-non-negative-integer>valid non-negative integer</a>, or<li>a <a id=pragma-directives:valid-non-negative-integer-2 href=common-microsyntaxes.html#valid-non-negative-integer>valid non-negative integer</a>, followed by a U+003B SEMICOLON character
      (;), followed by one or more <a id=pragma-directives:space-characters-4 href=https://infra.spec.whatwg.org/#ascii-whitespace data-x-internal=space-characters>ASCII whitespace</a>, followed by a substring that is
@@ -1501,22 +1501,18 @@ gave me some of the songs they wrote. I love sharing my music.<c- p>&lt;/</c-><c
     replaced by the page at the given <a id=pragma-directives:url href=https://url.spec.whatwg.org/#concept-url data-x-internal=url>URL</a>.</p>
 
     <div class=example>
-
      <p>A news organization's front page could include the following markup in the page's
      <code id=pragma-directives:the-head-element><a href=#the-head-element>head</a></code> element, to ensure that the page automatically reloads from the server every
      five minutes:</p>
 
      <pre><code class='html'><c- p>&lt;</c-><c- f>meta</c-> <c- e>http-equiv</c-><c- o>=</c-><c- s>&quot;Refresh&quot;</c-> <c- e>content</c-><c- o>=</c-><c- s>&quot;300&quot;</c-><c- p>&gt;</c-></code></pre>
-
     </div>
 
     <div class=example>
-
      <p>A sequence of pages could be used as an automated slide show by making each page refresh to
      the next page in the sequence, using markup such as the following:</p>
 
      <pre><code class='html'><c- p>&lt;</c-><c- f>meta</c-> <c- e>http-equiv</c-><c- o>=</c-><c- s>&quot;Refresh&quot;</c-> <c- e>content</c-><c- o>=</c-><c- s>&quot;20; URL=page4.html&quot;</c-><c- p>&gt;</c-></code></pre>
-
     </div>
    <dt><dfn id=attr-meta-http-equiv-set-cookie>Set-Cookie state</dfn> (<code>http-equiv="<code id=pragma-directives:attr-meta-http-equiv-keyword-set-cookie><a href=#attr-meta-http-equiv-keyword-set-cookie>set-cookie</a></code>"</code>)
 
