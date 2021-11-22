@@ -36,9 +36,12 @@
 
   
 
-  <nav><a href=form-elements.html>← 4.10.6 The button element</a> — <a href=./>Table of Contents</a> — <a href=interactive-elements.html>4.11 Interactive elements →</a></nav><ol class=toc><li><ol><li><ol><li><a href=form-control-infrastructure.html#form-control-infrastructure><span class=secno>4.10.17</span> Form control infrastructure</a><ol><li><a href="form-control-infrastructure.html#a-form-control's-value"><span class=secno>4.10.17.1</span> A form control's value</a><li><a href=form-control-infrastructure.html#mutability><span class=secno>4.10.17.2</span> Mutability</a><li><a href=form-control-infrastructure.html#association-of-controls-and-forms><span class=secno>4.10.17.3</span> Association of controls and forms</a></ol><li><a href=form-control-infrastructure.html#attributes-common-to-form-controls><span class=secno>4.10.18</span> Attributes common to form controls</a><ol><li><a href=form-control-infrastructure.html#naming-form-controls:-the-name-attribute><span class=secno>4.10.18.1</span> Naming form controls: the <code>name</code> attribute</a><li><a href=form-control-infrastructure.html#submitting-element-directionality:-the-dirname-attribute><span class=secno>4.10.18.2</span> Submitting element directionality: the <code>dirname</code> attribute</a><li><a href=form-control-infrastructure.html#limiting-user-input-length:-the-maxlength-attribute><span class=secno>4.10.18.3</span> Limiting user input length: the <code>maxlength</code> attribute</a><li><a href=form-control-infrastructure.html#setting-minimum-input-length-requirements:-the-minlength-attribute><span class=secno>4.10.18.4</span> Setting minimum input length requirements: the <code>minlength</code> attribute</a><li><a href=form-control-infrastructure.html#enabling-and-disabling-form-controls:-the-disabled-attribute><span class=secno>4.10.18.5</span> Enabling and disabling form controls: the <code>disabled</code> attribute</a><li><a href=form-control-infrastructure.html#form-submission-attributes><span class=secno>4.10.18.6</span> Form submission attributes</a><li><a href=form-control-infrastructure.html#autofill><span class=secno>4.10.18.7</span> Autofill</a><ol><li><a href=form-control-infrastructure.html#autofilling-form-controls:-the-autocomplete-attribute><span class=secno>4.10.18.7.1</span> Autofilling form controls: the <code>autocomplete</code> attribute</a></ol></ol><li><a href=form-control-infrastructure.html#textFieldSelection><span class=secno>4.10.19</span> APIs for the text control selections</a><li><a href=form-control-infrastructure.html#constraints><span class=secno>4.10.20</span> Constraints</a><ol><li><a href=form-control-infrastructure.html#the-constraint-validation-api><span class=secno>4.10.20.1</span> The constraint validation API</a><li><a href=form-control-infrastructure.html#security-forms><span class=secno>4.10.20.2</span> Security</a></ol><li><a href=form-control-infrastructure.html#form-submission-2><span class=secno>4.10.21</span> Form submission</a><ol><li><a href=form-control-infrastructure.html#url-encoded-form-data><span class=secno>4.10.21.1</span> URL-encoded form data</a><li><a href=form-control-infrastructure.html#multipart-form-data><span class=secno>4.10.21.2</span> Multipart form data</a><li><a href=form-control-infrastructure.html#plain-text-form-data><span class=secno>4.10.21.3</span> Plain text form data</a><li><a href=form-control-infrastructure.html#the-submitevent-interface><span class=secno>4.10.21.4</span> The <code>SubmitEvent</code> interface</a><li><a href=form-control-infrastructure.html#the-formdataevent-interface><span class=secno>4.10.21.5</span> The <code>FormDataEvent</code> interface</a></ol></ol></ol></ol><h4 id=form-control-infrastructure><span class=secno>4.10.17</span> Form control infrastructure<a href=#form-control-infrastructure class=self-link></a></h4>
+  <nav><a href=form-elements.html>← 4.10.7 The button element</a> — <a href=./>Table of Contents</a> — <a href=interactive-elements.html>4.11 Interactive elements →</a></nav><ol class=toc><li><ol><li><ol><li><a href=form-control-infrastructure.html#form-control-infrastructure><span class=secno>4.10.18</span> Form control infrastructure</a><ol><li><a href="form-control-infrastructure.html#a-form-control's-value"><span class=secno>4.10.18.1</span> A form control's value</a><li><a href=form-control-infrastructure.html#mutability><span class=secno>4.10.18.2</span> Mutability</a><li><a href=form-control-infrastructure.html#association-of-controls-and-forms><span class=secno>4.10.18.3</span> Association of controls and forms</a></ol><li><a href=form-control-infrastructure.html#attributes-common-to-form-controls><span class=secno>4.10.19</span> Attributes common to form controls</a><ol><li><a href=form-control-infrastructure.html#naming-form-controls:-the-name-attribute><span class=secno>4.10.19.1</span> Naming form controls: the <code>name</code> attribute</a><li><a href=form-control-infrastructure.html#submitting-element-directionality:-the-dirname-attribute><span class=secno>4.10.19.2</span> Submitting element directionality: the <code>dirname</code> attribute</a><li><a href=form-control-infrastructure.html#limiting-user-input-length:-the-maxlength-attribute><span class=secno>4.10.19.3</span> Limiting user input length: the <code>maxlength</code> attribute</a><li><a href=form-control-infrastructure.html#setting-minimum-input-length-requirements:-the-minlength-attribute><span class=secno>4.10.19.4</span> Setting minimum input length requirements: the <code>minlength</code> attribute</a><li><a href=form-control-infrastructure.html#enabling-and-disabling-form-controls:-the-disabled-attribute><span class=secno>4.10.19.5</span> Enabling and disabling form controls: the <code>disabled</code> attribute</a><li><a href=form-control-infrastructure.html#form-submission-attributes><span class=secno>4.10.19.6</span> Form submission attributes</a><li><a href=form-control-infrastructure.html#autofill><span class=secno>4.10.19.7</span> Autofill</a><ol><li><a href=form-control-infrastructure.html#autofilling-form-controls:-the-autocomplete-attribute><span class=secno>4.10.19.7.1</span> Autofilling form controls: the <code>autocomplete</code> attribute</a></ol></ol><li><a href=form-control-infrastructure.html#textFieldSelection><span class=secno>4.10.20</span> APIs for the text control selections</a><li><a href=form-control-infrastructure.html#constraints><span class=secno>4.10.21</span> Constraints</a><ol><li><a href=form-control-infrastructure.html#the-constraint-validation-api><span class=secno>4.10.21.1</span> The constraint validation API</a><li><a href=form-control-infrastructure.html#security-forms><span class=secno>4.10.21.2</span> Security</a></ol><li><a href=form-control-infrastructure.html#form-submission-2><span class=secno>4.10.22</span> Form submission</a><ol><li><a href=form-control-infrastructure.html#url-encoded-form-data><span class=secno>4.10.22.1</span> URL-encoded form data</a><li><a href=form-control-infrastructure.html#multipart-form-data><span class=secno>4.10.22.2</span> Multipart form data</a><li><a href=form-control-infrastructure.html#plain-text-form-data><span class=secno>4.10.22.3</span> Plain text form data</a><li><a href=form-control-infrastructure.html#the-submitevent-interface><span class=secno>4.10.22.4</span> The <code>SubmitEvent</code> interface</a><li><a href=form-control-infrastructure.html#the-formdataevent-interface><span class=secno>4.10.22.5</span> The <code>FormDataEvent</code> interface</a></ol></ol></ol></ol><h4 id=form-control-infrastructure><span class=secno>4.10.18</span> Form control infrastructure<a href=#form-control-infrastructure class=self-link></a></h4>
 
-  <h5 id="a-form-control's-value"><span class=secno>4.10.17.1</span> A form control's value<a href="#a-form-control's-value" class=self-link></a></h5>
+  <p class=note>In this section <a href=forms.html#concept-form id=form-control-infrastructure:concept-form>form</a>
+  refers to either a <code id=form-control-infrastructure:the-form-element><a href=forms.html#the-form-element>form</a></code> or a <code id=form-control-infrastructure:the-search-element><a href=forms.html#the-search-element>search</a></code> element.</p>
+
+  <h5 id="a-form-control's-value"><span class=secno>4.10.18.1</span> A form control's value<a href="#a-form-control's-value" class=self-link></a></h5>
 
   <p>Most form controls have a <dfn id=concept-fe-value>value</dfn> and a <dfn id=concept-fe-checked>checkedness</dfn>. (The latter is only used by <code id="a-form-control's-value:the-input-element"><a href=input.html#the-input-element>input</a></code>
   elements.) These are used to describe how the user interacts with the control.</p>
@@ -72,7 +75,7 @@
   elements is what is used instead.</p>
 
 
-  <h5 id=mutability><span class=secno>4.10.17.2</span> Mutability<a href=#mutability class=self-link></a></h5>
+  <h5 id=mutability><span class=secno>4.10.18.2</span> Mutability<a href=#mutability class=self-link></a></h5>
 
   <p>A form control can be designated as <dfn id=concept-fe-mutable><i>mutable</i></dfn>.</p>
 
@@ -82,24 +85,26 @@
   
 
 
-  <h5 id=association-of-controls-and-forms><span class=secno>4.10.17.3</span> Association of controls and forms<a href=#association-of-controls-and-forms class=self-link></a></h5>
+  <h5 id=association-of-controls-and-forms><span class=secno>4.10.18.3</span> Association of controls and forms<a href=#association-of-controls-and-forms class=self-link></a></h5>
 
-  <p>A <a id=association-of-controls-and-forms:form-associated-element href=forms.html#form-associated-element>form-associated element</a> can have a relationship with a <code id=association-of-controls-and-forms:the-form-element><a href=forms.html#the-form-element>form</a></code>
-  element, which is called the element's <dfn id=form-owner>form owner</dfn>. If a <a id=association-of-controls-and-forms:form-associated-element-2 href=forms.html#form-associated-element>form-associated
-  element</a> is not associated with a <code id=association-of-controls-and-forms:the-form-element-2><a href=forms.html#the-form-element>form</a></code> element, its <a href=#form-owner id=association-of-controls-and-forms:form-owner>form owner</a> is
-  said to be null.</p>
+  <p>A <a id=association-of-controls-and-forms:form-associated-element href=forms.html#form-associated-element>form-associated element</a> can have a relationship with a
+  <a href=forms.html#concept-form id=association-of-controls-and-forms:concept-form>form</a>,
+  which is called the element's <dfn id=form-owner>form owner</dfn>. If a <a id=association-of-controls-and-forms:form-associated-element-2 href=forms.html#form-associated-element>form-associated
+  element</a> is not associated with a <a href=forms.html#concept-form id=association-of-controls-and-forms:concept-form-2>form</a>,
+  its <a href=#form-owner id=association-of-controls-and-forms:form-owner>form owner</a> is said to be null.</p>
 
   <p>A <a id=association-of-controls-and-forms:form-associated-element-3 href=forms.html#form-associated-element>form-associated element</a> has an associated <dfn id=parser-inserted-flag>parser inserted flag</dfn>.</p>
 
-  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes#attr-form title="Elements in HTML have attributes; these are additional values that configure the elements or adjust their behavior in various ways to meet the criteria the users want.">Attributes#attr-form</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>≤4+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>≤12.1+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>≤6+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>≤3+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>1+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>≤12.1+</span></span></div></div></div><p>A <a id=association-of-controls-and-forms:form-associated-element-4 href=forms.html#form-associated-element>form-associated element</a> is, by default, associated with its  ancestor <code id=association-of-controls-and-forms:the-form-element-3><a href=forms.html#the-form-element>form</a></code> element, but, if it is <a href=forms.html#category-listed id=association-of-controls-and-forms:category-listed>listed</a>, may have a <dfn data-dfn-for=button,fieldset,input,object,output,select,textarea id=attr-fae-form data-dfn-type=element-attr><code>form</code></dfn> attribute specified to override this.</p>
+  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes#attr-form title="Elements in HTML have attributes; these are additional values that configure the elements or adjust their behavior in various ways to meet the criteria the users want.">Attributes#attr-form</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>1+</span></span><span class="safari yes"><span>Safari</span><span>≤4+</span></span><span class="chrome yes"><span>Chrome</span><span>1+</span></span><hr><span class="opera yes"><span>Opera</span><span>≤12.1+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>≤6+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>≤3+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>1+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>≤12.1+</span></span></div></div></div><p>A <a id=association-of-controls-and-forms:form-associated-element-4 href=forms.html#form-associated-element>form-associated element</a> is, by default, associated with its  ancestor <a href=forms.html#concept-form id=association-of-controls-and-forms:concept-form-3>form</a> (<code id=association-of-controls-and-forms:the-form-element><a href=forms.html#the-form-element>form</a></code>
+  or <code id=association-of-controls-and-forms:the-search-element><a href=forms.html#the-search-element>search</a></code> element), but, if it is <a href=forms.html#category-listed id=association-of-controls-and-forms:category-listed>listed</a>, may have a <dfn data-dfn-for=button,fieldset,input,object,output,select,textarea id=attr-fae-form data-dfn-type=element-attr><code>form</code></dfn> attribute specified to override this.</p>
 
   <p class=note>This feature allows authors to work around the lack of support for nested
-  <code id=association-of-controls-and-forms:the-form-element-4><a href=forms.html#the-form-element>form</a></code> elements.</p>
+  <a href=forms.html#concept-form id=association-of-controls-and-forms:concept-form-4>forms</a>.</p>
 
   <p>If a <a href=forms.html#category-listed id=association-of-controls-and-forms:category-listed-2>listed</a> <a id=association-of-controls-and-forms:form-associated-element-5 href=forms.html#form-associated-element>form-associated element</a> has a
   <code id=association-of-controls-and-forms:attr-fae-form><a href=#attr-fae-form>form</a></code> attribute specified, then that attribute's value must be
-  the <a href=https://dom.spec.whatwg.org/#concept-id id=association-of-controls-and-forms:concept-id data-x-internal=concept-id>ID</a> of a <code id=association-of-controls-and-forms:the-form-element-5><a href=forms.html#the-form-element>form</a></code> element in the element's
-  <a id=association-of-controls-and-forms:tree href=https://dom.spec.whatwg.org/#concept-tree data-x-internal=tree>tree</a>.</p>
+  the <a href=https://dom.spec.whatwg.org/#concept-id id=association-of-controls-and-forms:concept-id data-x-internal=concept-id>ID</a> of a <a href=forms.html#concept-form id=association-of-controls-and-forms:concept-form-5>form</a>
+  in the element's <a id=association-of-controls-and-forms:tree href=https://dom.spec.whatwg.org/#concept-tree data-x-internal=tree>tree</a>.</p>
 
   
 
@@ -113,12 +118,15 @@
 
 
 
-  <h4 id=attributes-common-to-form-controls><span class=secno>4.10.18</span> Attributes common to form controls<a href=#attributes-common-to-form-controls class=self-link></a></h4>
+  <h4 id=attributes-common-to-form-controls><span class=secno>4.10.19</span> Attributes common to form controls<a href=#attributes-common-to-form-controls class=self-link></a></h4>
 
-  <h5 id=naming-form-controls:-the-name-attribute><span class=secno>4.10.18.1</span> Naming form controls: the <code id=naming-form-controls:-the-name-attribute:attr-fe-name><a href=#attr-fe-name>name</a></code> attribute<a href=#naming-form-controls:-the-name-attribute class=self-link></a></h5>
+  <p class=note>In this section <a href=forms.html#concept-form id=attributes-common-to-form-controls:concept-form>form</a>
+  refers to either a <code id=attributes-common-to-form-controls:the-form-element><a href=forms.html#the-form-element>form</a></code> or a <code id=attributes-common-to-form-controls:the-search-element><a href=forms.html#the-search-element>search</a></code> element.</p>
+
+  <h5 id=naming-form-controls:-the-name-attribute><span class=secno>4.10.19.1</span> Naming form controls: the <code id=naming-form-controls:-the-name-attribute:attr-fe-name><a href=#attr-fe-name>name</a></code> attribute<a href=#naming-form-controls:-the-name-attribute class=self-link></a></h5>
 
   <p>The <dfn data-dfn-for=button,fieldset,input,output,select,textarea id=attr-fe-name data-dfn-type=element-attr><code>name</code></dfn> content attribute gives the name of the form control, as
-  used in <a href=#form-submission-2 id=naming-form-controls:-the-name-attribute:form-submission-2>form submission</a> and in the <code id=naming-form-controls:-the-name-attribute:the-form-element><a href=forms.html#the-form-element>form</a></code> element's <code id=naming-form-controls:-the-name-attribute:dom-form-elements><a href=forms.html#dom-form-elements>elements</a></code> object. If the attribute is specified, its value must
+  used in <a href=#form-submission-2 id=naming-form-controls:-the-name-attribute:form-submission-2>form submission</a> and in the <a href=forms.html#concept-form id=naming-form-controls:-the-name-attribute:concept-form>form</a>'s <code id=naming-form-controls:-the-name-attribute:dom-form-elements><a href=forms.html#dom-form-elements>elements</a></code> object. If the attribute is specified, its value must
   not be the empty string or <code>isindex</code>.</p>
 
   <p class=note>A number of user agents historically implemented special support for first-in-form
@@ -155,7 +163,7 @@ form<c- p>.</c->method <c- o>===</c-> input<c- p>;</c-> <c- c1>// =&gt; true</c-
   </div>
 
 
-  <h5 id=submitting-element-directionality:-the-dirname-attribute><span class=secno>4.10.18.2</span> Submitting element directionality: the <code id=submitting-element-directionality:-the-dirname-attribute:attr-fe-dirname><a href=#attr-fe-dirname>dirname</a></code> attribute<a href=#submitting-element-directionality:-the-dirname-attribute class=self-link></a></h5>
+  <h5 id=submitting-element-directionality:-the-dirname-attribute><span class=secno>4.10.19.2</span> Submitting element directionality: the <code id=submitting-element-directionality:-the-dirname-attribute:attr-fe-dirname><a href=#attr-fe-dirname>dirname</a></code> attribute<a href=#submitting-element-directionality:-the-dirname-attribute class=self-link></a></h5>
 
   <p>The <dfn data-dfn-for=button,fieldset,input,object,output,select,textarea id=attr-fe-dirname data-dfn-type=element-attr><code>dirname</code></dfn> attribute on a form control element enables the
   submission of <a id=submitting-element-directionality:-the-dirname-attribute:the-directionality href=dom.html#the-directionality>the directionality</a> of the element, and gives the name of the control
@@ -185,7 +193,7 @@ form<c- p>.</c->method <c- o>===</c-> input<c- p>;</c-> <c- c1>// =&gt; true</c-
   </div>
 
 
-  <h5 id=limiting-user-input-length:-the-maxlength-attribute><span class=secno>4.10.18.3</span> Limiting user input length: the <code id=limiting-user-input-length:-the-maxlength-attribute:attr-fe-maxlength><a href=#attr-fe-maxlength>maxlength</a></code> attribute<a href=#limiting-user-input-length:-the-maxlength-attribute class=self-link></a></h5>
+  <h5 id=limiting-user-input-length:-the-maxlength-attribute><span class=secno>4.10.19.3</span> Limiting user input length: the <code id=limiting-user-input-length:-the-maxlength-attribute:attr-fe-maxlength><a href=#attr-fe-maxlength>maxlength</a></code> attribute<a href=#limiting-user-input-length:-the-maxlength-attribute class=self-link></a></h5>
 
   <p>A <dfn data-lt=maxlength data-dfn-type=element-attr id=attr-fe-maxlength data-dfn-for=input,textarea>form
   control <code>maxlength</code> attribute</dfn>, controlled by the <a href=#concept-fe-dirty id=limiting-user-input-length:-the-maxlength-attribute:concept-fe-dirty>dirty value flag</a>, declares a limit on the number of characters a
@@ -202,7 +210,7 @@ form<c- p>.</c->method <c- o>===</c-> input<c- p>;</c-> <c- c1>// =&gt; true</c-
   
 
 
-  <h5 id=setting-minimum-input-length-requirements:-the-minlength-attribute><span class=secno>4.10.18.4</span> Setting minimum input length requirements: the <code id=setting-minimum-input-length-requirements:-the-minlength-attribute:attr-fe-minlength><a href=#attr-fe-minlength>minlength</a></code> attribute<a href=#setting-minimum-input-length-requirements:-the-minlength-attribute class=self-link></a></h5>
+  <h5 id=setting-minimum-input-length-requirements:-the-minlength-attribute><span class=secno>4.10.19.4</span> Setting minimum input length requirements: the <code id=setting-minimum-input-length-requirements:-the-minlength-attribute:attr-fe-minlength><a href=#attr-fe-minlength>minlength</a></code> attribute<a href=#setting-minimum-input-length-requirements:-the-minlength-attribute class=self-link></a></h5>
 
   <p>A <dfn data-lt=minlength data-dfn-type=element-attr id=attr-fe-minlength data-dfn-for=input,textarea>form
   control <code>minlength</code> attribute</dfn>, controlled by the <a href=#concept-fe-dirty id=setting-minimum-input-length-requirements:-the-minlength-attribute:concept-fe-dirty>dirty value flag</a>, declares a lower bound on the number of
@@ -248,7 +256,7 @@ form<c- p>.</c->method <c- o>===</c-> input<c- p>;</c-> <c- c1>// =&gt; true</c-
   </div>
 
 
-  <h5 id=enabling-and-disabling-form-controls:-the-disabled-attribute><span class=secno>4.10.18.5</span> Enabling and disabling form controls: the <code id=enabling-and-disabling-form-controls:-the-disabled-attribute:attr-fe-disabled><a href=#attr-fe-disabled>disabled</a></code> attribute<a href=#enabling-and-disabling-form-controls:-the-disabled-attribute class=self-link></a></h5>
+  <h5 id=enabling-and-disabling-form-controls:-the-disabled-attribute><span class=secno>4.10.19.5</span> Enabling and disabling form controls: the <code id=enabling-and-disabling-form-controls:-the-disabled-attribute:attr-fe-disabled><a href=#attr-fe-disabled>disabled</a></code> attribute<a href=#enabling-and-disabling-form-controls:-the-disabled-attribute class=self-link></a></h5>
 
   <p>The <dfn data-dfn-for=button,fieldset,input,object,output,select,textarea id=attr-fe-disabled data-dfn-type=element-attr><code>disabled</code></dfn> content attribute is a <a id=enabling-and-disabling-form-controls:-the-disabled-attribute:boolean-attribute href=common-microsyntaxes.html#boolean-attribute>boolean
   attribute</a>.</p>
@@ -269,24 +277,32 @@ form<c- p>.</c->method <c- o>===</c-> input<c- p>;</c-> <c- c1>// =&gt; true</c-
   
 
 
-  <h5 id=form-submission-attributes><span class=secno>4.10.18.6</span> Form submission attributes<a href=#form-submission-attributes class=self-link></a></h5>
+  <h5 id=form-submission-attributes><span class=secno>4.10.19.6</span> Form submission attributes<a href=#form-submission-attributes class=self-link></a></h5>
 
-  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form#Attributes_for_form_submission title="The <form> HTML element represents a document section containing interactive controls for submitting information.">Element/form#Attributes_for_form_submission</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>4+</span></span><span class="safari yes"><span>Safari</span><span>10.1+</span></span><span class="chrome yes"><span>Chrome</span><span>10+</span></span><hr><span class="opera yes"><span>Opera</span><span>15+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>10+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>10.3+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>37+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>14+</span></span></div></div></div><p><dfn id=attributes-for-form-submission>Attributes for form submission</dfn> can be specified both on <code id=form-submission-attributes:the-form-element><a href=forms.html#the-form-element>form</a></code> elements
+  <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form#Attributes_for_form_submission title="The <form> HTML element represents a document section containing interactive controls for submitting information.">Element/form#Attributes_for_form_submission</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>4+</span></span><span class="safari yes"><span>Safari</span><span>10.1+</span></span><span class="chrome yes"><span>Chrome</span><span>10+</span></span><hr><span class="opera yes"><span>Opera</span><span>15+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge yes"><span>Edge (Legacy)</span><span>12+</span></span><span class="ie yes"><span>Internet Explorer</span><span>10+</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>4+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>10.3+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>18+</span></span><span class="webview_android yes"><span>WebView Android</span><span>37+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>1.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>14+</span></span></div></div></div><p><dfn id=attributes-for-form-submission>Attributes for form submission</dfn> can be specified both on
+  <a href=forms.html#concept-form id=form-submission-attributes:concept-form>forms</a>
   and on <a href=forms.html#concept-submit-button id=form-submission-attributes:concept-submit-button>submit buttons</a> (elements that represent buttons
   that submit forms, e.g. an <code id=form-submission-attributes:the-input-element><a href=input.html#the-input-element>input</a></code> element whose <code id=form-submission-attributes:attr-input-type><a href=input.html#attr-input-type>type</a></code> attribute is in the <a href="input.html#submit-button-state-(type=submit)" id="form-submission-attributes:submit-button-state-(type=submit)">Submit Button</a> state).
 
-  <p>The <a href=#attributes-for-form-submission id=form-submission-attributes:attributes-for-form-submission>attributes for form submission</a> that may be specified on <code id=form-submission-attributes:the-form-element-2><a href=forms.html#the-form-element>form</a></code>
-  elements are <code id=form-submission-attributes:attr-fs-action><a href=#attr-fs-action>action</a></code>, <code id=form-submission-attributes:attr-fs-enctype><a href=#attr-fs-enctype>enctype</a></code>, <code id=form-submission-attributes:attr-fs-method><a href=#attr-fs-method>method</a></code>, <code id=form-submission-attributes:attr-fs-novalidate><a href=#attr-fs-novalidate>novalidate</a></code>, and <code id=form-submission-attributes:attr-fs-target><a href=#attr-fs-target>target</a></code>.</p>
+  <p>The <a href=#attributes-for-form-submission id=form-submission-attributes:attributes-for-form-submission>attributes for form submission</a> that may be specified on
+  <a href=forms.html#concept-form id=form-submission-attributes:concept-form-2>forms</a>
+  are <code id=form-submission-attributes:attr-fs-action><a href=#attr-fs-action>action</a></code>, <code id=form-submission-attributes:attr-fs-enctype><a href=#attr-fs-enctype>enctype</a></code>, <code id=form-submission-attributes:attr-fs-method><a href=#attr-fs-method>method</a></code>, <code id=form-submission-attributes:attr-fs-novalidate><a href=#attr-fs-novalidate>novalidate</a></code>, and <code id=form-submission-attributes:attr-fs-target><a href=#attr-fs-target>target</a></code>.</p>
 
   <p>The corresponding <a href=#attributes-for-form-submission id=form-submission-attributes:attributes-for-form-submission-2>attributes for form submission</a> that may be specified on <a href=forms.html#concept-submit-button id=form-submission-attributes:concept-submit-button-2>submit buttons</a> are <code id=form-submission-attributes:attr-fs-formaction><a href=#attr-fs-formaction>formaction</a></code>, <code id=form-submission-attributes:attr-fs-formenctype><a href=#attr-fs-formenctype>formenctype</a></code>, <code id=form-submission-attributes:attr-fs-formmethod><a href=#attr-fs-formmethod>formmethod</a></code>, <code id=form-submission-attributes:attr-fs-formnovalidate><a href=#attr-fs-formnovalidate>formnovalidate</a></code>, and <code id=form-submission-attributes:attr-fs-formtarget><a href=#attr-fs-formtarget>formtarget</a></code>. When omitted, they default to the values given on
-  the corresponding attributes on the <code id=form-submission-attributes:the-form-element-3><a href=forms.html#the-form-element>form</a></code> element.</p>
+  the corresponding attributes on the <a href=forms.html#concept-form id=form-submission-attributes:concept-form-3>form</a>.</p>
 
   <hr>
 
   <p>The <dfn data-dfn-for=form,button id=attr-fs-action data-dfn-type=element-attr><code>action</code></dfn> and
   <dfn data-dfn-for=form,button id=attr-fs-formaction data-dfn-type=element-attr><code>formaction</code></dfn>
-  content attributes, if specified, must have a value that is a <a id=form-submission-attributes:valid-non-empty-url-potentially-surrounded-by-spaces href=urls-and-fetching.html#valid-non-empty-url-potentially-surrounded-by-spaces>valid non-empty URL
+  content attributes of a <code id=form-submission-attributes:the-form-element><a href=forms.html#the-form-element>form</a></code> or <code id=form-submission-attributes:the-button-element><a href=form-elements.html#the-button-element>button</a></code>, if specified,
+  must have a value that is a <a id=form-submission-attributes:valid-non-empty-url-potentially-surrounded-by-spaces href=urls-and-fetching.html#valid-non-empty-url-potentially-surrounded-by-spaces>valid non-empty URL
   potentially surrounded by spaces</a>.</p>
+
+  <p>The <dfn data-dfn-for=search id=attr-search-action data-dfn-type=element-attr><code>action</code></dfn>
+  content attribute of a <code id=form-submission-attributes:the-search-element><a href=forms.html#the-search-element>search</a></code> element, if specified,
+  must have a value that is a <a id=form-submission-attributes:valid-url-potentially-surrounded-by-spaces href=urls-and-fetching.html#valid-url-potentially-surrounded-by-spaces>valid URL potentially surrounded by spaces</a>.<br>
+  If not specified, the <code id=form-submission-attributes:the-search-element-2><a href=forms.html#the-search-element>search</a></code> element disables <a href=#form-submission-2 id=form-submission-attributes:form-submission-2>form submission</a>.</p>
 
   <p>The <dfn id=concept-fs-action>action</dfn> of an element is the value of the element's
   <code id=form-submission-attributes:attr-fs-formaction-2><a href=#attr-fs-formaction>formaction</a></code> attribute, if the element is a <a href=forms.html#concept-submit-button id=form-submission-attributes:concept-submit-button-3>submit button</a> and has such an attribute, or the value of its
@@ -300,7 +316,8 @@ form<c- p>.</c->method <c- o>===</c-> input<c- p>;</c-> <c- c1>// =&gt; true</c-
   content attributes are <a href=common-microsyntaxes.html#enumerated-attribute id=form-submission-attributes:enumerated-attribute>enumerated attributes</a> with the
   following keywords and states:</p>
 
-  <ul><li>The keyword <dfn data-dfn-for=form/method,button/method id=attr-fs-method-get-keyword data-dfn-type=attr-value><code>get</code></dfn>, mapping to the state <dfn id=attr-fs-method-get>GET</dfn>, indicating the HTTP GET method.<li>The keyword <dfn data-dfn-for=form/method,button/method id=attr-fs-method-post-keyword data-dfn-type=attr-value><code>post</code></dfn>, mapping to the state <dfn id=attr-fs-method-post>POST</dfn>, indicating the HTTP POST method.<li>The keyword <dfn data-dfn-for=form/method,button/method id=attr-fs-method-dialog-keyword data-dfn-type=attr-value><code>dialog</code></dfn>, mapping to the state <dfn id=attr-fs-method-dialog>dialog</dfn>, indicating that submitting the <code id=form-submission-attributes:the-form-element-4><a href=forms.html#the-form-element>form</a></code> is
+  <ul><li>The keyword <dfn data-dfn-for=form/method,button/method id=attr-fs-method-get-keyword data-dfn-type=attr-value><code>get</code></dfn>, mapping to the state <dfn id=attr-fs-method-get>GET</dfn>, indicating the HTTP GET method.<li>The keyword <dfn data-dfn-for=form/method,button/method id=attr-fs-method-post-keyword data-dfn-type=attr-value><code>post</code></dfn>, mapping to the state <dfn id=attr-fs-method-post>POST</dfn>, indicating the HTTP POST method.<li>The keyword <dfn data-dfn-for=form/method,button/method id=attr-fs-method-dialog-keyword data-dfn-type=attr-value><code>dialog</code></dfn>, mapping to the state <dfn id=attr-fs-method-dialog>dialog</dfn>, indicating that submitting the
+   <a href=forms.html#concept-form id=form-submission-attributes:concept-form-4>form</a> is
    intended to close the <code id=form-submission-attributes:the-dialog-element><a href=interactive-elements.html#the-dialog-element>dialog</a></code> box in which the form finds itself, if any, and
    otherwise not submit.</ul>
 
@@ -342,7 +359,8 @@ form<c- p>.</c->method <c- o>===</c-> input<c- p>;</c-> <c- c1>// =&gt; true</c-
 
   <div class=example>
 
-   <p>In this example, a <code id=form-submission-attributes:the-form-element-5><a href=forms.html#the-form-element>form</a></code> is used with a <code id=form-submission-attributes:the-dialog-element-2><a href=interactive-elements.html#the-dialog-element>dialog</a></code>. The <code id=form-submission-attributes:attr-fs-method-6><a href=#attr-fs-method>method</a></code> attribute's "<code id=form-submission-attributes:attr-fs-method-dialog-keyword><a href=#attr-fs-method-dialog-keyword>dialog</a></code>" keyword is used to have the dialog
+   <p>In this example, a <a href=forms.html#concept-form id=form-submission-attributes:concept-form-5>form</a>
+   is used with a <code id=form-submission-attributes:the-dialog-element-2><a href=interactive-elements.html#the-dialog-element>dialog</a></code>. The <code id=form-submission-attributes:attr-fs-method-6><a href=#attr-fs-method>method</a></code> attribute's "<code id=form-submission-attributes:attr-fs-method-dialog-keyword><a href=#attr-fs-method-dialog-keyword>dialog</a></code>" keyword is used to have the dialog
    automatically close when the form is submitted.</p>
 
    <pre lang=en-GB><code class='html'><c- p>&lt;</c-><c- f>dialog</c-> <c- e>id</c-><c- o>=</c-><c- s>&quot;ship&quot;</c-><c- p>&gt;</c->
@@ -424,9 +442,9 @@ form<c- p>.</c->method <c- o>===</c-> input<c- p>;</c-> <c- c1>// =&gt; true</c-
   
 
 
-  <h5 id=autofill><span class=secno>4.10.18.7</span> Autofill<a href=#autofill class=self-link></a></h5>
+  <h5 id=autofill><span class=secno>4.10.19.7</span> Autofill<a href=#autofill class=self-link></a></h5>
 
-  <h6 id=autofilling-form-controls:-the-autocomplete-attribute><span class=secno>4.10.18.7.1</span> Autofilling form controls: the <code id=autofilling-form-controls:-the-autocomplete-attribute:attr-fe-autocomplete><a href=#attr-fe-autocomplete>autocomplete</a></code> attribute<a href=#autofilling-form-controls:-the-autocomplete-attribute class=self-link></a></h6>
+  <h6 id=autofilling-form-controls:-the-autocomplete-attribute><span class=secno>4.10.19.7.1</span> Autofilling form controls: the <code id=autofilling-form-controls:-the-autocomplete-attribute:attr-fe-autocomplete><a href=#attr-fe-autocomplete>autocomplete</a></code> attribute<a href=#autofilling-form-controls:-the-autocomplete-attribute class=self-link></a></h6>
 
   <div class="mdn-anno wrapped before"><button onclick=toggleStatus(this) class=mdn-anno-btn><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete title="The HTML autocomplete attribute lets web developers specify what if any permission the user agent has to provide automated assistance in filling out form field values, as well as guidance to the browser as to the type of information expected in the field.">Attributes/autocomplete</a><div class=support><span class="firefox yes"><span>Firefox</span><span>Yes</span></span><span class="safari unknown"><span>Safari</span><span>?</span></span><span class="chrome yes"><span>Chrome</span><span>66+</span></span><hr><span class="opera yes"><span>Opera</span><span>Yes</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>Yes</span></span><span class="safari_ios unknown"><span>Safari iOS</span><span>?</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>66+</span></span><span class="webview_android yes"><span>WebView Android</span><span>66+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>9.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>Yes</span></span></div></div></div><p>User agents sometimes have features for helping users fill forms in, for example prefilling the
   user's address based on earlier user input. The <dfn data-dfn-for=button,fieldset,input,object,output,select,textarea id=attr-fe-autocomplete data-dfn-type=element-attr><code>autocomplete</code></dfn> content attribute can be used to hint to
@@ -1052,7 +1070,7 @@ MIT Room 32-G524
   
 
 
-  <h4 id=textFieldSelection><span class=secno>4.10.19</span> APIs for the text control selections<a href=#textFieldSelection class=self-link></a></h4>
+  <h4 id=textFieldSelection><span class=secno>4.10.20</span> APIs for the text control selections<a href=#textFieldSelection class=self-link></a></h4>
 
   
 
@@ -1121,7 +1139,7 @@ control<c- p>.</c->setSelectionRange<c- p>(</c->oldStart <c- o>+</c-> prefix<c- 
 
 
 
-  <h4 id=constraints><span class=secno>4.10.20</span> Constraints<a href=#constraints class=self-link></a></h4>
+  <h4 id=constraints><span class=secno>4.10.21</span> Constraints<a href=#constraints class=self-link></a></h4>
 
   
 
@@ -1131,7 +1149,7 @@ control<c- p>.</c->setSelectionRange<c- p>(</c->oldStart <c- o>+</c-> prefix<c- 
 
 
 
-  <h5 id=the-constraint-validation-api><span class=secno>4.10.20.1</span> The <dfn>constraint validation API</dfn><a href=#the-constraint-validation-api class=self-link></a></h5>
+  <h5 id=the-constraint-validation-api><span class=secno>4.10.21.1</span> The <dfn>constraint validation API</dfn><a href=#the-constraint-validation-api class=self-link></a></h5>
 
   <dl class=domintro><dt><code><var>element</var>.<span id=dom-cva-willvalidate>willValidate</span></code><dd>
     <p>Returns true if the element will be validated when the form is submitted; false
@@ -1192,7 +1210,7 @@ control<c- p>.</c->setSelectionRange<c- p>(</c->oldStart <c- o>+</c-> prefix<c- 
   
 
 
-  <h5 id=security-forms><span class=secno>4.10.20.2</span> Security<a href=#security-forms class=self-link></a></h5>
+  <h5 id=security-forms><span class=secno>4.10.21.2</span> Security<a href=#security-forms class=self-link></a></h5>
 
   <p id=security-0>Servers should not rely on client-side validation. Client-side validation can
   be intentionally bypassed by hostile users, and unintentionally bypassed by users of older user
@@ -1203,7 +1221,7 @@ control<c- p>.</c->setSelectionRange<c- p>(</c->oldStart <c- o>+</c-> prefix<c- 
 
 
 
-  <h4 id=form-submission-2><span class=secno>4.10.21</span> <dfn id=form-submission>Form submission</dfn><a href=#form-submission-2 class=self-link></a></h4>
+  <h4 id=form-submission-2><span class=secno>4.10.22</span> <dfn id=form-submission>Form submission</dfn><a href=#form-submission-2 class=self-link></a></h4>
 
   
 
@@ -1258,20 +1276,20 @@ fur
   
 
 
-  <h5 id=url-encoded-form-data><span class=secno>4.10.21.1</span> URL-encoded form data<a href=#url-encoded-form-data class=self-link></a></h5>
+  <h5 id=url-encoded-form-data><span class=secno>4.10.22.1</span> URL-encoded form data<a href=#url-encoded-form-data class=self-link></a></h5>
 
   <p id=application-x-www-form-urlencoded-encoding-algorithm><span id=application/x-www-form-urlencoded-encoding-algorithm></span>See <cite>URL</cite> for
   details on <code id=url-encoded-form-data:application/x-www-form-urlencoded><a data-x-internal=application/x-www-form-urlencoded href=https://url.spec.whatwg.org/#concept-urlencoded>application/x-www-form-urlencoded</a></code>. <a href=references.html#refsURL>[URL]</a></p>
 
 
-  <h5 id=multipart-form-data><span class=secno>4.10.21.2</span> Multipart form data<a href=#multipart-form-data class=self-link></a></h5>
+  <h5 id=multipart-form-data><span class=secno>4.10.22.2</span> Multipart form data<a href=#multipart-form-data class=self-link></a></h5>
 
   
 
   <p>For details on how to interpret <code id=multipart-form-data:multipart/form-data><a href=indices.html#multipart/form-data>multipart/form-data</a></code> payloads, see RFC 7578. <a href=references.html#refsRFC7578>[RFC7578]</a></p>
 
 
-  <h5 id=plain-text-form-data><span class=secno>4.10.21.3</span> Plain text form data<a href=#plain-text-form-data class=self-link></a></h5>
+  <h5 id=plain-text-form-data><span class=secno>4.10.22.3</span> Plain text form data<a href=#plain-text-form-data class=self-link></a></h5>
 
   
 
@@ -1279,7 +1297,7 @@ fur
   not reliably interpretable by computer, as the format is ambiguous (for example, there is no way
   to distinguish a literal newline in a value from the newline at the end of the value).</p>
 
-  <h5 id=the-submitevent-interface><span class=secno>4.10.21.4</span> The <code>SubmitEvent</code> interface<a href=#the-submitevent-interface class=self-link></a></h5><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/SubmitEvent title="The SubmitEvent interface defines the object used to represent an HTML form's submit event. This event is fired at the <form> when the form's submit action is invoked.">SubmitEvent</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>75+</span></span><span class="safari yes"><span>Safari</span><span>15+</span></span><span class="chrome yes"><span>Chrome</span><span>81+</span></span><hr><span class="opera unknown"><span>Opera</span><span>?</span></span><span class="edge_blink yes"><span>Edge</span><span>81+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android unknown"><span>Firefox Android</span><span>?</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>15+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>81+</span></span><span class="webview_android yes"><span>WebView Android</span><span>81+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>13.0+</span></span><span class="opera_android unknown"><span>Opera Android</span><span>?</span></span></div></div></div>
+  <h5 id=the-submitevent-interface><span class=secno>4.10.22.4</span> The <code>SubmitEvent</code> interface<a href=#the-submitevent-interface class=self-link></a></h5><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/SubmitEvent title="The SubmitEvent interface defines the object used to represent an HTML form's submit event. This event is fired at the <form> when the form's submit action is invoked.">SubmitEvent</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>75+</span></span><span class="safari yes"><span>Safari</span><span>15+</span></span><span class="chrome yes"><span>Chrome</span><span>81+</span></span><hr><span class="opera unknown"><span>Opera</span><span>?</span></span><span class="edge_blink yes"><span>Edge</span><span>81+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android unknown"><span>Firefox Android</span><span>?</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>15+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>81+</span></span><span class="webview_android yes"><span>WebView Android</span><span>81+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>13.0+</span></span><span class="opera_android unknown"><span>Opera Android</span><span>?</span></span></div></div></div>
 
   
 
@@ -1289,18 +1307,18 @@ fur
 
   
 
-  <h5 id=the-formdataevent-interface><span class=secno>4.10.21.5</span> The <code>FormDataEvent</code> interface<a href=#the-formdataevent-interface class=self-link></a></h5><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/FormDataEvent/FormDataEvent title="The FormDataEvent() constructor creates a new FormDataEvent object instance.">FormDataEvent/FormDataEvent</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>72+</span></span><span class="safari yes"><span>Safari</span><span>15+</span></span><span class="chrome yes"><span>Chrome</span><span>77+</span></span><hr><span class="opera yes"><span>Opera</span><span>64+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android no"><span>Firefox Android</span><span>No</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>15+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>77+</span></span><span class="webview_android yes"><span>WebView Android</span><span>77+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>12.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>55+</span></span></div></div><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/FormDataEvent title="The FormDataEvent interface represents a formdata event — such an event is fired on an HTMLFormElement object after the entry list representing the form's data is constructed. This happens when the form is submitted, but can also be triggered by the invocation of a FormData() constructor.">FormDataEvent</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>72+</span></span><span class="safari yes"><span>Safari</span><span>15+</span></span><span class="chrome yes"><span>Chrome</span><span>77+</span></span><hr><span class="opera yes"><span>Opera</span><span>64+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android no"><span>Firefox Android</span><span>No</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>15+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>77+</span></span><span class="webview_android yes"><span>WebView Android</span><span>77+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>12.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>55+</span></span></div></div></div>
+  <h5 id=the-formdataevent-interface><span class=secno>4.10.22.5</span> The <code>FormDataEvent</code> interface<a href=#the-formdataevent-interface class=self-link></a></h5><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/FormDataEvent/FormDataEvent title="The FormDataEvent() constructor creates a new FormDataEvent object instance.">FormDataEvent/FormDataEvent</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>72+</span></span><span class="safari yes"><span>Safari</span><span>15+</span></span><span class="chrome yes"><span>Chrome</span><span>77+</span></span><hr><span class="opera yes"><span>Opera</span><span>64+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android no"><span>Firefox Android</span><span>No</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>15+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>77+</span></span><span class="webview_android yes"><span>WebView Android</span><span>77+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>12.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>55+</span></span></div></div><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/FormDataEvent title="The FormDataEvent interface represents a formdata event — such an event is fired on an HTMLFormElement object after the entry list representing the form's data is constructed. This happens when the form is submitted, but can also be triggered by the invocation of a FormData() constructor.">FormDataEvent</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>72+</span></span><span class="safari yes"><span>Safari</span><span>15+</span></span><span class="chrome yes"><span>Chrome</span><span>77+</span></span><hr><span class="opera yes"><span>Opera</span><span>64+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android no"><span>Firefox Android</span><span>No</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>15+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>77+</span></span><span class="webview_android yes"><span>WebView Android</span><span>77+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>12.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>55+</span></span></div></div></div>
 
   
 
   <dl class=domintro><dt><code><var>event</var>.<span>formData</span></code><dd>
     <p>Returns a <code id=the-formdataevent-interface:formdata><a data-x-internal=formdata href=https://xhr.spec.whatwg.org/#formdata>FormData</a></code> object representing names and values of elements associated
-    to the target <code id=the-formdataevent-interface:the-form-element><a href=forms.html#the-form-element>form</a></code>. Operations on the <code id=the-formdataevent-interface:formdata-2><a data-x-internal=formdata href=https://xhr.spec.whatwg.org/#formdata>FormData</a></code> object will affect form
-    data to be submitted.</p>
+    to the target <a href=forms.html#concept-form id=the-formdataevent-interface:concept-form>form</a>. Operations on the <code id=the-formdataevent-interface:formdata-2><a data-x-internal=formdata href=https://xhr.spec.whatwg.org/#formdata>FormData</a></code>
+    object will affect form data to be submitted.</p>
    </dl>
 
   
 
 
 
-  <nav><a href=form-elements.html>← 4.10.6 The button element</a> — <a href=./>Table of Contents</a> — <a href=interactive-elements.html>4.11 Interactive elements →</a></nav>
+  <nav><a href=form-elements.html>← 4.10.7 The button element</a> — <a href=./>Table of Contents</a> — <a href=interactive-elements.html>4.11 Interactive elements →</a></nav>

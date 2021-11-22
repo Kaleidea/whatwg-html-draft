@@ -112,7 +112,7 @@
 
    <p>Similarly, a <code id=the-hidden-attribute:the-canvas-element><a href=canvas.html#the-canvas-element>canvas</a></code> element with the <code id=the-hidden-attribute:attr-hidden-14><a href=#attr-hidden>hidden</a></code>
    attribute could be used by a scripted graphics engine as an off-screen buffer, and a form control
-   could refer to a hidden <code id=the-hidden-attribute:the-form-element><a href=forms.html#the-form-element>form</a></code> element using its <code id=the-hidden-attribute:attr-fae-form><a href=form-control-infrastructure.html#attr-fae-form>form</a></code> attribute.</p>
+   could refer to a hidden <a href=forms.html#concept-form id=the-hidden-attribute:concept-form>form</a> using its <code id=the-hidden-attribute:attr-fae-form><a href=form-control-infrastructure.html#attr-fae-form>form</a></code> attribute.</p>
 
   </div>
 
@@ -882,9 +882,10 @@ addShortcutKeyLabel<c- p>(</c->document<c- p>.</c->getElementById<c- p>(</c-><c-
 
   <p>The <code id=autocapitalization:attr-autocapitalize-3><a href=#attr-autocapitalize>autocapitalize</a></code> attribute can be used on an <span>editing host</span> to control autocapitalization behavior for the hosted
   editable region, on an <code id=autocapitalization:the-input-element><a href=input.html#the-input-element>input</a></code> or <code id=autocapitalization:the-textarea-element><a href=form-elements.html#the-textarea-element>textarea</a></code> element to control the behavior
-  for inputting text into that element, or on a <code id=autocapitalization:the-form-element><a href=forms.html#the-form-element>form</a></code> element to control the default
+  for inputting text into that element, or on a <a href=forms.html#concept-form id=autocapitalization:concept-form>form</a>
+  to control the default
   behavior for all <a href=forms.html#category-autocapitalize id=autocapitalization:category-autocapitalize>autocapitalize-inheriting elements</a>
-  associated with the <code id=autocapitalization:the-form-element-2><a href=forms.html#the-form-element>form</a></code> element.
+  associated with the <a href=forms.html#concept-form id=autocapitalization:concept-form-2>form</a>.
 
   <p>The <code id=autocapitalization:attr-autocapitalize-4><a href=#attr-autocapitalize>autocapitalize</a></code> attribute never causes
   autocapitalization to be enabled for <code id=autocapitalization:the-input-element-2><a href=input.html#the-input-element>input</a></code> elements whose <code id=autocapitalization:attr-input-type><a href=input.html#attr-input-type>type</a></code> attribute is in one of the <a href="input.html#url-state-(type=url)" id="autocapitalization:url-state-(type=url)">URL</a>, <a href="input.html#email-state-(type=email)" id="autocapitalization:email-state-(type=email)">Email</a>, or <a href="input.html#password-state-(type=password)" id="autocapitalization:password-state-(type=password)">Password</a> states.</p>
@@ -928,10 +929,10 @@ addShortcutKeyLabel<c- p>(</c->document<c- p>.</c->getElementById<c- p>(</c-><c-
   <dl class=domintro><dt><code><var>element</var>.<span id=dom-autocapitalize>autocapitalize</span> [ = <var>value</var> ]</code><dd>
     <p>Returns the current autocapitalization state for the element, or an empty string if it hasn't
     been set. Note that for <code id=autocapitalization:the-input-element-3><a href=input.html#the-input-element>input</a></code> and <code id=autocapitalization:the-textarea-element-2><a href=form-elements.html#the-textarea-element>textarea</a></code> elements that inherit their
-    state from a <code id=autocapitalization:the-form-element-3><a href=forms.html#the-form-element>form</a></code> element, this will return the autocapitalization state of the
-    <code id=autocapitalization:the-form-element-4><a href=forms.html#the-form-element>form</a></code> element, but for an element in an editable region, this will not return the
-    autocapitalization state of the editing host (unless this element is, in fact, the <span>editing
-    host</span>).</p>
+    state from a <a href=forms.html#concept-form id=autocapitalization:concept-form-3>form</a>, this will return the autocapitalization
+    state of the <a href=forms.html#concept-form id=autocapitalization:concept-form-4>form</a>, but for an element in an editable region,
+    this will not return the autocapitalization state of the editing host (unless this element is,
+    in fact, the <span>editing host</span>).</p>
 
     <p>Can be set, to set the <code id=autocapitalization:attr-autocapitalize-5><a href=#attr-autocapitalize>autocapitalize</a></code> content
     attribute (and thereby change the autocapitalization behavior for the element).</p>

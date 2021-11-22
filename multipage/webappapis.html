@@ -2276,10 +2276,10 @@ document<c- p>.</c->querySelector<c- p>(</c-><c- u>&quot;button&quot;</c-><c- p>
    <p>Since module type is also part of the <a href=#module-map id=integration-with-the-javascript-module-system:module-map-7>module map</a> key, the following code will
    create two separate entries in the <a href=#module-map id=integration-with-the-javascript-module-system:module-map-8>module map</a> (the type is "<code>javascript</code>" for the first, and "<code>css</code>" for the second):
 
-   <pre><code class='html'><c- p>&lt;</c-><c- f>script</c-> <c- e>type</c-><c- o>=</c-><c- s>module</c-><c- p>&gt;</c->
+   <pre><code class='html'><c- p>&lt;</c-><c- f>script</c-><c- p>&gt;</c->
   <c- k>import</c-> <c- u>&quot;https://example.com/module&quot;</c-><c- p>;</c->
 <c- p>&lt;/</c-><c- f>script</c-><c- p>&gt;</c->
-<c- p>&lt;</c-><c- f>script</c-> <c- e>type</c-><c- o>=</c-><c- s>module</c-><c- p>&gt;</c->
+<c- p>&lt;</c-><c- f>script</c-><c- p>&gt;</c->
   <c- k>import</c-> <c- u>&quot;https://example.com/module&quot;</c-> assert <c- p>{</c-> type<c- o>:</c-> <c- u>&quot;css&quot;</c-> <c- p>};</c->
 <c- p>&lt;/</c-><c- f>script</c-><c- p>&gt;</c-></code></pre>
 
