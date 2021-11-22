@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="split index" lang=en-US-x-hixie><script src=/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Standard</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/spec.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/styles.css crossorigin=""><script>
+<!DOCTYPE html><html class="split index" lang=en-US-x-hixie><script src=/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Specification Draft: <code>search</code> element with form functionality</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/spec.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/styles.css crossorigin=""><script>
    function toggleStatus(div) {
      div.parentNode.classList.toggle('wrapped');
    }
@@ -8,38 +8,38 @@
   </script><body>
   
   <script async="" crossorigin="" src=/html-dfn.js></script>
-  <script data-file-issue-url=https://github.com/whatwg/html/issues/new async="" crossorigin="" src=https://resources.whatwg.org/file-issue.js></script>
+  <script data-file-issue-url=https://github.com/Kaleidea/whatwg-html-draft/issues/new async="" crossorigin="" src=https://resources.whatwg.org/file-issue.js></script>
   <script async="" crossorigin="" src=https://resources.whatwg.org/commit-snapshot-shortcut-key.js></script>
   <header id=head class="head with-buttons">
    <a href=https://whatwg.org/ class=logo><img width=100 alt=WHATWG crossorigin="" src=https://resources.whatwg.org/logo.svg height=100></a>
-   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Living Standard — Last Updated <span class=pubdate>22 November 2021</span></h2></hgroup>
+   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Specification Draft: <code>search</code> element with form functionality — Last Updated <span class=pubdate>22 November 2021</span></h2></hgroup>
    
    <nav>
-    
+
     <div>
-     
-     <a href=/><span><strong>One-Page Version</strong> <code>html.spec.whatwg.org</code></span></a>
-     <a onclick=setLinkFragment(this); id=multipage-link href=/multipage/><span><strong>Multipage Version</strong> <code>/multipage</code></span></a>
-     <a onclick=setLinkFragment(this); href=/dev/><span><strong>Version for Web Devs</strong> <code>/dev</code></span></a>
-     <a href=/print.pdf><span><strong>PDF Version</strong> <code>/print.pdf</code></span></a>
-     <a href=https://github.com/whatwg/html/wiki/Translations><span><strong>Translations</strong> <code>日本語 • 简体中文</code></span></a>
-    </div>
-    <div>
-     <a href=https://github.com/whatwg/html/blob/main/FAQ.md class=misc><span><strong>FAQ</strong> <code>on GitHub</code></span></a>
+     <a href=https://discourse.wicg.io/t/html-search-element-with-form-functionality-specification-and-implementation-draft/5697 class=changes><span><strong>Discuss on WICG forum</strong> <code>Web Incubator Community Group</code></span></a>
+     <a href=https://github.com/Kaleidea/whatwg-html-draft/issues class=feedback><span><strong>Feedback about draft</strong> <code>file an issue</code></span></a>
      <a href=https://whatwg.org/chat class=comms><span><strong>Chat</strong> <code>on Matrix</code></span></a>
     </div>
+
     <div>
-     <a href=https://github.com/whatwg/html class=changes><span><strong>Contribute on GitHub</strong> <code>whatwg/html repository</code></span></a>
-     <a href=https://github.com/whatwg/html/commits class=changes><span><strong>Commits</strong> <code>on GitHub</code></span></a>
-     <a id=commit-snapshot-link href=/commit-snapshots/f25ab44a7556355b07f49d1ba0893b581877f9f8/ class=changes><span><strong>Snapshot</strong> <code>as of this commit</code></span></a>
-     <a href=https://twitter.com/htmlstandard class=changes><span><strong>Twitter Updates</strong> <code>@htmlstandard</code></span></a>
-    </div>
-    <div>
-     <a href=https://github.com/whatwg/html/issues class=feedback><span><strong>Open Issues</strong> <code>filed on GitHub</code></span></a>
-     <a href=https://whatwg.org/newbug class=feedback><span><strong>Open an Issue</strong> <code>whatwg.org/newbug</code></span></a>
      <a href=https://github.com/web-platform-tests/wpt/tree/master/html class=feedback><span><strong>Tests</strong> <code>web-platform-tests html/</code></span></a>
      <a href=https://github.com/web-platform-tests/wpt/labels/html class=feedback><span><strong>Issues for Tests</strong> <code>ongoing work</code></span></a>
     </div>
+
+    <div>
+     <a href=/><span><strong>One-Page Version</strong> <code>/</code></span></a>
+     <a onclick=setLinkFragment(this); id=multipage-link href=/multipage/><span><strong>Multipage Version</strong> <code>/multipage</code></span></a>
+     <a onclick=setLinkFragment(this); href=/dev/><span><strong>Version for Web Devs</strong> <code>/dev</code></span></a>
+    </div>
+
+    <div>
+     <a href=https://github.com/Kaleidea/whatwg-html/commits/search-form class=changes><span><strong>Changes</strong> <code>on GitHub</code></span></a>
+     <a href=https://github.com/Kaleidea/whatwg-html/commits/search-form-detailed class=changes><span><strong>Breakdown of changes</strong> <code>on GitHub</code></span></a>
+     <a href=https://github.com/Kaleidea/chromium/commits/search-element class=changes><span><strong>Implementation</strong> <code>in Chromium (Blink)</code></span></a>
+     <a href=https://github.com/Kaleidea/WebKit/commits/search-element class=changes><span><strong>Implementation</strong> <code>in WebKit</code></span></a>
+    </div>
+
    </nav>
 
    
