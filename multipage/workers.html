@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Standard</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/spec.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/styles.css crossorigin=""><script>
+<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Specification Draft: &lt;search> element with form functionality</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/spec.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/styles.css crossorigin=""><script>
    function toggleStatus(div) {
      div.parentNode.classList.toggle('wrapped');
    }
@@ -8,12 +8,13 @@
   </script><body>
   
   <script async="" crossorigin="" src=/html-dfn.js></script>
-  <script data-file-issue-url=https://github.com/whatwg/html/issues/new async="" crossorigin="" src=https://resources.whatwg.org/file-issue.js></script>
+  <script data-file-issue-url=https://github.com/Kaleidea/whatwg-html-draft/issues/new async="" crossorigin="" src=https://resources.whatwg.org/file-issue.js></script>
   
   <header id=head class="head with-buttons">
    <a href=https://whatwg.org/ class=logo><img width=100 alt=WHATWG crossorigin="" src=https://resources.whatwg.org/logo.svg height=100></a>
-   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Living Standard — Last Updated <span class=pubdate>22 November 2021</span></h2></hgroup>
+   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Review Draft: <code id=living-standard:the-search-element><a href=forms.html#the-search-element>search</a></code> element with form functionality — Last Updated <span class=pubdate>1 December 2021</span></h2></hgroup>
    
+
    
 
    
@@ -1402,11 +1403,9 @@ worker<c- p>.</c->port<c- p>.</c->postMessage<c- p>({</c-> foo<c- o>:</c-> <c- t
 
    <li><p>If <var>owner</var> is a <code id=worker-processing-model:workerglobalscope><a href=#workerglobalscope>WorkerGlobalScope</a></code> object (i.e., we are creating a
    nested dedicated worker), then set <var>parent worker global scope</var> to
-   <var>owner</var>.<li>
-    <p>Let <var>agent</var> be the result of <a href=webappapis.html#obtain-a-dedicated/shared-worker-agent id=worker-processing-model:obtain-a-dedicated/shared-worker-agent>obtaining a dedicated/shared worker agent</a> given <var>outside settings</var> and
-    <var>is shared</var>. Run the rest of these steps in that agent.</p>
-
-    <p id=worker-processing-model-top>For the purposes of timing APIs, this is the <dfn id=official-moment-of-creation data-export="">official moment of creation</dfn> of the worker.</p> <li>
+   <var>owner</var>.<li><p>Let <var>unsafeWorkerCreationTime</var> be the <a id=worker-processing-model:unsafe-shared-current-time href=https://w3c.github.io/hr-time/#dfn-unsafe-shared-current-time data-x-internal=unsafe-shared-current-time>unsafe shared current
+   time</a>.<li><p>Let <var>agent</var> be the result of <a href=webappapis.html#obtain-a-dedicated/shared-worker-agent id=worker-processing-model:obtain-a-dedicated/shared-worker-agent>obtaining a dedicated/shared worker agent</a> given <var>outside settings</var> and
+   <var>is shared</var>. Run the rest of these steps in that agent.<li>
     <p>Let <var>realm execution context</var> be the result of <a id=worker-processing-model:creating-a-new-javascript-realm href=webappapis.html#creating-a-new-javascript-realm>creating a new JavaScript
     realm</a> given <var>agent</var> and the following customizations:</p>
 
@@ -1420,8 +1419,8 @@ worker<c- p>.</c->port<c- p>.</c->postMessage<c- p>({</c-> foo<c- o>:</c-> <c- t
     <p class=note>This is the <code id=worker-processing-model:dedicatedworkerglobalscope-2><a href=#dedicatedworkerglobalscope>DedicatedWorkerGlobalScope</a></code> or
     <code id=worker-processing-model:sharedworkerglobalscope-2><a href=#sharedworkerglobalscope>SharedWorkerGlobalScope</a></code> object created in the previous step.</p>
    <li><p><a href=#set-up-a-worker-environment-settings-object id=worker-processing-model:set-up-a-worker-environment-settings-object>Set up a worker environment settings object</a> with <var>realm execution
-   context</var> and <var>outside settings</var>, and let <var>inside settings</var> be the
-   result.<li><p>Set <var>worker global scope</var>'s <a href=#concept-workerglobalscope-name id=worker-processing-model:concept-workerglobalscope-name>name</a> to the value of <var>options</var>'s
+   context</var>, <var>outside settings</var>, and <var>unsafeWorkerCreationTime</var>, and let
+   <var>inside settings</var> be the result.<li><p>Set <var>worker global scope</var>'s <a href=#concept-workerglobalscope-name id=worker-processing-model:concept-workerglobalscope-name>name</a> to the value of <var>options</var>'s
    <code>name</code> member.<li><p><a href=https://infra.spec.whatwg.org/#set-append id=worker-processing-model:set-append data-x-internal=set-append>Append</a> <var>owner</var> to <var>worker global
    scope</var>'s <a href=#concept-WorkerGlobalScope-owner-set id=worker-processing-model:concept-WorkerGlobalScope-owner-set>owner set</a>.<li>
     <p>If <var>is shared</var> is true, then:</p>
@@ -1617,8 +1616,8 @@ worker<c- p>.</c->port<c- p>.</c->postMessage<c- p>({</c-> foo<c- o>:</c-> <c- t
   <h5 id=script-settings-for-workers><span class=secno>10.2.6.2</span> Script settings for workers<a href=#script-settings-for-workers class=self-link></a></h5>
 
   <p>To <dfn id=set-up-a-worker-environment-settings-object>set up a worker environment settings object</dfn>, given a <a id=script-settings-for-workers:javascript-execution-context href=https://tc39.es/ecma262/#sec-execution-contexts data-x-internal=javascript-execution-context>JavaScript execution
-  context</a> <var>execution context</var> and <a id=script-settings-for-workers:environment-settings-object href=webappapis.html#environment-settings-object>environment settings object</a>
-  <var>outside settings</var>:</p>
+  context</a> <var>execution context</var>, an <a id=script-settings-for-workers:environment-settings-object href=webappapis.html#environment-settings-object>environment settings object</a>
+  <var>outside settings</var>, and a number <var>unsafeWorkerCreationTime</var>:</p>
 
   <ol><li><p>Let <var>inherited origin</var> be <var>outside settings</var>'s <a href=webappapis.html#concept-settings-object-origin id=script-settings-for-workers:concept-settings-object-origin>origin</a>.<li><p>Let <var>realm</var> be the value of <var>execution context</var>'s Realm
    component.<li><p>Let <var>worker global scope</var> be <var>realm</var>'s <a href=webappapis.html#concept-realm-global id=script-settings-for-workers:concept-realm-global>global object</a>.<li>
@@ -1642,6 +1641,8 @@ worker<c- p>.</c->port<c- p>.</c->postMessage<c- p>({</c-> foo<c- o>:</c-> <c- t
       <p>Return <var>worker global scope</var>'s <a href=#concept-workerglobalscope-policy-container id=script-settings-for-workers:concept-workerglobalscope-policy-container>policy container</a>.</p>
      <dt>The <a href=webappapis.html#concept-settings-object-cross-origin-isolated-capability id=script-settings-for-workers:concept-settings-object-cross-origin-isolated-capability>cross-origin
      isolated capability</a><dd><p>Return <var>worker global scope</var>'s <a href=#concept-workerglobalscope-cross-origin-isolated-capability id=script-settings-for-workers:concept-workerglobalscope-cross-origin-isolated-capability>cross-origin isolated
+     capability</a>.<dt>The <a href=webappapis.html#concept-settings-object-time-origin id=script-settings-for-workers:concept-settings-object-time-origin>time origin</a><dd><p>Return the result of <a href=https://w3c.github.io/hr-time/#dfn-coarsen-time id=script-settings-for-workers:coarsen-time data-x-internal=coarsen-time>coarsening</a>
+     <var>unsafeWorkerCreationTime</var> with <var>worker global scope</var>'s <a href=#concept-workerglobalscope-cross-origin-isolated-capability id=script-settings-for-workers:concept-workerglobalscope-cross-origin-isolated-capability-2>cross-origin isolated
      capability</a>.</dl>
    <li><p>Set <var>settings object</var>'s <a href=webappapis.html#concept-environment-id id=script-settings-for-workers:concept-environment-id>id</a> to a new
    unique opaque string, <a href=webappapis.html#concept-environment-creation-url id=script-settings-for-workers:concept-environment-creation-url>creation URL</a> to

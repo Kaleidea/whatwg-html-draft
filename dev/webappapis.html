@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Standard, Edition for Web Developers</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/dev/styles.css crossorigin=""><script>
+<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Specification Draft: &lt;search> element with form functionality, Edition for Web Developers</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/dev/styles.css crossorigin=""><script>
    function toggleStatus(div) {
      div.parentNode.classList.toggle('wrapped');
    }
@@ -13,7 +13,8 @@
   <header id=head class="head with-buttons">
    <a href=https://whatwg.org/ class=logo><img width=100 alt=WHATWG crossorigin="" src=https://resources.whatwg.org/logo.svg height=100></a>
    
-   <hgroup><h1><a rel=home href=/dev/>HTML: The Living Standard</a></h1><h2 id=dev-edition-h2 class="no-num no-toc">Edition for Web Developers — Last Updated <span class=pubdate>22 November 2021</span></h2></hgroup>
+   <hgroup><h1><a rel=home href=/dev/>HTML: The Living Standard — Edition for Web Developers</a></h1><h2 id=dev-edition-h2 class="no-num no-toc">Review Draft: <code id=dev-edition-h2:the-search-element><a href=forms.html#the-search-element>search</a></code> element with form functionality — Last Updated <span class=pubdate>1 December 2021</span></h2></hgroup>
+
    
 
    <div id=search>
@@ -415,6 +416,24 @@
    the correct type from succeeding.</p>
   </div>
 
+  <div class=example>
+   <p>JavaScript module scripts are the default import type when importing from another JavaScript
+    module; that is, when an <code>import</code> statement lacks a <code>type</code> import assertion the imported module script's type will be JavaScript.
+    Attempting to import a JavaScript resource using an <code>import</code> statement with
+    a <code>type</code> import assertion will fail:</p>
+
+    <pre><code class='html'><c- p>&lt;</c-><c- f>script</c-> <c- e>type</c-><c- o>=</c-><c- s>&quot;module&quot;</c-><c- p>&gt;</c->
+    <c- c1>// All of the following will fail, assuming that the imported .mjs files are served with a</c->
+    <c- c1>// JavaScript MIME type. JavaScript module scripts are the default and cannot be imported with</c->
+    <c- c1>// any import type assertion.</c->
+    <c- k>import</c-> foo <c- k>from</c-> <c- u>&quot;./foo.mjs&quot;</c-> assert <c- p>{</c-> type<c- o>:</c-> <c- u>&quot;javascript&quot;</c-> <c- p>};</c->
+    <c- k>import</c-> foo2 <c- k>from</c-> <c- u>&quot;./foo2.mjs&quot;</c-> assert <c- p>{</c-> type<c- o>:</c-> <c- u>&quot;js&quot;</c-> <c- p>};</c->
+    <c- k>import</c-> foo3 <c- k>from</c-> <c- u>&quot;./foo3.mjs&quot;</c-> assert <c- p>{</c-> type<c- o>:</c-> <c- u>&quot;&quot;</c-> <c- p>};</c->
+    <c- k>await</c-> <c- k>import</c-><c- p>(</c-><c- u>&quot;./foo4.mjs&quot;</c-><c- p>,</c-> <c- p>{</c-> assert<c- o>:</c-> <c- p>{</c-> type<c- o>:</c-> <c- kc>null</c-> <c- p>}</c-> <c- p>});</c->
+    <c- k>await</c-> <c- k>import</c-><c- p>(</c-><c- u>&quot;./foo5.mjs&quot;</c-><c- p>,</c-> <c- p>{</c-> assert<c- o>:</c-> <c- p>{</c-> type<c- o>:</c-> <c- kc>undefined</c-> <c- p>}</c-> <c- p>});</c->
+<c- p>&lt;/</c-><c- f>script</c-><c- p>&gt;</c-></code></pre>
+  </div>
+
   
 
   <div id=module-specifier-examples class=example>
@@ -781,8 +800,8 @@
   
 
   <dl class=domintro><dt><code>self.<span id=dom-issecurecontext>isSecureContext</span></code><dd><p>Returns whether or not this global object represents a <span>secure context</span>. <a href=references.html#refsSECURE-CONTEXTS>[SECURE-CONTEXTS]</a><dt><code>self.<span id=dom-origin>origin</span></code><dd><p>Returns the global object's <a id=windoworworkerglobalscope-mixin:concept-origin href=origin.html#concept-origin>origin</a>, serialized as string.<dt><code>self.<span id=dom-crossoriginisolated>crossOriginIsolated</span></code><dd><p>Returns whether scripts running in this global are allowed to use APIs that require
-   cross-origin isolation. This depends on the `<code>Cross-Origin-Opener-Policy</code>` and
-   `<code>Cross-Origin-Embedder-Policy</code>` HTTP response headers and the "<code id=windoworworkerglobalscope-mixin:cross-origin-isolated-feature><a href=infrastructure.html#cross-origin-isolated-feature>cross-origin-isolated</a></code>" feature.</dl>
+   cross-origin isolation. This depends on the `<code id=windoworworkerglobalscope-mixin:cross-origin-opener-policy-2><a href=origin.html#cross-origin-opener-policy-2>Cross-Origin-Opener-Policy</a></code>` and
+   `<code id=windoworworkerglobalscope-mixin:cross-origin-embedder-policy><a href=origin.html#cross-origin-embedder-policy>Cross-Origin-Embedder-Policy</a></code>` HTTP response headers and the "<code id=windoworworkerglobalscope-mixin:cross-origin-isolated-feature><a href=infrastructure.html#cross-origin-isolated-feature>cross-origin-isolated</a></code>" feature.</dl>
 
   <div class=example>
    <p>Developers are strongly encouraged to use <code>self.origin</code> over <code>location.origin</code>. The former returns the <a id=windoworworkerglobalscope-mixin:concept-origin-2 href=origin.html#concept-origin>origin</a> of the environment,

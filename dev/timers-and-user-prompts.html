@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Standard, Edition for Web Developers</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/dev/styles.css crossorigin=""><script>
+<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Specification Draft: &lt;search> element with form functionality, Edition for Web Developers</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/dev/styles.css crossorigin=""><script>
    function toggleStatus(div) {
      div.parentNode.classList.toggle('wrapped');
    }
@@ -13,7 +13,8 @@
   <header id=head class="head with-buttons">
    <a href=https://whatwg.org/ class=logo><img width=100 alt=WHATWG crossorigin="" src=https://resources.whatwg.org/logo.svg height=100></a>
    
-   <hgroup><h1><a rel=home href=/dev/>HTML: The Living Standard</a></h1><h2 id=dev-edition-h2 class="no-num no-toc">Edition for Web Developers — Last Updated <span class=pubdate>22 November 2021</span></h2></hgroup>
+   <hgroup><h1><a rel=home href=/dev/>HTML: The Living Standard — Edition for Web Developers</a></h1><h2 id=dev-edition-h2 class="no-num no-toc">Review Draft: <code id=dev-edition-h2:the-search-element><a href=forms.html#the-search-element>search</a></code> element with form functionality — Last Updated <span class=pubdate>1 December 2021</span></h2></hgroup>
+
    
 
    <div id=search>
@@ -41,19 +42,19 @@
   <p>The <code id=timers:dom-settimeout><a href=#dom-settimeout>setTimeout()</a></code> and <code id=timers:dom-setinterval><a href=#dom-setinterval>setInterval()</a></code> methods allow authors to schedule timer-based
   callbacks.</p>
 
-  <dl class=domintro><dt><code><var>handle</var> = self.<span id=dom-settimeout>setTimeout</span>(<var>handler</var> [, <var>timeout</var> [, ...<var>arguments</var> ] ])</code><dd>
+  <dl class=domintro><dt><code><var>id</var> = self.<span id=dom-settimeout>setTimeout</span>(<var>handler</var> [, <var>timeout</var> [, ...<var>arguments</var> ] ])</code><dd>
     <p>Schedules a timeout to run <var>handler</var> after <var>timeout</var> milliseconds. Any
     <var>arguments</var> are passed straight through to the <var>handler</var>.</p>
-   <dt><code><var>handle</var> = self.<a href=#dom-settimeout id=timers:dom-settimeout-2>setTimeout</a>(<var>code</var> [, <var>timeout</var> ])</code><dd>
+   <dt><code><var>id</var> = self.<a href=#dom-settimeout id=timers:dom-settimeout-2>setTimeout</a>(<var>code</var> [, <var>timeout</var> ])</code><dd>
     <p>Schedules a timeout to compile and run <var>code</var> after <var>timeout</var>
     milliseconds.</p>
-   <dt><code>self.<span id=dom-cleartimeout>clearTimeout</span>(<var>handle</var>)</code><dd><p>Cancels the timeout set with <code id=timers:dom-settimeout-3><a href=#dom-settimeout>setTimeout()</a></code> or <code id=timers:dom-setinterval-2><a href=#dom-setinterval>setInterval()</a></code> identified by <var>handle</var>.<dt><code><var>handle</var> = self.<span id=dom-setinterval>setInterval</span>(<var>handler</var> [, <var>timeout</var> [, ...<var>arguments</var> ] ])</code><dd>
+   <dt><code>self.<span id=dom-cleartimeout>clearTimeout</span>(<var>id</var>)</code><dd><p>Cancels the timeout set with <code id=timers:dom-settimeout-3><a href=#dom-settimeout>setTimeout()</a></code> or <code id=timers:dom-setinterval-2><a href=#dom-setinterval>setInterval()</a></code> identified by <var>id</var>.<dt><code><var>id</var> = self.<span id=dom-setinterval>setInterval</span>(<var>handler</var> [, <var>timeout</var> [, ...<var>arguments</var> ] ])</code><dd>
     <p>Schedules a timeout to run <var>handler</var> every <var>timeout</var> milliseconds. Any
     <var>arguments</var> are passed straight through to the <var>handler</var>.</p>
-   <dt><code><var>handle</var> = self.<a href=#dom-setinterval id=timers:dom-setinterval-3>setInterval</a>(<var>code</var> [, <var>timeout</var> ])</code><dd>
+   <dt><code><var>id</var> = self.<a href=#dom-setinterval id=timers:dom-setinterval-3>setInterval</a>(<var>code</var> [, <var>timeout</var> ])</code><dd>
     <p>Schedules a timeout to compile and run <var>code</var> every <var>timeout</var>
     milliseconds.</p>
-   <dt><code>self.<span id=dom-clearinterval>clearInterval</span>(<var>handle</var>)</code><dd><p>Cancels the timeout set with <code id=timers:dom-setinterval-4><a href=#dom-setinterval>setInterval()</a></code> or <code id=timers:dom-settimeout-4><a href=#dom-settimeout>setTimeout()</a></code> identified by <var>handle</var>.</dl>
+   <dt><code>self.<span id=dom-clearinterval>clearInterval</span>(<var>id</var>)</code><dd><p>Cancels the timeout set with <code id=timers:dom-setinterval-4><a href=#dom-setinterval>setInterval()</a></code> or <code id=timers:dom-settimeout-4><a href=#dom-settimeout>setTimeout()</a></code> identified by <var>id</var>.</dl>
 
   <p class=note>Timers can be nested; after five such nested timers, however, the interval is
   forced to be at least four milliseconds.</p>
@@ -64,7 +65,6 @@
   
 
   <div class=example>
-
    <p>To run tasks of several milliseconds back to back without any delay, while still yielding back
    to the browser to avoid starving the user interface (and to avoid the browser killing the script
    for hogging the CPU), simply queue the next timer before performing work:</p>
@@ -79,9 +79,9 @@
 <c- p>}</c->
 
 <c- a>function</c-> rescheduleWork<c- p>()</c-> <c- p>{</c->
-  <c- a>var</c-> handle <c- o>=</c-> setTimeout<c- p>(</c->rescheduleWork<c- p>,</c-> <c- mf>0</c-><c- p>);</c-> <c- c1>// preschedule next iteration</c->
+  <c- a>var</c-> id <c- o>=</c-> setTimeout<c- p>(</c->rescheduleWork<c- p>,</c-> <c- mf>0</c-><c- p>);</c-> <c- c1>// preschedule next iteration</c->
   <c- k>if</c-> <c- p>(</c->doExpensiveWork<c- p>())</c->
-    clearTimeout<c- p>(</c->handle<c- p>);</c-> <c- c1>// clear the timeout if we don&apos;t need it</c->
+    clearTimeout<c- p>(</c->id<c- p>);</c-> <c- c1>// clear the timeout if we don&apos;t need it</c->
 <c- p>}</c->
 
 <c- a>function</c-> scheduleWork<c- p>()</c-> <c- p>{</c->
@@ -89,9 +89,9 @@
 <c- p>}</c->
 
 scheduleWork<c- p>();</c-> <c- c1>// queues a task to do lots of work</c-></code></pre>
-
   </div>
 
+  
 
   <h3 id=microtask-queuing><span class=secno>8.7</span> Microtask queuing<a href=#microtask-queuing class=self-link></a></h3><div class="mdn-anno wrapped"><button onclick=toggleStatus(this) class=mdn-anno-btn><b title="Support in all current engines." class=all-engines-flag>✔</b><span>MDN</span></button><div class=feature><p><a href=https://developer.mozilla.org/en-US/docs/Web/API/queueMicrotask title="The queueMicrotask() method, which is exposed on the Window or Worker interface, queues a microtask to be executed at a safe time prior to control returning to the browser's event loop.">queueMicrotask</a><p class=all-engines-text>Support in all current engines.<div class=support><span class="firefox yes"><span>Firefox</span><span>69+</span></span><span class="safari yes"><span>Safari</span><span>12.1+</span></span><span class="chrome yes"><span>Chrome</span><span>71+</span></span><hr><span class="opera yes"><span>Opera</span><span>58+</span></span><span class="edge_blink yes"><span>Edge</span><span>79+</span></span><hr><span class="edge no"><span>Edge (Legacy)</span><span>No</span></span><span class="ie no"><span>Internet Explorer</span><span>No</span></span><hr><span class="firefox_android yes"><span>Firefox Android</span><span>79+</span></span><span class="safari_ios yes"><span>Safari iOS</span><span>12.2+</span></span><span class="chrome_android yes"><span>Chrome Android</span><span>71+</span></span><span class="webview_android yes"><span>WebView Android</span><span>71+</span></span><span class="samsunginternet_android yes"><span>Samsung Internet</span><span>10.0+</span></span><span class="opera_android yes"><span>Opera Android</span><span>50+</span></span></div></div></div>
 

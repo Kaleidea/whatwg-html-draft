@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Standard</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/spec.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/styles.css crossorigin=""><script>
+<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Specification Draft: &lt;search> element with form functionality</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/spec.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/styles.css crossorigin=""><script>
    function toggleStatus(div) {
      div.parentNode.classList.toggle('wrapped');
    }
@@ -8,12 +8,13 @@
   </script><body>
   
   <script async="" crossorigin="" src=/html-dfn.js></script>
-  <script data-file-issue-url=https://github.com/whatwg/html/issues/new async="" crossorigin="" src=https://resources.whatwg.org/file-issue.js></script>
+  <script data-file-issue-url=https://github.com/Kaleidea/whatwg-html-draft/issues/new async="" crossorigin="" src=https://resources.whatwg.org/file-issue.js></script>
   
   <header id=head class="head with-buttons">
    <a href=https://whatwg.org/ class=logo><img width=100 alt=WHATWG crossorigin="" src=https://resources.whatwg.org/logo.svg height=100></a>
-   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Living Standard — Last Updated <span class=pubdate>22 November 2021</span></h2></hgroup>
+   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Review Draft: <code id=living-standard:the-search-element><a href=forms.html#the-search-element>search</a></code> element with form functionality — Last Updated <span class=pubdate>1 December 2021</span></h2></hgroup>
    
+
    
 
    
@@ -1416,7 +1417,8 @@
     <code id=the-stack-of-open-elements:listing><a href=obsolete.html#listing>listing</a></code>, <code id=the-stack-of-open-elements:the-main-element><a href=grouping-content.html#the-main-element>main</a></code>, <code id=the-stack-of-open-elements:the-marquee-element><a href=obsolete.html#the-marquee-element>marquee</a></code>, <code id=the-stack-of-open-elements:the-menu-element><a href=grouping-content.html#the-menu-element>menu</a></code>,
     <code id=the-stack-of-open-elements:the-meta-element><a href=semantics.html#the-meta-element>meta</a></code>, <code id=the-stack-of-open-elements:the-nav-element><a href=sections.html#the-nav-element>nav</a></code>, <code id=the-stack-of-open-elements:noembed><a href=obsolete.html#noembed>noembed</a></code>, <code id=the-stack-of-open-elements:noframes><a href=obsolete.html#noframes>noframes</a></code>,
     <code id=the-stack-of-open-elements:the-noscript-element><a href=scripting.html#the-noscript-element>noscript</a></code>, <code id=the-stack-of-open-elements:the-object-element><a href=iframe-embed-object.html#the-object-element>object</a></code>, <code id=the-stack-of-open-elements:the-ol-element><a href=grouping-content.html#the-ol-element>ol</a></code>, <code id=the-stack-of-open-elements:the-p-element><a href=grouping-content.html#the-p-element>p</a></code>, <code id=the-stack-of-open-elements:the-param-element><a href=iframe-embed-object.html#the-param-element>param</a></code>,
-    <code id=the-stack-of-open-elements:plaintext><a href=obsolete.html#plaintext>plaintext</a></code>, <code id=the-stack-of-open-elements:the-pre-element><a href=grouping-content.html#the-pre-element>pre</a></code>, <code id=the-stack-of-open-elements:the-script-element><a href=scripting.html#the-script-element>script</a></code>, <code id=the-stack-of-open-elements:the-section-element><a href=sections.html#the-section-element>section</a></code>,
+    <code id=the-stack-of-open-elements:plaintext><a href=obsolete.html#plaintext>plaintext</a></code>, <code id=the-stack-of-open-elements:the-pre-element><a href=grouping-content.html#the-pre-element>pre</a></code>, <code id=the-stack-of-open-elements:the-script-element><a href=scripting.html#the-script-element>script</a></code>,
+    <code id=the-stack-of-open-elements:the-search-element><a href=forms.html#the-search-element>search</a></code>, <code id=the-stack-of-open-elements:the-section-element><a href=sections.html#the-section-element>section</a></code>,
     <code id=the-stack-of-open-elements:the-select-element><a href=form-elements.html#the-select-element>select</a></code>, <code id=the-stack-of-open-elements:the-source-element><a href=embedded-content.html#the-source-element>source</a></code>, <code id=the-stack-of-open-elements:the-style-element><a href=semantics.html#the-style-element>style</a></code>, <code id=the-stack-of-open-elements:the-summary-element><a href=interactive-elements.html#the-summary-element>summary</a></code>,
     <code id=the-stack-of-open-elements:the-table-element><a href=tables.html#the-table-element>table</a></code>, <code id=the-stack-of-open-elements:the-tbody-element><a href=tables.html#the-tbody-element>tbody</a></code>, <code id=the-stack-of-open-elements:the-td-element><a href=tables.html#the-td-element>td</a></code>, <code id=the-stack-of-open-elements:the-template-element><a href=scripting.html#the-template-element>template</a></code>,
     <code id=the-stack-of-open-elements:the-textarea-element><a href=form-elements.html#the-textarea-element>textarea</a></code>, <code id=the-stack-of-open-elements:the-tfoot-element><a href=tables.html#the-tfoot-element>tfoot</a></code>, <code id=the-stack-of-open-elements:the-th-element><a href=tables.html#the-th-element>th</a></code>, <code id=the-stack-of-open-elements:the-thead-element><a href=tables.html#the-thead-element>thead</a></code>,
@@ -1562,7 +1564,8 @@
   <a href=#head-element-pointer id=the-element-pointers:head-element-pointer><code>head</code> element pointer</a> gets set to point to this node.</p>
 
   <p>The <a href=#form-element-pointer id=the-element-pointers:form-element-pointer><code>form</code> element pointer</a> points to the last
-  <code id=the-element-pointers:the-form-element><a href=forms.html#the-form-element>form</a></code> element that was opened and whose end tag has not yet been seen. It is used to
+  <a href=forms.html#concept-form id=the-element-pointers:concept-form>form</a> (<code id=the-element-pointers:the-form-element><a href=forms.html#the-form-element>form</a></code> or <code id=the-element-pointers:the-search-element><a href=forms.html#the-search-element>search</a></code> element)
+  that was opened and whose end tag has not yet been seen. It is used to
   make form controls associate with forms in the face of dramatically bad markup, for historical
   reasons. It is ignored inside <code id=the-element-pointers:the-template-element><a href=scripting.html#the-template-element>template</a></code> elements.</p>
 
@@ -2868,7 +2871,8 @@
    either not <a href=forms.html#category-listed id=creating-and-inserting-nodes:category-listed>listed</a> or doesn't have a <code id=creating-and-inserting-nodes:attr-fae-form><a href=form-control-infrastructure.html#attr-fae-form>form</a></code> attribute, and the <var>intended parent</var> is in the same
    <a id=creating-and-inserting-nodes:tree href=https://dom.spec.whatwg.org/#concept-tree data-x-internal=tree>tree</a> as the element pointed to by the <a href=#form-element-pointer id=creating-and-inserting-nodes:form-element-pointer-2><code>form</code> element
    pointer</a>, then <a href=form-control-infrastructure.html#concept-form-association id=creating-and-inserting-nodes:concept-form-association>associate</a> <var>element</var>
-   with the <code id=creating-and-inserting-nodes:the-form-element><a href=forms.html#the-form-element>form</a></code> element pointed to by the <a href=#form-element-pointer id=creating-and-inserting-nodes:form-element-pointer-3><code>form</code> element
+   with the <a href=forms.html#concept-form id=creating-and-inserting-nodes:concept-form>form</a> pointed to by the
+   <a href=#form-element-pointer id=creating-and-inserting-nodes:form-element-pointer-3><code>form</code> element
    pointer</a> and set <var>element</var>'s <a id=creating-and-inserting-nodes:parser-inserted-flag href=form-control-infrastructure.html#parser-inserted-flag>parser inserted flag</a>.<li><p>Return <var>element</var>.</ol>
 
   <hr>
@@ -3013,9 +3017,9 @@
     children, so they are dropped on the floor.</p>
    <li>
     <p>If there is a <code id=creating-and-inserting-nodes:text-2><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>Text</a></code> node immediately before the <var>adjusted insertion
-    location</var>, then append <var>data</var> to that <code id=creating-and-inserting-nodes:text-3><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>Text</a></code> node's data.</p>
+    location</var>, then append <var>data</var> to that <code id=creating-and-inserting-nodes:text-3><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>Text</a></code> node's <a href=https://dom.spec.whatwg.org/#concept-cd-data id=creating-and-inserting-nodes:concept-cd-data data-x-internal=concept-cd-data>data</a>.</p>
 
-    <p>Otherwise, create a new <code id=creating-and-inserting-nodes:text-4><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>Text</a></code> node whose data is <var>data</var> and
+    <p>Otherwise, create a new <code id=creating-and-inserting-nodes:text-4><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>Text</a></code> node whose <a href=https://dom.spec.whatwg.org/#concept-cd-data id=creating-and-inserting-nodes:concept-cd-data-2 data-x-internal=concept-cd-data>data</a> is <var>data</var> and
     whose <a id=creating-and-inserting-nodes:node-document-2 href=https://dom.spec.whatwg.org/#concept-node-document data-x-internal=node-document>node document</a> is the same as that of the
     element in which the <var>adjusted insertion location</var> finds itself, and insert
     the newly created node at the <var>adjusted insertion location</var>.</p>
@@ -3142,26 +3146,27 @@ document<c- p>.</c->body<c- p>.</c->appendChild<c- p>(</c->text<c- p>);</c->
     identifier is not missing, or the token's system identifier is neither missing nor
     "<code id=the-initial-insertion-mode:about:legacy-compat><a href=urls-and-fetching.html#about:legacy-compat>about:legacy-compat</a></code>", then there is a <a href=#parse-errors id=the-initial-insertion-mode:parse-errors>parse error</a>.</p>
 
-    <p>Append a <code id=the-initial-insertion-mode:documenttype><a data-x-internal=documenttype href=https://dom.spec.whatwg.org/#interface-documenttype>DocumentType</a></code> node to the <code id=the-initial-insertion-mode:document-3><a href=dom.html#document>Document</a></code> node, with the <code>name</code> attribute set to the name given in the DOCTYPE token, or the empty string
-    if the name was missing; the <code>publicId</code> attribute set to the public
-    identifier given in the DOCTYPE token, or the empty string if the public identifier was missing;
-    the <code>systemId</code> attribute set to the system identifier given in the DOCTYPE
-    token, or the empty string if the system identifier was missing; and the other attributes
-    specific to <code id=the-initial-insertion-mode:documenttype-2><a data-x-internal=documenttype href=https://dom.spec.whatwg.org/#interface-documenttype>DocumentType</a></code> objects set to null and empty lists as appropriate.
-    Associate the <code id=the-initial-insertion-mode:documenttype-3><a data-x-internal=documenttype href=https://dom.spec.whatwg.org/#interface-documenttype>DocumentType</a></code> node with the <code id=the-initial-insertion-mode:document-4><a href=dom.html#document>Document</a></code> object so that it is
-    returned as the value of the <code>doctype</code> attribute of the
-    <code id=the-initial-insertion-mode:document-5><a href=dom.html#document>Document</a></code> object.</p>
+    <p>Append a <code id=the-initial-insertion-mode:documenttype><a data-x-internal=documenttype href=https://dom.spec.whatwg.org/#interface-documenttype>DocumentType</a></code> node to the <code id=the-initial-insertion-mode:document-3><a href=dom.html#document>Document</a></code> node, with its <a href=https://dom.spec.whatwg.org/#concept-doctype-name id=the-initial-insertion-mode:concept-doctype-name data-x-internal=concept-doctype-name>name</a> set to the name given in the DOCTYPE token, or the
+    empty string if the name was missing; its <a href=https://dom.spec.whatwg.org/#concept-doctype-publicid id=the-initial-insertion-mode:concept-doctype-publicid data-x-internal=concept-doctype-publicid>public
+    ID</a> set to the public identifier given in the DOCTYPE token, or the empty string if the
+    public identifier was missing; and its <a href=https://dom.spec.whatwg.org/#concept-doctype-systemid id=the-initial-insertion-mode:concept-doctype-systemid data-x-internal=concept-doctype-systemid>system ID</a>
+    set to the system identifier given in the DOCTYPE token, or the empty string if the system
+    identifier was missing.</p>
+
+    <p class=note>This also ensures that the <code id=the-initial-insertion-mode:documenttype-2><a data-x-internal=documenttype href=https://dom.spec.whatwg.org/#interface-documenttype>DocumentType</a></code> node is returned as the
+    value of the <code id=the-initial-insertion-mode:dom-document-doctype><a data-x-internal=dom-document-doctype href=https://dom.spec.whatwg.org/#dom-document-doctype>doctype</a></code> attribute of the
+    <code id=the-initial-insertion-mode:document-4><a href=dom.html#document>Document</a></code> object.</p>
 
     <p id=quirks-mode-doctypes>Then, if the document is <em>not</em> <a id=the-initial-insertion-mode:an-iframe-srcdoc-document href=iframe-embed-object.html#an-iframe-srcdoc-document>an <code>iframe</code>
     <code>srcdoc</code> document</a>, and the <a href=#parser-cannot-change-the-mode-flag id=the-initial-insertion-mode:parser-cannot-change-the-mode-flag>parser cannot
     change the mode flag</a> is false, and the DOCTYPE token matches one of the conditions in the
-    following list, then set the <code id=the-initial-insertion-mode:document-6><a href=dom.html#document>Document</a></code> to <a id=the-initial-insertion-mode:quirks-mode href=https://dom.spec.whatwg.org/#concept-document-quirks data-x-internal=quirks-mode>quirks mode</a>:</p>
+    following list, then set the <code id=the-initial-insertion-mode:document-5><a href=dom.html#document>Document</a></code> to <a id=the-initial-insertion-mode:quirks-mode href=https://dom.spec.whatwg.org/#concept-document-quirks data-x-internal=quirks-mode>quirks mode</a>:</p>
 
     <ul class=brief><li> The <i id=the-initial-insertion-mode:force-quirks-flag><a href=#force-quirks-flag>force-quirks flag</a></i> is set to <i>on</i>. <li> The name is not "<code>html</code>". <li> The public identifier is set to: "<code>-//W3O//DTD W3 HTML Strict 3.0//EN//</code>" <li> The public identifier is set to: "<code>-/W3C/DTD HTML 4.0 Transitional/EN</code>" <li> The public identifier is set to: "<code>HTML</code>" <li> The system identifier is set to: "<code>http://www.ibm.com/data/dtd/v11/ibmxhtml1-transitional.dtd</code>" <li> The public identifier starts with: "<code>+//Silmaril//dtd html Pro v0r11 19970101//</code>" <li> The public identifier starts with: "<code>-//AS//DTD HTML 3.0 asWedit + extensions//</code>" <li> The public identifier starts with: "<code>-//AdvaSoft Ltd//DTD HTML 3.0 asWedit + extensions//</code>" <li> The public identifier starts with: "<code>-//IETF//DTD HTML 2.0 Level 1//</code>" <li> The public identifier starts with: "<code>-//IETF//DTD HTML 2.0 Level 2//</code>" <li> The public identifier starts with: "<code>-//IETF//DTD HTML 2.0 Strict Level 1//</code>" <li> The public identifier starts with: "<code>-//IETF//DTD HTML 2.0 Strict Level 2//</code>" <li> The public identifier starts with: "<code>-//IETF//DTD HTML 2.0 Strict//</code>" <li> The public identifier starts with: "<code>-//IETF//DTD HTML 2.0//</code>" <li> The public identifier starts with: "<code>-//IETF//DTD HTML 2.1E//</code>" <li> The public identifier starts with: "<code>-//IETF//DTD HTML 3.0//</code>" <li> The public identifier starts with: "<code>-//IETF//DTD HTML 3.2 Final//</code>" <li> The public identifier starts with: "<code>-//IETF//DTD HTML 3.2//</code>" <li> The public identifier starts with: "<code>-//IETF//DTD HTML 3//</code>" <li> The public identifier starts with: "<code>-//IETF//DTD HTML Level 0//</code>" <li> The public identifier starts with: "<code>-//IETF//DTD HTML Level 1//</code>" <li> The public identifier starts with: "<code>-//IETF//DTD HTML Level 2//</code>" <li> The public identifier starts with: "<code>-//IETF//DTD HTML Level 3//</code>" <li> The public identifier starts with: "<code>-//IETF//DTD HTML Strict Level 0//</code>" <li> The public identifier starts with: "<code>-//IETF//DTD HTML Strict Level 1//</code>" <li> The public identifier starts with: "<code>-//IETF//DTD HTML Strict Level 2//</code>" <li> The public identifier starts with: "<code>-//IETF//DTD HTML Strict Level 3//</code>" <li> The public identifier starts with: "<code>-//IETF//DTD HTML Strict//</code>" <li> The public identifier starts with: "<code>-//IETF//DTD HTML//</code>" <li> The public identifier starts with: "<code>-//Metrius//DTD Metrius Presentational//</code>" <li> The public identifier starts with: "<code>-//Microsoft//DTD Internet Explorer 2.0 HTML Strict//</code>" <li> The public identifier starts with: "<code>-//Microsoft//DTD Internet Explorer 2.0 HTML//</code>" <li> The public identifier starts with: "<code>-//Microsoft//DTD Internet Explorer 2.0 Tables//</code>" <li> The public identifier starts with: "<code>-//Microsoft//DTD Internet Explorer 3.0 HTML Strict//</code>" <li> The public identifier starts with: "<code>-//Microsoft//DTD Internet Explorer 3.0 HTML//</code>" <li> The public identifier starts with: "<code>-//Microsoft//DTD Internet Explorer 3.0 Tables//</code>" <li> The public identifier starts with: "<code>-//Netscape Comm. Corp.//DTD HTML//</code>" <li> The public identifier starts with: "<code>-//Netscape Comm. Corp.//DTD Strict HTML//</code>" <li> The public identifier starts with: "<code>-//O'Reilly and Associates//DTD HTML 2.0//</code>" <li> The public identifier starts with: "<code>-//O'Reilly and Associates//DTD HTML Extended 1.0//</code>" <li> The public identifier starts with: "<code>-//O'Reilly and Associates//DTD HTML Extended Relaxed 1.0//</code>" <li> The public identifier starts with: "<code>-//SQ//DTD HTML 2.0 HoTMetaL + extensions//</code>" <li> The public identifier starts with: "<code>-//SoftQuad Software//DTD HoTMetaL PRO 6.0::19990601::extensions to HTML 4.0//</code>" <li> The public identifier starts with: "<code>-//SoftQuad//DTD HoTMetaL PRO 4.0::19971010::extensions to HTML 4.0//</code>" <li> The public identifier starts with: "<code>-//Spyglass//DTD HTML 2.0 Extended//</code>" <li> The public identifier starts with: "<code>-//Sun Microsystems Corp.//DTD HotJava HTML//</code>" <li> The public identifier starts with: "<code>-//Sun Microsystems Corp.//DTD HotJava Strict HTML//</code>" <li> The public identifier starts with: "<code>-//W3C//DTD HTML 3 1995-03-24//</code>" <li> The public identifier starts with: "<code>-//W3C//DTD HTML 3.2 Draft//</code>" <li> The public identifier starts with: "<code>-//W3C//DTD HTML 3.2 Final//</code>" <li> The public identifier starts with: "<code>-//W3C//DTD HTML 3.2//</code>" <li> The public identifier starts with: "<code>-//W3C//DTD HTML 3.2S Draft//</code>" <li> The public identifier starts with: "<code>-//W3C//DTD HTML 4.0 Frameset//</code>" <li> The public identifier starts with: "<code>-//W3C//DTD HTML 4.0 Transitional//</code>" <li> The public identifier starts with: "<code>-//W3C//DTD HTML Experimental 19960712//</code>" <li> The public identifier starts with: "<code>-//W3C//DTD HTML Experimental 970421//</code>" <li> The public identifier starts with: "<code>-//W3C//DTD W3 HTML//</code>" <li> The public identifier starts with: "<code>-//W3O//DTD W3 HTML 3.0//</code>" <li> The public identifier starts with: "<code>-//WebTechs//DTD Mozilla HTML 2.0//</code>" <li> The public identifier starts with: "<code>-//WebTechs//DTD Mozilla HTML//</code>" <li> The system identifier is missing and the public identifier starts with: "<code>-//W3C//DTD HTML 4.01 Frameset//</code>" <li> The system identifier is missing and the public identifier starts with: "<code>-//W3C//DTD HTML 4.01 Transitional//</code>" </ul>
 
     <p>Otherwise, if the document is <em>not</em> <a id=the-initial-insertion-mode:an-iframe-srcdoc-document-2 href=iframe-embed-object.html#an-iframe-srcdoc-document>an <code>iframe</code> <code>srcdoc</code> document</a>, and the <a href=#parser-cannot-change-the-mode-flag id=the-initial-insertion-mode:parser-cannot-change-the-mode-flag-2>parser cannot change
     the mode flag</a> is false, and the DOCTYPE token matches one of the conditions in the
-    following list, then then set the <code id=the-initial-insertion-mode:document-7><a href=dom.html#document>Document</a></code> to <a id=the-initial-insertion-mode:limited-quirks-mode href=https://dom.spec.whatwg.org/#concept-document-limited-quirks data-x-internal=limited-quirks-mode>limited-quirks mode</a>:</p>
+    following list, then then set the <code id=the-initial-insertion-mode:document-6><a href=dom.html#document>Document</a></code> to <a id=the-initial-insertion-mode:limited-quirks-mode href=https://dom.spec.whatwg.org/#concept-document-limited-quirks data-x-internal=limited-quirks-mode>limited-quirks mode</a>:</p>
 
     <ul class=brief><li> The public identifier starts with: "<code>-//W3C//DTD XHTML 1.0 Frameset//</code>" <li> The public identifier starts with: "<code>-//W3C//DTD XHTML 1.0 Transitional//</code>" <li> The system identifier is not missing and the public identifier starts with: "<code>-//W3C//DTD HTML 4.01 Frameset//</code>" <li> The system identifier is not missing and the public identifier starts with: "<code>-//W3C//DTD HTML 4.01 Transitional//</code>" </ul>
 
@@ -3174,7 +3179,7 @@ document<c- p>.</c->body<c- p>.</c->appendChild<c- p>(</c->text<c- p>);</c->
    <dt>Anything else<dd>
     <p>If the document is <em>not</em> <a id=the-initial-insertion-mode:an-iframe-srcdoc-document-3 href=iframe-embed-object.html#an-iframe-srcdoc-document>an <code>iframe</code> <code>srcdoc</code> document</a>, then this is a <a href=#parse-errors id=the-initial-insertion-mode:parse-errors-2>parse
     error</a>; if the <a href=#parser-cannot-change-the-mode-flag id=the-initial-insertion-mode:parser-cannot-change-the-mode-flag-3>parser cannot change the mode flag</a> is false, set the
-    <code id=the-initial-insertion-mode:document-8><a href=dom.html#document>Document</a></code> to <a id=the-initial-insertion-mode:quirks-mode-2 href=https://dom.spec.whatwg.org/#concept-document-quirks data-x-internal=quirks-mode>quirks mode</a>.</p>
+    <code id=the-initial-insertion-mode:document-7><a href=dom.html#document>Document</a></code> to <a id=the-initial-insertion-mode:quirks-mode-2 href=https://dom.spec.whatwg.org/#concept-document-quirks data-x-internal=quirks-mode>quirks mode</a>.</p>
 
     <p>In any case, switch the <a href=#insertion-mode id=the-initial-insertion-mode:insertion-mode-3>insertion mode</a> to "<a href=#the-before-html-insertion-mode id=the-initial-insertion-mode:the-before-html-insertion-mode-2>before html</a>", then reprocess the token.</p>
    </dl>
@@ -3750,10 +3755,11 @@ document<c- p>.</c->body<c- p>.</c->appendChild<c- p>(</c->text<c- p>);</c->
     <p>If there <em>is</em> a <code id=parsing-main-inbody:the-template-element-6><a href=scripting.html#the-template-element>template</a></code> element on the <a href=#stack-of-open-elements id=parsing-main-inbody:stack-of-open-elements-38>stack of open
     elements</a>, then run these substeps instead:</p>
 
-    <ol><li><p>If the <a href=#stack-of-open-elements id=parsing-main-inbody:stack-of-open-elements-39>stack of open elements</a> does not <a href=#has-an-element-in-scope id=parsing-main-inbody:has-an-element-in-scope-6>have a <code>form</code> element in scope</a>, then this is a <a href=#parse-errors id=parsing-main-inbody:parse-errors-21>parse
-     error</a>; return and ignore the token.<li><p><a href=#generate-implied-end-tags id=parsing-main-inbody:generate-implied-end-tags-7>Generate implied end tags</a>.<li><p>If the <a href=#current-node id=parsing-main-inbody:current-node-11>current node</a> is not a <code id=parsing-main-inbody:the-form-element><a href=forms.html#the-form-element>form</a></code> element, then this is a
-     <a href=#parse-errors id=parsing-main-inbody:parse-errors-22>parse error</a>.<li><p>Pop elements from the <a href=#stack-of-open-elements id=parsing-main-inbody:stack-of-open-elements-40>stack of open elements</a> until a <code id=parsing-main-inbody:the-form-element-2><a href=forms.html#the-form-element>form</a></code>
-     element has been popped from the stack.</ol>
+    <ol><li><p>If the <a href=#stack-of-open-elements id=parsing-main-inbody:stack-of-open-elements-39>stack of open elements</a> does not <a href=#has-an-element-in-scope id=parsing-main-inbody:has-an-element-in-scope-6>have a <span>form</span> in scope</a>, then this is a
+     <a href=#parse-errors id=parsing-main-inbody:parse-errors-21>parse error</a>; return and ignore the token.<li><p><a href=#generate-implied-end-tags id=parsing-main-inbody:generate-implied-end-tags-7>Generate implied end tags</a>.<li><p>If the <a href=#current-node id=parsing-main-inbody:current-node-11>current node</a> is not a <a href=forms.html#concept-form id=parsing-main-inbody:concept-form>form</a>,
+     then this is a <a href=#parse-errors id=parsing-main-inbody:parse-errors-22>parse error</a>.<li><p>Pop elements from the <a href=#stack-of-open-elements id=parsing-main-inbody:stack-of-open-elements-40>stack of open elements</a> until a
+     <a href=forms.html#concept-form id=parsing-main-inbody:concept-form-2>form</a> (<code id=parsing-main-inbody:the-form-element><a href=forms.html#the-form-element>form</a></code> or <code id=parsing-main-inbody:the-search-element><a href=forms.html#the-search-element>search</a></code> element)
+     has been popped from the stack.</ol>
    <dt>An end tag whose tag name is "p"<dd>
     <p>If the <a href=#stack-of-open-elements id=parsing-main-inbody:stack-of-open-elements-41>stack of open elements</a> does not <a href=#has-an-element-in-button-scope id=parsing-main-inbody:has-an-element-in-button-scope-8>have a <code>p</code> element in button scope</a>, then this is a <a href=#parse-errors id=parsing-main-inbody:parse-errors-23>parse
     error</a>; <a href=#insert-an-html-element id=parsing-main-inbody:insert-an-html-element-10>insert an HTML element</a> for a "p" start tag token with no
@@ -4321,7 +4327,8 @@ document<c- p>.</c->body<c- p>.</c->appendChild<c- p>(</c->text<c- p>);</c->
 
     <p><a href=#insert-an-html-element id=parsing-main-intable:insert-an-html-element-7>Insert an HTML element</a> for the token, and set the <a href=#form-element-pointer id=parsing-main-intable:form-element-pointer-2><code>form</code> element pointer</a> to point to the element created.</p>
 
-    <p>Pop that <code id=parsing-main-intable:the-form-element><a href=forms.html#the-form-element>form</a></code> element off the <a href=#stack-of-open-elements id=parsing-main-intable:stack-of-open-elements-5>stack of open elements</a>.</p>
+    <p>Pop that <a href=forms.html#concept-form id=parsing-main-intable:concept-form>form</a> off the
+    <a href=#stack-of-open-elements id=parsing-main-intable:stack-of-open-elements-5>stack of open elements</a>.</p>
    <dt>An end-of-file token<dd>
     <p>Process the token <a href=#using-the-rules-for id=parsing-main-intable:using-the-rules-for-2>using the rules for</a> the "<a href=#parsing-main-inbody id=parsing-main-intable:parsing-main-inbody>in body</a>" <a href=#insertion-mode id=parsing-main-intable:insertion-mode-10>insertion mode</a>.</p>
    <dt>Anything else<dd>
@@ -5415,8 +5422,9 @@ document<c- p>.</c->body<c- p>.</c->appendChild<c- p>(</c->text<c- p>);</c->
   information:</p>
 
   <ul><li>Whether the document is set to <i id=coercing-an-html-dom-into-an-infoset:no-quirks-mode><a data-x-internal=no-quirks-mode href=https://dom.spec.whatwg.org/#concept-document-no-quirks>no-quirks mode</a></i>, <i id=coercing-an-html-dom-into-an-infoset:limited-quirks-mode><a data-x-internal=limited-quirks-mode href=https://dom.spec.whatwg.org/#concept-document-limited-quirks>limited-quirks mode</a></i>, or
-   <i id=coercing-an-html-dom-into-an-infoset:quirks-mode><a data-x-internal=quirks-mode href=https://dom.spec.whatwg.org/#concept-document-quirks>quirks mode</a></i><li>The association between form controls and forms that aren't their nearest <code id=coercing-an-html-dom-into-an-infoset:the-form-element><a href=forms.html#the-form-element>form</a></code>
-   element ancestor (use of the <a href=#form-element-pointer id=coercing-an-html-dom-into-an-infoset:form-element-pointer><code>form</code> element pointer</a> in the parser)<li>The <a id=coercing-an-html-dom-into-an-infoset:template-contents href=scripting.html#template-contents>template contents</a> of any <code id=coercing-an-html-dom-into-an-infoset:the-template-element><a href=scripting.html#the-template-element>template</a></code> elements.</ul>
+   <i id=coercing-an-html-dom-into-an-infoset:quirks-mode><a data-x-internal=quirks-mode href=https://dom.spec.whatwg.org/#concept-document-quirks>quirks mode</a></i><li>The association between form controls and forms that aren't their nearest
+   <a href=forms.html#concept-form id=coercing-an-html-dom-into-an-infoset:concept-form>form</a> ancestor
+   (use of the <a href=#form-element-pointer id=coercing-an-html-dom-into-an-infoset:form-element-pointer><code>form</code> element pointer</a> in the parser)<li>The <a id=coercing-an-html-dom-into-an-infoset:template-contents href=scripting.html#template-contents>template contents</a> of any <code id=coercing-an-html-dom-into-an-infoset:the-template-element><a href=scripting.html#the-template-element>template</a></code> elements.</ul>
 
   <p class=note>The mutations allowed by this section apply <em>after</em> the <a href=#html-parser id=coercing-an-html-dom-into-an-infoset:html-parser-5>HTML
   parser</a>'s rules have been applied. For example, a <code>&lt;a::></code> start tag
@@ -5733,7 +5741,7 @@ document<c- p>.</c->body<c- p>.</c->appendChild<c- p>(</c->text<c- p>);</c->
     <ol><li><p>Let <var>current node</var> be the child node being processed.<li>
       <p>Append the appropriate string from the following list to <var>s</var>:</p>
 
-      <dl class=switch><dt>If <var>current node</var> is an <code>Element</code><dd>
+      <dl class=switch><dt>If <var>current node</var> is an <code id=serialising-html-fragments:element-2><a data-x-internal=element href=https://dom.spec.whatwg.org/#interface-element>Element</a></code><dd>
         <p>If <var>current node</var> is an element in the <a id=serialising-html-fragments:html-namespace-2 href=https://infra.spec.whatwg.org/#html-namespace data-x-internal=html-namespace-2>HTML namespace</a>, the
         <a id=serialising-html-fragments:mathml-namespace href=https://infra.spec.whatwg.org/#mathml-namespace data-x-internal=mathml-namespace>MathML namespace</a>, or the <a id=serialising-html-fragments:svg-namespace href=https://infra.spec.whatwg.org/#svg-namespace data-x-internal=svg-namespace>SVG namespace</a>, then let <var>tagname</var> be <var>current node</var>'s local name. Otherwise, let <var>tagname</var> be <var>current node</var>'s qualified name.</p>
 
@@ -5782,31 +5790,31 @@ document<c- p>.</c->body<c- p>.</c->appendChild<c- p>(</c->text<c- p>);</c->
         element), followed by a U+003C LESS-THAN SIGN character (&lt;), a U+002F SOLIDUS character
         (/), <var>tagname</var> again, and finally a U+003E GREATER-THAN SIGN character
         (>).</p>
-       <dt>If <var>current node</var> is a <code>Text</code> node<dd>
+       <dt>If <var>current node</var> is a <code id=serialising-html-fragments:text><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>Text</a></code> node<dd>
         <p>If the parent of <var>current node</var> is a <code id=serialising-html-fragments:the-style-element><a href=semantics.html#the-style-element>style</a></code>,
         <code id=serialising-html-fragments:the-script-element><a href=scripting.html#the-script-element>script</a></code>, <code id=serialising-html-fragments:xmp><a href=obsolete.html#xmp>xmp</a></code>, <code id=serialising-html-fragments:the-iframe-element><a href=iframe-embed-object.html#the-iframe-element>iframe</a></code>, <code id=serialising-html-fragments:noembed><a href=obsolete.html#noembed>noembed</a></code>,
         <code id=serialising-html-fragments:noframes><a href=obsolete.html#noframes>noframes</a></code>, or <code id=serialising-html-fragments:plaintext><a href=obsolete.html#plaintext>plaintext</a></code> element, or if the parent of <var>current node</var> is a <code id=serialising-html-fragments:the-noscript-element><a href=scripting.html#the-noscript-element>noscript</a></code> element and <a href=webappapis.html#concept-n-script id=serialising-html-fragments:concept-n-script>scripting is enabled</a> for the node, then append the value of
-        <var>current node</var>'s <code>data</code> IDL attribute literally.</p>
+        <var>current node</var>'s <a href=https://dom.spec.whatwg.org/#concept-cd-data id=serialising-html-fragments:concept-cd-data data-x-internal=concept-cd-data>data</a> literally.</p>
 
-        <p>Otherwise, append the value of <var>current node</var>'s <code>data</code> IDL attribute, <a href=#escapingString id=serialising-html-fragments:escapingString-3>escaped as described
+        <p>Otherwise, append the value of <var>current node</var>'s <a href=https://dom.spec.whatwg.org/#concept-cd-data id=serialising-html-fragments:concept-cd-data-2 data-x-internal=concept-cd-data>data</a>, <a href=#escapingString id=serialising-html-fragments:escapingString-3>escaped as described
         below</a>.</p>
-       <dt>If <var>current node</var> is a <code>Comment</code><dd>
+       <dt>If <var>current node</var> is a <code id=serialising-html-fragments:comment-2><a data-x-internal=comment-2 href=https://dom.spec.whatwg.org/#interface-comment>Comment</a></code><dd>
         <p>Append the literal string "<code>&lt;!--</code>" (U+003C LESS-THAN SIGN, U+0021
-        EXCLAMATION MARK, U+002D HYPHEN-MINUS, U+002D HYPHEN-MINUS), followed by the value of <var>current node</var>'s <code>data</code> IDL attribute, followed by the
+        EXCLAMATION MARK, U+002D HYPHEN-MINUS, U+002D HYPHEN-MINUS), followed by the value of
+        <var>current node</var>'s <a href=https://dom.spec.whatwg.org/#concept-cd-data id=serialising-html-fragments:concept-cd-data-3 data-x-internal=concept-cd-data>data</a>, followed by the
         literal string "<code>--></code>" (U+002D HYPHEN-MINUS, U+002D HYPHEN-MINUS,
         U+003E GREATER-THAN SIGN).</p>
-       <dt>If <var>current node</var> is a <code>ProcessingInstruction</code><dd>
+       <dt>If <var>current node</var> is a <code id=serialising-html-fragments:processinginstruction><a data-x-internal=processinginstruction href=https://dom.spec.whatwg.org/#interface-processinginstruction>ProcessingInstruction</a></code><dd>
         <p>Append the literal string "<code>&lt;?</code>" (U+003C LESS-THAN SIGN, U+003F
         QUESTION MARK), followed by the value of <var>current node</var>'s <code>target</code> IDL attribute, followed by a single U+0020 SPACE character, followed
-        by the value of <var>current node</var>'s <code>data</code> IDL
-        attribute, followed by a single U+003E GREATER-THAN SIGN character (>).</p>
-       <dt>If <var>current node</var> is a <code>DocumentType</code><dd>
+        by the value of <var>current node</var>'s <a href=https://dom.spec.whatwg.org/#concept-cd-data id=serialising-html-fragments:concept-cd-data-4 data-x-internal=concept-cd-data>data</a>,
+        followed by a single U+003E GREATER-THAN SIGN character (>).</p>
+       <dt>If <var>current node</var> is a <code id=serialising-html-fragments:documenttype><a data-x-internal=documenttype href=https://dom.spec.whatwg.org/#interface-documenttype>DocumentType</a></code><dd>
         <p>Append the literal string "<code>&lt;!DOCTYPE</code>" (U+003C LESS-THAN SIGN, U+0021
         EXCLAMATION MARK, U+0044 LATIN CAPITAL LETTER D, U+004F LATIN CAPITAL LETTER O, U+0043 LATIN
         CAPITAL LETTER C, U+0054 LATIN CAPITAL LETTER T, U+0059 LATIN CAPITAL LETTER Y, U+0050 LATIN
         CAPITAL LETTER P, U+0045 LATIN CAPITAL LETTER E), followed by a space (U+0020 SPACE),
-        followed by the value of <var>current node</var>'s <code>name</code> IDL
-        attribute, followed by the literal string "<code>></code>" (U+003E GREATER-THAN SIGN).</p>
+        followed by the value of <var>current node</var>'s <a href=https://dom.spec.whatwg.org/#concept-doctype-name id=serialising-html-fragments:concept-doctype-name data-x-internal=concept-doctype-name>name</a>, followed by the literal string "<code>></code>" (U+003E GREATER-THAN SIGN).</p>
        </dl>
      </ol>
    <li><p>Return <var>s</var>.</ol>
@@ -5824,7 +5832,7 @@ document<c- p>.</c->body<c- p>.</c->appendChild<c- p>(</c->text<c- p>);</c->
    contains a comment that contains the literal string "<code>--></code>", then when
    the result of serializing the element is parsed, the comment will be truncated at that point and
    the rest of the comment will be interpreted as markup. More examples would be making a
-   <code id=serialising-html-fragments:the-script-element-2><a href=scripting.html#the-script-element>script</a></code> element contain a <code id=serialising-html-fragments:text><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>Text</a></code> node with the text string "<code>&lt;/script></code>", or having a <code id=serialising-html-fragments:the-p-element><a href=grouping-content.html#the-p-element>p</a></code> element that contains a
+   <code id=serialising-html-fragments:the-script-element-2><a href=scripting.html#the-script-element>script</a></code> element contain a <code id=serialising-html-fragments:text-2><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>Text</a></code> node with the text string "<code>&lt;/script></code>", or having a <code id=serialising-html-fragments:the-p-element><a href=grouping-content.html#the-p-element>p</a></code> element that contains a
    <code id=serialising-html-fragments:the-ul-element><a href=grouping-content.html#the-ul-element>ul</a></code> element (as the <code id=serialising-html-fragments:the-ul-element-2><a href=grouping-content.html#the-ul-element>ul</a></code> element's <a href=syntax.html#syntax-start-tag id=serialising-html-fragments:syntax-start-tag>start
    tag</a> would imply the end tag for the <code id=serialising-html-fragments:the-p-element-2><a href=grouping-content.html#the-p-element>p</a></code>).</p>
 
@@ -5848,14 +5856,15 @@ document<c- p>.</c->body<c- p>.</c->appendChild<c- p>(</c->text<c- p>);</c->
 
    <ul class=domTree><li class=t1><code id=serialising-html-fragments:the-html-element><a href=semantics.html#the-html-element>html</a></code><ul><li class=t1><code id=serialising-html-fragments:the-head-element><a href=semantics.html#the-head-element>head</a></code><li class=t1><code id=serialising-html-fragments:the-body-element><a href=sections.html#the-body-element>body</a></code><ul><li class=t1><code id=serialising-html-fragments:the-form-element><a href=forms.html#the-form-element>form</a></code> <span class=t2><code id=serialising-html-fragments:the-id-attribute class="attribute name"><a href=dom.html#the-id-attribute>id</a></code>="<code class="attribute value">outer</code>"</span><ul><li class=t1><code id=serialising-html-fragments:the-div-element><a href=grouping-content.html#the-div-element>div</a></code><ul><li class=t1><code id=serialising-html-fragments:the-form-element-2><a href=forms.html#the-form-element>form</a></code> <span class=t2><code id=serialising-html-fragments:the-id-attribute-2 class="attribute name"><a href=dom.html#the-id-attribute>id</a></code>="<code class="attribute value">inner</code>"</span><ul><li class=t1><code id=serialising-html-fragments:the-input-element><a href=input.html#the-input-element>input</a></code></ul></ul></ul></ul></ul></ul>
 
-   <p>The <code id=serialising-html-fragments:the-input-element-2><a href=input.html#the-input-element>input</a></code> element will be associated with the inner <code id=serialising-html-fragments:the-form-element-3><a href=forms.html#the-form-element>form</a></code> element.
+   <p>The <code id=serialising-html-fragments:the-input-element-2><a href=input.html#the-input-element>input</a></code> element will be associated with the inner
+   <a href=forms.html#concept-form id=serialising-html-fragments:concept-form>form</a>.
    Now, if this tree structure is serialized and reparsed, the <code>&lt;form
    id="inner"></code> start tag will be ignored, and so the <code id=serialising-html-fragments:the-input-element-3><a href=input.html#the-input-element>input</a></code> element will be
-   associated with the outer <code id=serialising-html-fragments:the-form-element-4><a href=forms.html#the-form-element>form</a></code> element instead.</p>
+   associated with the outer <a href=forms.html#concept-form id=serialising-html-fragments:concept-form-2>form</a> instead.</p>
 
    <pre><code class='html'><c- p>&lt;</c-><c- f>html</c-><c- p>&gt;&lt;</c-><c- f>head</c-><c- p>&gt;&lt;/</c-><c- f>head</c-><c- p>&gt;&lt;</c-><c- f>body</c-><c- p>&gt;&lt;</c-><c- f>form</c-> <c- e>id</c-><c- o>=</c-><c- s>&quot;outer&quot;</c-><c- p>&gt;&lt;</c-><c- f>div</c-><c- p>&gt;</c-><mark><c- p>&lt;</c-><c- f>form</c-> <c- e>id</c-><c- o>=</c-><c- s>&quot;inner&quot;</c-><c- p>&gt;</c-></mark><c- p>&lt;</c-><c- f>input</c-><c- p>&gt;&lt;/</c-><c- f>form</c-><c- p>&gt;&lt;/</c-><c- f>div</c-><c- p>&gt;&lt;/</c-><c- f>form</c-><c- p>&gt;&lt;/</c-><c- f>body</c-><c- p>&gt;&lt;/</c-><c- f>html</c-><c- p>&gt;</c-></code></pre>
 
-   <ul class=domTree><li class=t1><code id=serialising-html-fragments:the-html-element-2><a href=semantics.html#the-html-element>html</a></code><ul><li class=t1><code id=serialising-html-fragments:the-head-element-2><a href=semantics.html#the-head-element>head</a></code><li class=t1><code id=serialising-html-fragments:the-body-element-2><a href=sections.html#the-body-element>body</a></code><ul><li class=t1><code id=serialising-html-fragments:the-form-element-5><a href=forms.html#the-form-element>form</a></code> <span class=t2><code id=serialising-html-fragments:the-id-attribute-3 class="attribute name"><a href=dom.html#the-id-attribute>id</a></code>="<code class="attribute value">outer</code>"</span><ul><li class=t1><code id=serialising-html-fragments:the-div-element-2><a href=grouping-content.html#the-div-element>div</a></code><ul><li class=t1><code id=serialising-html-fragments:the-input-element-4><a href=input.html#the-input-element>input</a></code></ul></ul></ul></ul></ul>
+   <ul class=domTree><li class=t1><code id=serialising-html-fragments:the-html-element-2><a href=semantics.html#the-html-element>html</a></code><ul><li class=t1><code id=serialising-html-fragments:the-head-element-2><a href=semantics.html#the-head-element>head</a></code><li class=t1><code id=serialising-html-fragments:the-body-element-2><a href=sections.html#the-body-element>body</a></code><ul><li class=t1><code id=serialising-html-fragments:the-form-element-3><a href=forms.html#the-form-element>form</a></code> <span class=t2><code id=serialising-html-fragments:the-id-attribute-3 class="attribute name"><a href=dom.html#the-id-attribute>id</a></code>="<code class="attribute value">outer</code>"</span><ul><li class=t1><code id=serialising-html-fragments:the-div-element-2><a href=grouping-content.html#the-div-element>div</a></code><ul><li class=t1><code id=serialising-html-fragments:the-input-element-4><a href=input.html#the-input-element>input</a></code></ul></ul></ul></ul></ul>
 
   </div>
 
@@ -6025,10 +6034,12 @@ console<c- p>.</c->assert<c- p>(</c->container<c- p>.</c->firstChild <c- k>insta
 
     <p class=note>The parser will reference the <var id=parsing-html-fragments:concept-frag-parse-context-8><a href=#concept-frag-parse-context>context</a></var> element as part of that algorithm.</p>
    <li>
-    <p>Set the parser's <a href=#form-element-pointer id=parsing-html-fragments:form-element-pointer><code>form</code> element pointer</a> to the nearest node to the
-    <var id=parsing-html-fragments:concept-frag-parse-context-9><a href=#concept-frag-parse-context>context</a></var> element that is a <code id=parsing-html-fragments:the-form-element><a href=forms.html#the-form-element>form</a></code>
-    element (going straight up the ancestor chain, and including the element itself, if it is a
-    <code id=parsing-html-fragments:the-form-element-2><a href=forms.html#the-form-element>form</a></code> element), if any. (If there is no such <code id=parsing-html-fragments:the-form-element-3><a href=forms.html#the-form-element>form</a></code> element, the
+    <p>Set the parser's <a href=#form-element-pointer id=parsing-html-fragments:form-element-pointer><code>form</code> element pointer</a>
+    to the nearest node to the <var id=parsing-html-fragments:concept-frag-parse-context-9><a href=#concept-frag-parse-context>context</a></var>
+    element that is a <a href=forms.html#concept-form id=parsing-html-fragments:concept-form>form</a>
+    (going straight up the ancestor chain, and including the element itself, if it is a
+    <a href=forms.html#concept-form id=parsing-html-fragments:concept-form-2>form</a>), if any. (If there is no such
+    <a href=forms.html#concept-form id=parsing-html-fragments:concept-form-3>form</a>, the
     <a href=#form-element-pointer id=parsing-html-fragments:form-element-pointer-2><code>form</code> element pointer</a> keeps its initial value, null.)</p>
    <li>
     <p>Place the <var>input</var> into the <a href=#input-stream id=parsing-html-fragments:input-stream>input stream</a> for the <a href=#html-parser id=parsing-html-fragments:html-parser-3>HTML

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Standard</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/spec.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/styles.css crossorigin=""><script>
+<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Specification Draft: &lt;search> element with form functionality</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/spec.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard.css crossorigin=""><link rel=stylesheet href=https://resources.whatwg.org/standard-shared-with-dev.css crossorigin=""><link rel=icon href=https://resources.whatwg.org/logo.svg crossorigin=""><link rel=stylesheet href=/styles.css crossorigin=""><script>
    function toggleStatus(div) {
      div.parentNode.classList.toggle('wrapped');
    }
@@ -8,12 +8,13 @@
   </script><body>
   
   <script async="" crossorigin="" src=/html-dfn.js></script>
-  <script data-file-issue-url=https://github.com/whatwg/html/issues/new async="" crossorigin="" src=https://resources.whatwg.org/file-issue.js></script>
+  <script data-file-issue-url=https://github.com/Kaleidea/whatwg-html-draft/issues/new async="" crossorigin="" src=https://resources.whatwg.org/file-issue.js></script>
   
   <header id=head class="head with-buttons">
    <a href=https://whatwg.org/ class=logo><img width=100 alt=WHATWG crossorigin="" src=https://resources.whatwg.org/logo.svg height=100></a>
-   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Living Standard — Last Updated <span class=pubdate>22 November 2021</span></h2></hgroup>
+   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Review Draft: <code id=living-standard:the-search-element><a href=forms.html#the-search-element>search</a></code> element with form functionality — Last Updated <span class=pubdate>1 December 2021</span></h2></hgroup>
    
+
    
 
    
@@ -33,7 +34,7 @@
 
   
 
-  <nav><a href=form-control-infrastructure.html>← 4.10.17 Form control infrastructure</a> — <a href=./>Table of Contents</a> — <a href=scripting.html>4.12 Scripting →</a></nav><ol class=toc><li id=toc-semantics><ol><li><a href=interactive-elements.html#interactive-elements><span class=secno>4.11</span> Interactive elements</a><ol><li><a href=interactive-elements.html#the-details-element><span class=secno>4.11.1</span> The <code>details</code> element</a><li><a href=interactive-elements.html#the-summary-element><span class=secno>4.11.2</span> The <code>summary</code> element</a><li><a href=interactive-elements.html#commands><span class=secno>4.11.3</span> Commands</a><ol><li><a href=interactive-elements.html#facets-2><span class=secno>4.11.3.1</span> Facets</a><li><a href=interactive-elements.html#using-the-a-element-to-define-a-command><span class=secno>4.11.3.2</span> Using the <code>a</code> element to define a command</a><li><a href=interactive-elements.html#using-the-button-element-to-define-a-command><span class=secno>4.11.3.3</span> Using the <code>button</code> element to define a command</a><li><a href=interactive-elements.html#using-the-input-element-to-define-a-command><span class=secno>4.11.3.4</span> Using the <code>input</code> element to define a command</a><li><a href=interactive-elements.html#using-the-option-element-to-define-a-command><span class=secno>4.11.3.5</span> Using the <code>option</code> element to define a command</a><li><a href=interactive-elements.html#using-the-accesskey-attribute-on-a-legend-element-to-define-a-command><span class=secno>4.11.3.6</span> Using the <code>accesskey</code> attribute
+  <nav><a href=form-control-infrastructure.html>← 4.10.18 Form control infrastructure</a> — <a href=./>Table of Contents</a> — <a href=scripting.html>4.12 Scripting →</a></nav><ol class=toc><li id=toc-semantics><ol><li><a href=interactive-elements.html#interactive-elements><span class=secno>4.11</span> Interactive elements</a><ol><li><a href=interactive-elements.html#the-details-element><span class=secno>4.11.1</span> The <code>details</code> element</a><li><a href=interactive-elements.html#the-summary-element><span class=secno>4.11.2</span> The <code>summary</code> element</a><li><a href=interactive-elements.html#commands><span class=secno>4.11.3</span> Commands</a><ol><li><a href=interactive-elements.html#facets-2><span class=secno>4.11.3.1</span> Facets</a><li><a href=interactive-elements.html#using-the-a-element-to-define-a-command><span class=secno>4.11.3.2</span> Using the <code>a</code> element to define a command</a><li><a href=interactive-elements.html#using-the-button-element-to-define-a-command><span class=secno>4.11.3.3</span> Using the <code>button</code> element to define a command</a><li><a href=interactive-elements.html#using-the-input-element-to-define-a-command><span class=secno>4.11.3.4</span> Using the <code>input</code> element to define a command</a><li><a href=interactive-elements.html#using-the-option-element-to-define-a-command><span class=secno>4.11.3.5</span> Using the <code>option</code> element to define a command</a><li><a href=interactive-elements.html#using-the-accesskey-attribute-on-a-legend-element-to-define-a-command><span class=secno>4.11.3.6</span> Using the <code>accesskey</code> attribute
   on a <code>legend</code> element to define a command</a><li><a href=interactive-elements.html#using-the-accesskey-attribute-to-define-a-command-on-other-elements><span class=secno>4.11.3.7</span> Using the <code>accesskey</code>
   attribute to define a command on other elements</a></ol><li><a href=interactive-elements.html#the-dialog-element><span class=secno>4.11.4</span> The <code>dialog</code> element</a></ol></ol></ol><h3 id=interactive-elements><span class=secno>4.11</span> Interactive elements<a href=#interactive-elements class=self-link></a></h3>
 
@@ -508,7 +509,7 @@
 
   <p>The <dfn id=dialog-focusing-steps>dialog focusing steps</dfn> for a <code id=the-dialog-element:the-dialog-element-13><a href=#the-dialog-element>dialog</a></code> element <var>subject</var> are as follows:</p>
 
-  <ol><li><p>If <var>subject</var> is <a id=the-dialog-element:inert-2 href=interaction.html#inert>inert</a>, return.<li><p>Let <var>control</var> be the <a id=the-dialog-element:focus-delegate href=interaction.html#focus-delegate>focus delegate</a> of <var>subject</var>.<li><p>If <var>control</var> is null, then set <var>control</var> to <var>subject</var>.<li>
+  <ol><li><p>Let <var>control</var> be the <a id=the-dialog-element:focus-delegate href=interaction.html#focus-delegate>focus delegate</a> of <var>subject</var>.<li><p>If <var>control</var> is null, then set <var>control</var> to <var>subject</var>.<li>
     <p>Run the <a id=the-dialog-element:focusing-steps href=interaction.html#focusing-steps>focusing steps</a> for <var>control</var>.</p>
 
     <p class=note>If <var>control</var> is not <a id=the-dialog-element:focusable href=interaction.html#focusable>focusable</a>, this will do nothing. For
@@ -599,4 +600,4 @@
 
 
 
-  <nav><a href=form-control-infrastructure.html>← 4.10.17 Form control infrastructure</a> — <a href=./>Table of Contents</a> — <a href=scripting.html>4.12 Scripting →</a></nav>
+  <nav><a href=form-control-infrastructure.html>← 4.10.18 Form control infrastructure</a> — <a href=./>Table of Contents</a> — <a href=scripting.html>4.12 Scripting →</a></nav>
